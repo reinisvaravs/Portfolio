@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slideshow</title>
     <style>
+        
+        button {
+            margin: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
 
         body {
             text-align: center;
@@ -29,17 +35,27 @@
             text-align: center;
             margin-top: 20px;
         }
+
     </style>
 </head>
 <body>
     <div id="imageContainer">
-        <img id="currentImage" src="" alt="Slideshow Image">
+        <img src="" alt="Slideshow Image" id="currentImage">
     </div>
-    <button id="nextButton">Next Image</button>
+
+    <div style="text-align: center;">
+        <button onclick="nextImage()" id="next">Next Image</button>
+        <button onclick="toggleAutoScroll()" id="autoscroll">Auto Scroll</button>
+    </div>
 
     <script>
-       const images = [
-            'images/0.png',
+
+        let currentIndex = 0;
+        let autoScrollInterval;
+        let isAutoScrolling = false;
+
+        function loadImages() {
+            images = [
             'images/1.png',
             'images/2.png',
             'images/3.png',
@@ -73,24 +89,38 @@
             'images/31.png',
             'images/32.png'
         ];
+        }
 
-        let currentIndex = 0;
-        const imageElement = document.getElementById('currentImage');
-        const nextButton = document.getElementById('nextButton');
-
-        function displayImage(index) {
-            imageElement.src = images[index];
+        function showImage(index) {
+            if (index >= 0 && index < images.length) {
+                document.getElementById('currentImage').src = images[index];
+                currentIndex = index;
+            }
         }
 
         function nextImage() {
             currentIndex = (currentIndex + 1) % images.length;
-            displayImage(currentIndex);
+            showImage(currentIndex);
         }
 
-        nextButton.addEventListener('click', nextImage);
+        function toggleAutoScroll() {
+            if (isAutoScrolling) {
+                clearInterval(autoScrollInterval);
+                isAutoScrolling = false;
+                document.getElementById("autoscroll").style = ".button";
 
-        // Display the first image on page load
-        displayImage(currentIndex);
+            } else {
+                autoScrollInterval = setInterval(nextImage, 1000); 
+                isAutoScrolling = true;
+                document.getElementById("autoscroll").style.background = "green";
+            }
+        }
+
+        // Load images when the page loads
+        window.onload = function() {
+            loadImages();
+            showImage(0); // Show the first image
+        };
     </script>
 </body>
 </html>
