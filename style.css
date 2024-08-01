@@ -3,13 +3,15 @@
 }
 
 body {
-    margin: 0 7%;
-    font-family: 'Roboto', sans-serif;
+    margin: 0 7% 0 7%;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
 h1 {
     text-align: center;
     font-size: 2.5rem;
+    color: #ffffff;
 }
 
 .social-media-div {
@@ -33,11 +35,13 @@ h1 {
 .social-media-icon img {
     width: 100%;
     height: 100%;
+    filter: invert(1);
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: 400;
+    color: #ffffff;
 }
 
 .container {
@@ -52,19 +56,20 @@ h2 {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
     overflow: hidden;
+    background-color: #2a2a2a;
 }
 
 .card-header {
-    background-color: #f0f0f0;
+    background-color: #333333;
     padding: 20px;
     position: relative;
     height: 30px;
 }
 
 .card-header.blue {
-    background-color: #0066cc;
+    background-color: #004080;
 }
 
 .logo {
@@ -82,7 +87,7 @@ h2 {
 .card-body p {
     margin: 0;
     font-size: 1rem;
-    color: #666;
+    color: #b0b0b0;
 }
 
 .card-footer {
@@ -94,7 +99,7 @@ h2 {
 
 .button {
     text-decoration: none;
-    color: #ff9900;
+    color: #ffa500;
     font-weight: bold;
     font-size: 0.9rem;
 }
@@ -104,23 +109,23 @@ a {
 }
 
 a:hover[class="button"] {
-    color: #d58001;
+    color: #ffb732;
     font-size: 1rem;
 }
 
 .name-link {
-    color: #666;
+    color: #b0b0b0;
     font-size: 1rem;
 }
 
 a:hover[class="name-link"] {
-    color: #000000;
+    color: #ffffff;
     font-size: 1.1rem;
 }
 
 a[id="test"] {
     text-decoration: none;
-    color: white;
+    color: #e0e0e0;
 }
 
 /* Responsive Design */
@@ -169,14 +174,6 @@ a[id="test"] {
     }
 }
 
-body {
-    margin: 0 7% 0 7%;
-}
-
-h1 {
-    text-align: center;
-    font-size: xxx-large;
-}
 
 .social-media-div {
     width: 50%;
@@ -198,11 +195,13 @@ h1 {
 .social-media-icon img {
     width: 100%;
     height: 100%;
+    filter: invert(1);
 }
 
 h2 {
     font-size: x-large;
     font-weight: 400;
+    color: #ffffff;
 }
 
 .container {
@@ -215,20 +214,21 @@ h2 {
 .card {
   width: 300px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(255,255,255,0.1);
   overflow: hidden;
   font-family: Arial, sans-serif;
+  background-color: #2a2a2a;
 }
 
 .card-header {
-  background-color: #f0f0f0;
+  background-color: #333333;
   padding: 20px;
   position: relative;
   height: 30px;
 }
 
 .card-header.blue {
-  background-color: #0066cc;
+  background-color: #004080;
 }
 
 .logo {
@@ -246,7 +246,7 @@ h2 {
 .card-body p {
   margin: 0;
   font-size: 18px;
-  color: #666;
+  color: #b0b0b0;
 }
 
 .card-footer {
@@ -258,7 +258,7 @@ h2 {
 
 .button {
   text-decoration: none;
-  color: #ff9900;
+  color: #ffa500;
   font-weight: bold;
   font-size: 14px;
 }
@@ -268,21 +268,21 @@ a {
 }
 
 a:hover[class="button"] {
-    color: #d58001;
+    color: #ffb732;
     font-size: 15px;
 }
 
 .name-link {
-    color: #666;
+    color: #b0b0b0;
     font-size: 18px;
 }
 
 a:hover[class="name-link"] {
-    color: #000000;
+    color: #ffffff;
     font-size: 19px;
 }
 
 a[id="test"] {
     text-decoration: none;
-    color: white;
+    color: #1a1a1a;
 }
