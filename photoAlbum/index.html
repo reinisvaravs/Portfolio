@@ -52,17 +52,12 @@
     <div style="text-align: center;">
         <button onclick="nextImage()" id="next">Next Image</button>
         <button onclick="toggleAutoScroll()" id="autoscroll">Auto Scroll</button>
-        <button id="audioButton">Play Audio</button>
+        <button id="skip">Skip To End</button>
     </div>
 
-    <audio id="audioElement">
-        <source src="" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+    
 
-      <br>
 
-      <a href="https://mrdeepfakes.com/video/12255/emma-watson-gets-fucked-on-the-table" target="_blank">MrDeepFakes.com</a>
 
     <script>
 
@@ -135,26 +130,15 @@
             }
         }
 
-        const audio = document.getElementById('audioElement');
-const audioButton = document.getElementById('audioButton');
+        document.querySelector("#skip").onclick = function() {
+            currentIndex = 26;
+            showImage(currentIndex);
+        }
 
-audioButton.addEventListener('click', function() {
-  if (audio.paused) {
-    audio.play();
-    audioButton.textContent = 'Stop Audio';
-    document.getElementById("audioButton").style.background = "green";
-  } else {
-    audio.pause();
-    audio.currentTime = 0;
-    audioButton.textContent = 'Play Audio';
-    document.getElementById("audioButton").style = ".button";
-  }
-});
 
-        // Load images when the page loads
         window.onload = function() {
             loadImages();
-            showImage(0); // Show the first image
+            showImage(0); 
         };
     </script>
 </body>
