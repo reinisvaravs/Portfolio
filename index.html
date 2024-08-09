@@ -3,80 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myProjects</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <script>
+
+    function hello() {
+        
+        if (document.querySelector('h1').innerHTML === 'Hello!') {
+        document.querySelector('h1').innerHTML = 'Goodbye!';
+        } else {
+            document.querySelector('h1').innerHTML = 'Hello!';
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        document.querySelector("#name-form").onsubmit = function() {
+            const name = document.querySelector("#name").value;
+            alert(`Hello, ${name}!`);
+        };
+
+        document.querySelectorAll("#button").forEach(function(button) {
+            button.onclick = function() {
+                document.querySelector("#hello").style.color = button.dataset.color;
+            }
+        });
+
+        document.querySelector("select").onchange = function() {
+            document.querySelector("#hi").style.color = this.value;
+        }
+
+        document.querySelector("#submit").disabled = true;
+
+        document.querySelector("#task").onkeyup = () => {
+            if (document.querySelector("#task").value.length > 0) {
+                document.querySelector("#submit").disabled = false;
+            } else {
+                document.querySelector("#submit").disabled = true;
+            }
+        }
+
+        document.querySelector("#tasks-form").onsubmit = () => {
+            const task = document.querySelector("#task").value;
+            const li = document.createElement("li");
+            li.innerHTML = task;
+
+            document.querySelector("#tasks").append(li);
+
+            document.querySelector("#task").value = "";
+
+            document.querySelector("#submit").disabled = true;
+
+            return false;
+        }
+
+        if (!localStorage.getItem("counter")) {
+            localStorage.setItem("counter", 0);
+        }
+
+        function count() {
+            let counter = localStorage.getItem("counter");
+            counter++;
+            document.querySelector("#counterh1").innerHTML = counter;
+            localStorage.setItem("counter", counter);
+           
+        }
+        document.querySelector("#counterh1").innerHTML = localStorage.getItem("counter");
+        document.querySelector("#count-button").onclick = count;        
+    });
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        #container {
+            display: block;
+            margin-top: 60px;
+        }
+
+        #container div {
+            margin-bottom: 60px;
+        }
+
+        li {
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-<header></header>
 
-<main>
-<h1>My Javascript Projects</h1>
-    <div class="social-media-div">
-        <div>
-            <a href="https://github.com/reinisvaravs/reinisvaravs.github.io" target="_blank"><img src="images/git.png" alt="github-icon" class="social-media-icon"></a>
-        </div>
-    </div>
-
-<h2>About</h2>
-<p>This page is where I store all my programming projects. All source code will be linked to my GitHub page.</p>
-
-<br>
-<h2>My projects count: 0</h2>
-<br>
-
-<h2>Javascript basics</h2>
-
-<div class="container">
-    <div class="card">
-        <div class="card-header blue">
-            <img src="images/JS-icon.png" alt="JS-icon" class="logo">
-          </div>
-          <div class="card-body">
-            <a href="slotMachine/index.html" target="_blank" class="name-link">
-               Slot Machine
-            </a>
-          </div>
-        <div class="card-footer">
-          <a href="https://github.com/reinisvaravs/reinisvaravs.github.io/tree/main/slotMachine" target="_blank" class="button">CODE</a>
-        </div>
-      </div>
-  
-    <div class="card">
-      <div class="card-header blue">
-        <img src="images/JS-icon.png" alt="JS-icon" class="logo">
-      </div>
-      <div class="card-body">
-        <a href="chromeDinosaurGame/index.html" target="_blank" class="name-link">
-           Chrome Dinosaur Game
-        </a>
-      </div>
-      <div class="card-footer">
-        <a href="https://github.com/reinisvaravs/reinisvaravs.github.io/tree/main/chromeDinosaurGame" target="_blank" class="button">CODE</a>
-      </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header blue">
-          <img src="images/JS-icon.png" alt="JS-icon" class="logo">
-        </div>
-        <div class="card-body">
-          <a href="weatherApp/index.html" target="_blank" class="name-link">
-             Weather App
-          </a>
-        </div>
-        <div class="card-footer">
-          <a href="https://github.com/reinisvaravs/reinisvaravs.github.io/tree/main/weatherApp" target="_blank" class="button">CODE</a>
-        </div>
-      </div>
+<div id="container">
+<div>
+    <h1>Hello!</h1>
+    <button onclick='hello()'>Click here</button>
 </div>
 
-<a href="photoAlbum/index.html" target="_blank" id="test">test</a>
+<div>
+    <form id="name-form">
+        <input type="text" id="name" placeholder="Type name here">
+        <input type="submit">
+    </form>
+</div>
+
+<div>
+    <h1 id="hello">I can change colors</h1>
+    <button data-color="red" id="button">Red</button>
+    <button data-color="blue" id="button">Blue</button>
+    <button data-color="green" id="button">Green</button>
+</div>
+
+<div>
+
+    <h1 id="hi">Select a color below this</h1>
+    <select>
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+    </select>
+</div>
+
+<div>
+    <h1>To do list</h1>
+    <ul id="tasks"></ul>
+    <form id="tasks-form">
+        <input type="text" id="task" placeholder="New Task">
+        <input id="submit" type="submit">
+    </form>
+</div>
+
+<div>
+    <h1 id="counterh1">0</h1>
+    <button id="count-button">Count</button>
+    <p>after counting, refresh the page - the counter wont reset.</p>
+</div>
+</div>
 
 
 
-</main>
-
-<footer></footer>
 </body>
 </html>
