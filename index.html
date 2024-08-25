@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picu darbnīca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+body {
+    margin: 0;
+    background-color: #ffffff;
+    overflow-x: hidden; 
+}
+
+.fonts_h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    margin: 15px;
+}
+
+.header_div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo_div {
+    width: 20%;
+    height: 100%;
+}
+
+.logo {
+    height: 100%;
+}
+
+.container {
+    background-color: #f58220;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    justify-content: space-evenly;
+
+
+    div {
+        width: auto;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #e3e3e3;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.lang_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    button {
+        width: 50px;
+        text-align: center;
+        background-color: #f58220;
+        border: none;
+        color: #a2d2f0;
+        font-size: 15px;
+    }
+
+    
+}
+
+.container_picas {
+    margin: auto;
+    width: 90%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.all {
+    width: 30%;
+    border: none;
+}
+
+.pogas_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.virsraksts {
+    text-align: center;
+    font-size: 45px;
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.pizza_photo {
+    width: 100%;
+}
+
+
+#button_30cm_1, #button_30cm_2, #button_30cm_3 {
+        width: 48%;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        background: #f58220;
+        color: #ffffff;
+        cursor: pointer;
+}
+
+
+
+#button_20cm_1, #button_20cm_2, #button_20cm_3 {
+        width: 48%;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        background: #eef2f8;
+        color: #000000;
+        cursor: pointer;
+}
+
+.sastavdalas {
+    margin-top: -10px;
+    font-size: smaller;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.vards_izmers {
+    color: #7e8ca3;
+    font-size: smaller;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.name {
+    height: 100px;
+    border: none;
+}
+
+.highlight {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid red;
+}
+
+#sekcija_1 {
+    margin-bottom: 40px;
+}
+
+#sekcija_2 {
+    margin-top: 40px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header_div">
+        <div class="logo_div">
+            <img src="./images/pica_logo_balts.png" alt="picu_darbnicas_logo" class="logo">
+        </div>
+    </div>
+</header>
+
+
+<main>
+
+    <div class="container">
+        <div>
+            <a href="./index.html">
+                <h1>Picas</h1>
+            </a>
+        </div>
+        <div>
+            <a href="./dzerieni.html">
+                <h1>Dzērieni</h1>
+            </a>
+        </div>
+        <div>
+            <a href="./piegade.html">
+                <h1>Piegāde</h1>
+            </a>
+        </div>
+        <div>
+            <a href="./piegade.html">
+                <h1>Kontakti</h1>
+            </a>
+        </div>
+        <div class="lang_container">
+            <div>
+                <button>LAT</button>
+            </div>
+            <div>
+                <button>ENG</button>
+            </div>
+            <div>
+                <button>RUS</button>
+            </div>
+        </div>
+    </div>
+<div id="sekcija_1">
+    <h1 class="virsraksts">Picu <span class="highlight">Top 3</span></h1>
+
+    <div class="container_picas">
+        <div class="all" id="chicken_curry">
+            <div class="photo">
+                <img src="./images/chicken_curry.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
+            </div>
+            <div class="name">
+                <h1 class="fonts_h1">Chicken Curry</h1>
+                <p class="sastavdalas">Vistas fileja, paprika, tomāti, konservēti ananasi, karija mērce</p>
+            </div>
+            <div>
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button id="button_30cm_1">30cm</button>
+                    <button id="button_20cm_1">20cm</button>
+                </div>
+            </div>
+            <h1 id="cena_chicken_curry">€ 9.10</h1>
+        </div>
+        
+
+        <div class="all" id="gruzinu">
+            <div class="photo">
+                <img src="./images/gruzinu.jpg" class="pizza_photo" alt="gruzinu_picas_foto">
+            </div>
+            <div class="name">
+                <h1 class="fonts_h1">Gruzīnu</h1>
+                <p class="sastavdalas">Salami, bekons, ķiploku mērce</p>
+            </div>
+            <div>
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button id="button_30cm_2">30cm</button>
+                    <button id="button_20cm_2">20cm</button>
+                </div>
+            </div>
+            <h1 id="cena_gruzinu">€ 9.10</h1>
+        </div>
+
+
+        <div class="all" id="new_york">
+            <div class="photo">
+                <img src="./images/new_york.jpg" class="pizza_photo" alt="new_york_picas_foto">
+            </div>
+            <div class="name">
+                <h1 class="fonts_h1">New York</h1>
+                <p class="sastavdalas">Šķiņķis, vistas fileja, šampinjoni, sīpoli, marinēti gurķi, ķiploku mērce</p>
+            </div>
+            <div>
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button id="button_30cm_3">30cm</button>
+                    <button id="button_20cm_3">20cm</button>
+                </div>
+            </div>
+            <h1 id="cena_new_york">€ 10.40</h1>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div id="sekcija_2">
+    <div class="container_picas">
+        <div class="all" id="margarita">
+            <div class="photo">
+                <img src="./images/margarita.jpg" class="pizza_photo" alt="margaritas_foto">
+            </div>
+            <div class="name">
+                <h1 class="fonts_h1">Margarita</h1>
+                <p class="sastavdalas">Extra siers, tomāti, oregano</p>
+            </div>
+            <div>
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button id="button_30cm_1">30cm</button>
+                    <button id="button_20cm_1">20cm</button>
+                </div>
+            </div>
+            <h1 id="cena_margarita">€ 6.90</h1>
+        </div>
+        
+
+        <div class="all" id="gruzinu">
+            <div class="photo">
+                <img src="./images/gruzinu.jpg" class="pizza_photo" alt="chicken_curry_pizza_photo">
+            </div>
+            <div class="name">
+                <h1 class="fonts_h1">Gruzīnu</h1>
+                <p class="sastavdalas">Salami, bekons, ķiploku mērce</p>
+            </div>
+            <div>
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button id="button_30cm_2">30cm</button>
+                    <button id="button_20cm_2">20cm</button>
+                </div>
+            </div>
+            <h1 id="cena_2">€ 9.10</h1>
+        </div>
+
+
+        <div class="all" id="new_york">
+            <div class="photo">
+                <img src="./images/new_york.jpg" class="pizza_photo" alt="chicken_curry_pizza_photo">
+            </div>
+            <div class="name">
+                <h1 class="fonts_h1">New York</h1>
+                <p class="sastavdalas">Šķiņķis, vistas fileja, šampinjoni, sīpoli, marinēti gurķi, ķiploku mērce</p>
+            </div>
+            <div>
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button id="button_30cm_3">30cm</button>
+                    <button id="button_20cm_3">20cm</button>
+                </div>
+            </div>
+            <h1 id="cena_3">€ 10.40</h1>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</main>
+<footer></footer>
+<script>
+    document.querySelector("#button_20cm_1").onclick = function() {
+        document.querySelector("#button_20cm_1").style.background = "#f58220";
+        document.querySelector("#button_20cm_1").style.color = "#ffffff";
+        document.querySelector("#button_30cm_1").style.background = "#eef2f8";
+        document.querySelector("#button_30cm_1").style.color = "#000000";
+        document.querySelector("#cena_chicken_curry").innerHTML = "€ 6.30";
+    };
+
+    document.querySelector("#button_30cm_1").onclick = function() {
+        document.querySelector("#button_30cm_1").style.background = "#f58220";
+        document.querySelector("#button_30cm_1").style.color = "#ffffff";
+        document.querySelector("#button_20cm_1").style.background = "#eef2f8";
+        document.querySelector("#button_20cm_1").style.color = "#000000";
+        document.querySelector("#cena_chicken_curry").innerHTML = "€ 9.10";
+    };
+
+
+
+    document.querySelector("#button_20cm_2").onclick = function() {
+        document.querySelector("#button_20cm_2").style.background = "#f58220";
+        document.querySelector("#button_20cm_2").style.color = "#ffffff";
+        document.querySelector("#button_30cm_2").style.background = "#eef2f8";
+        document.querySelector("#button_30cm_2").style.color = "#000000";
+        document.querySelector("#cena_gruzinu").innerHTML = "€ 6.30";
+    };
+
+    document.querySelector("#button_30cm_2").onclick = function() {
+        document.querySelector("#button_30cm_2").style.background = "#f58220";
+        document.querySelector("#button_30cm_2").style.color = "#ffffff";
+        document.querySelector("#button_20cm_2").style.background = "#eef2f8";
+        document.querySelector("#button_20cm_2").style.color = "#000000";
+        document.querySelector("#cena_gruzinu").innerHTML = "€ 9.10";
+    };
+
+
+
+    document.querySelector("#button_20cm_3").onclick = function() {
+        document.querySelector("#button_20cm_3").style.background = "#f58220";
+        document.querySelector("#button_20cm_3").style.color = "#ffffff";
+        document.querySelector("#button_30cm_3").style.background = "#eef2f8";
+        document.querySelector("#button_30cm_3").style.color = "#000000";
+        document.querySelector("#cena_new_york").innerHTML = "€ 7.30";
+    };
+
+    document.querySelector("#button_30cm_3").onclick = function() {
+        document.querySelector("#button_30cm_3").style.background = "#f58220";
+        document.querySelector("#button_30cm_3").style.color = "#ffffff";
+        document.querySelector("#button_20cm_3").style.background = "#eef2f8";
+        document.querySelector("#button_20cm_3").style.color = "#000000";
+        document.querySelector("#cena_new_york").innerHTML = "€ 10.40";
+    };
+
+
+    
+    
+</script>
+</body>
+</html>
