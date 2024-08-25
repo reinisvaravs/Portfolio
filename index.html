@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picu darbnīca</title>
+    <title>Picas | Picu darbnīca</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -120,7 +120,7 @@ a:hover {
 }
 
 
-#button_30cm_1, #button_30cm_2, #button_30cm_3 {
+.aktiva {
         width: 48%;
         height: 40px;
         border: none;
@@ -132,7 +132,7 @@ a:hover {
 
 
 
-#button_20cm_1, #button_20cm_2, #button_20cm_3 {
+.neaktiva {
         width: 48%;
         height: 40px;
         border: none;
@@ -177,9 +177,10 @@ hr {
     margin-top: 40px;
 }
 
-
-
-
+.coming_soon {
+    color: gray;
+    margin-left: 20px;
+}
 
     </style>
 </head>
@@ -229,11 +230,17 @@ hr {
             </div>
         </div>
     </div>
+
+
+
+<!-- Top 3 rinda -->
+
+
 <div id="sekcija_1">
     <h1 class="virsraksts">Picu <span class="highlight">Top 3</span></h1>
 
     <div class="container_picas">
-        <div class="all" id="chicken_curry">
+        <div class="all">
             <div class="photo">
                 <img src="./images/chicken_curry.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
             </div>
@@ -244,15 +251,15 @@ hr {
             <div>
                 <p class="vards_izmers">Izmērs</p>
                 <div class="pogas_div">
-                    <button id="button_30cm_1">30cm</button>
-                    <button id="button_20cm_1">20cm</button>
+                    <button class="aktiva" id="chicken_curry_30cm_top3">30cm</button>
+                    <button class="neaktiva" id="chicken_curry_20cm_top3">20cm</button>
                 </div>
             </div>
-            <h1 id="cena_chicken_curry">€ 9.10</h1>
+            <h1 id="cena_chicken_curry_top3">€ 9.10</h1>
         </div>
         
 
-        <div class="all" id="gruzinu">
+        <div class="all">
             <div class="photo">
                 <img src="./images/gruzinu.jpg" class="pizza_photo" alt="gruzinu_picas_foto">
             </div>
@@ -263,15 +270,15 @@ hr {
             <div>
                 <p class="vards_izmers">Izmērs</p>
                 <div class="pogas_div">
-                    <button id="button_30cm_2">30cm</button>
-                    <button id="button_20cm_2">20cm</button>
+                    <button class="aktiva" id="gruzinu_30cm">30cm</button>
+                    <button class="neaktiva" id="gruzinu_20cm">20cm</button>
                 </div>
             </div>
             <h1 id="cena_gruzinu">€ 9.10</h1>
         </div>
 
 
-        <div class="all" id="new_york">
+        <div class="all">
             <div class="photo">
                 <img src="./images/new_york.jpg" class="pizza_photo" alt="new_york_picas_foto">
             </div>
@@ -282,8 +289,8 @@ hr {
             <div>
                 <p class="vards_izmers">Izmērs</p>
                 <div class="pogas_div">
-                    <button id="button_30cm_3">30cm</button>
-                    <button id="button_20cm_3">20cm</button>
+                    <button class="aktiva" id="new_york_30cm">30cm</button>
+                    <button class="neaktiva" id="new_york_20cm">20cm</button>
                 </div>
             </div>
             <h1 id="cena_new_york">€ 10.40</h1>
@@ -293,11 +300,14 @@ hr {
 
 <hr>
 
+<!-- Rinda 1 -->
+
+
 <div id="sekcija_2">
     <div class="container_picas">
-        <div class="all" id="margarita">
+        <div class="all">
             <div class="photo">
-                <img src="./images/margarita.jpg" class="pizza_photo" alt="margaritas_foto">
+                <img src="./images/margarita.jpg" class="pizza_photo" alt="margarita_picas_foto">
             </div>
             <div class="name">
                 <h1 class="fonts_h1">Margarita</h1>
@@ -306,52 +316,54 @@ hr {
             <div>
                 <p class="vards_izmers">Izmērs</p>
                 <div class="pogas_div">
-                    <button id="button_30cm_1">30cm</button>
-                    <button id="button_20cm_1">20cm</button>
+                    <button class="aktiva" id="margarita_30cm">30cm</button>
+                    <button class="neaktiva" id="margarita_20cm">20cm</button>
                 </div>
             </div>
             <h1 id="cena_margarita">€ 6.90</h1>
         </div>
         
 
-        <div class="all" id="gruzinu">
+        <div class="all">
             <div class="photo">
-                <img src="./images/gruzinu.jpg" class="pizza_photo" alt="chicken_curry_pizza_photo">
+                <img src="./images/salami.jpg" class="pizza_photo" alt="salami_picas_foto">
             </div>
             <div class="name">
-                <h1 class="fonts_h1">Gruzīnu</h1>
-                <p class="sastavdalas">Salami, bekons, ķiploku mērce</p>
+                <h1 class="fonts_h1">Salami</h1>
+                <p class="sastavdalas">Salami</p>
             </div>
             <div>
                 <p class="vards_izmers">Izmērs</p>
                 <div class="pogas_div">
-                    <button id="button_30cm_2">30cm</button>
-                    <button id="button_20cm_2">20cm</button>
+                    <button class="aktiva" id="salami_30cm">30cm</button>
+                    <button class="neaktiva" id="salami_20cm">20cm</button>
                 </div>
             </div>
-            <h1 id="cena_2">€ 9.10</h1>
+            <h1 id="cena_salami">€ 7.40</h1>
         </div>
 
 
-        <div class="all" id="new_york">
+        <div class="all">
             <div class="photo">
-                <img src="./images/new_york.jpg" class="pizza_photo" alt="chicken_curry_pizza_photo">
+                <img src="./images/funghi.jpg" class="pizza_photo" alt="funghi_picas_foto">
             </div>
             <div class="name">
-                <h1 class="fonts_h1">New York</h1>
-                <p class="sastavdalas">Šķiņķis, vistas fileja, šampinjoni, sīpoli, marinēti gurķi, ķiploku mērce</p>
+                <h1 class="fonts_h1">Funghi</h1>
+                <p class="sastavdalas">Šampinjoni</p>
             </div>
             <div>
                 <p class="vards_izmers">Izmērs</p>
                 <div class="pogas_div">
-                    <button id="button_30cm_3">30cm</button>
-                    <button id="button_20cm_3">20cm</button>
+                    <button class="aktiva" id="funghi_30cm">30cm</button>
+                    <button class="neaktiva" id="funghi_20cm">20cm</button>
                 </div>
             </div>
-            <h1 id="cena_3">€ 10.40</h1>
+            <h1 id="cena_funghi">€ 7.40</h1>
         </div>
     </div>
 </div>
+
+<h1 class="coming_soon">Coming soon...</h1>
 
 
 
@@ -360,59 +372,142 @@ hr {
 </main>
 <footer></footer>
 <script>
-    document.querySelector("#button_20cm_1").onclick = function() {
-        document.querySelector("#button_20cm_1").style.background = "#f58220";
-        document.querySelector("#button_20cm_1").style.color = "#ffffff";
-        document.querySelector("#button_30cm_1").style.background = "#eef2f8";
-        document.querySelector("#button_30cm_1").style.color = "#000000";
-        document.querySelector("#cena_chicken_curry").innerHTML = "€ 6.30";
+
+
+
+// Top 3 rinda
+
+    const CC20 = document.querySelector("#chicken_curry_20cm_top3");
+    const CC30 = document.querySelector("#chicken_curry_30cm_top3");
+    const CCC = document.querySelector("#cena_chicken_curry_top3")
+    
+    CC20.onclick = function() {
+        CC20.style.background = "#f58220";
+        CC20.style.color = "#ffffff";
+        CC30.style.background = "#eef2f8";
+        CC30.style.color = "#000000";
+        CCC.innerHTML = "€ 6.30";
     };
 
-    document.querySelector("#button_30cm_1").onclick = function() {
-        document.querySelector("#button_30cm_1").style.background = "#f58220";
-        document.querySelector("#button_30cm_1").style.color = "#ffffff";
-        document.querySelector("#button_20cm_1").style.background = "#eef2f8";
-        document.querySelector("#button_20cm_1").style.color = "#000000";
-        document.querySelector("#cena_chicken_curry").innerHTML = "€ 9.10";
-    };
-
-
-
-    document.querySelector("#button_20cm_2").onclick = function() {
-        document.querySelector("#button_20cm_2").style.background = "#f58220";
-        document.querySelector("#button_20cm_2").style.color = "#ffffff";
-        document.querySelector("#button_30cm_2").style.background = "#eef2f8";
-        document.querySelector("#button_30cm_2").style.color = "#000000";
-        document.querySelector("#cena_gruzinu").innerHTML = "€ 6.30";
-    };
-
-    document.querySelector("#button_30cm_2").onclick = function() {
-        document.querySelector("#button_30cm_2").style.background = "#f58220";
-        document.querySelector("#button_30cm_2").style.color = "#ffffff";
-        document.querySelector("#button_20cm_2").style.background = "#eef2f8";
-        document.querySelector("#button_20cm_2").style.color = "#000000";
-        document.querySelector("#cena_gruzinu").innerHTML = "€ 9.10";
+    CC30.onclick = function() {
+        CC30.style.background = "#f58220";
+        CC30.style.color = "#ffffff";
+        CC20.style.background = "#eef2f8";
+        CC20.style.color = "#000000";
+        CCC.innerHTML = "€ 9.10";
     };
 
 
 
-    document.querySelector("#button_20cm_3").onclick = function() {
-        document.querySelector("#button_20cm_3").style.background = "#f58220";
-        document.querySelector("#button_20cm_3").style.color = "#ffffff";
-        document.querySelector("#button_30cm_3").style.background = "#eef2f8";
-        document.querySelector("#button_30cm_3").style.color = "#000000";
-        document.querySelector("#cena_new_york").innerHTML = "€ 7.30";
+    const gru20 = document.querySelector("#gruzinu_20cm");
+    const gru30 = document.querySelector("#gruzinu_30cm");
+    const gruC = document.querySelector("#cena_gruzinu")
+    
+    gru20.onclick = function() {
+        gru20.style.background = "#f58220";
+        gru20.style.color = "#ffffff";
+        gru30.style.background = "#eef2f8";
+        gru30.style.color = "#000000";
+        gruC.innerHTML = "€ 6.30";
     };
 
-    document.querySelector("#button_30cm_3").onclick = function() {
-        document.querySelector("#button_30cm_3").style.background = "#f58220";
-        document.querySelector("#button_30cm_3").style.color = "#ffffff";
-        document.querySelector("#button_20cm_3").style.background = "#eef2f8";
-        document.querySelector("#button_20cm_3").style.color = "#000000";
-        document.querySelector("#cena_new_york").innerHTML = "€ 10.40";
+    gru30.onclick = function() {
+        gru30.style.background = "#f58220";
+        gru30.style.color = "#ffffff";
+        gru20.style.background = "#eef2f8";
+        gru20.style.color = "#000000";
+        gruC.innerHTML = "€ 9.10";
     };
 
 
+
+    const nY20 = document.querySelector("#new_york_20cm");
+    const nY30 = document.querySelector("#new_york_30cm");
+    const NYC = document.querySelector("#cena_new_york")
+    
+    nY20.onclick = function() {
+        nY20.style.background = "#f58220";
+        nY20.style.color = "#ffffff";
+        nY30.style.background = "#eef2f8";
+        nY30.style.color = "#000000";
+        NYC.innerHTML = "€ 7.30";
+    };
+
+    nY30.onclick = function() {
+        nY30.style.background = "#f58220";
+        nY30.style.color = "#ffffff";
+        nY20.style.background = "#eef2f8";
+        nY20.style.color = "#000000";
+        NYC.innerHTML = "€ 10.40";
+    };
+
+
+
+// Rinda 1
+
+    const mar20 = document.querySelector("#margarita_20cm");
+    const mar30 = document.querySelector("#margarita_30cm");
+    const marC = document.querySelector("#cena_margarita")
+    
+    mar20.onclick = function() {
+        mar20.style.background = "#f58220";
+        mar20.style.color = "#ffffff";
+        mar30.style.background = "#eef2f8";
+        mar30.style.color = "#000000";
+        marC.innerHTML = "€ 5.00";
+    };
+
+    mar30.onclick = function() {
+        mar30.style.background = "#f58220";
+        mar30.style.color = "#ffffff";
+        mar20.style.background = "#eef2f8";
+        mar20.style.color = "#000000";
+        marC.innerHTML = "€ 6.90";
+    };
+
+
+
+    const sal20 = document.querySelector("#salami_20cm");
+    const sal30 = document.querySelector("#salami_30cm");
+    const salC = document.querySelector("#cena_salami")
+    
+    sal20.onclick = function() {
+        sal20.style.background = "#f58220";
+        sal20.style.color = "#ffffff";
+        sal30.style.background = "#eef2f8";
+        sal30.style.color = "#000000";
+        salC.innerHTML = "€ 5.20";
+    };
+
+    sal30.onclick = function() {
+        sal30.style.background = "#f58220";
+        sal30.style.color = "#ffffff";
+        sal20.style.background = "#eef2f8";
+        sal20.style.color = "#000000";
+        salC.innerHTML = "€ 7.40";
+    };
+
+
+
+    const fun20 = document.querySelector("#funghi_20cm");
+    const fun30 = document.querySelector("#funghi_30cm");
+    const funC = document.querySelector("#cena_funghi")
+    
+    fun20.onclick = function() {
+        fun20.style.background = "#f58220";
+        fun20.style.color = "#ffffff";
+        fun30.style.background = "#eef2f8";
+        fun30.style.color = "#000000";
+        funC.innerHTML = "€ 5.20";
+    };
+
+    fun30.onclick = function() {
+        fun30.style.background = "#f58220";
+        fun30.style.color = "#ffffff";
+        fun20.style.background = "#eef2f8";
+        fun20.style.color = "#000000";
+        funC.innerHTML = "€ 7.40";
+    };
     
     
 </script>
