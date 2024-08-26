@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-body {
+<style>
+    body {
     margin: 0;
     background-color: #ffffff;
     overflow-x: hidden; 
@@ -121,7 +121,7 @@ header {
 
 .aktiva {
         width: 48%;
-        height: 40px;
+        height: 35px;
         border: none;
         border-radius: 20px;
         background: #f58220;
@@ -131,7 +131,7 @@ header {
 
 .neaktiva {
         width: 48%;
-        height: 40px;
+        height: 35px;
         border: none;
         border-radius: 20px;
         background: #eef2f8;
@@ -182,7 +182,53 @@ hr {
     display: none;
 }
 
+.cena {
+    font-size: 22px;
+}
 
+.cena_grozs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 20px;
+
+    button {
+        width: 60%;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        background: #ff0000;
+        color: #ffffff;
+        cursor: pointer;
+        margin: auto;
+    }
+}
+
+.cart {
+    width: 20px;
+}
+
+#myDiv {
+    position: fixed;
+    left: 35%;
+    top: 90%;
+    display: none;
+}
+
+#grozs_button {
+        width: auto;
+        min-width: 300px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        background: #ff0000;
+        color: #ffffff;
+        cursor: pointer;
+        margin: auto;
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+}
 
 
 
@@ -253,7 +299,7 @@ hr {
         height: 30px;
     }
 }
-    </style>
+</style>
 </head>
 <body>
 
@@ -296,6 +342,13 @@ hr {
 
 <!-- Top 3 rinda -->
 
+<div id="myDiv">
+    <button id="grozs_button">
+            <img class="cart" src="./images/cart.png" alt="cart_image">
+            <span id="final_cena">0</span> € | Pasūtīt
+    </button>
+</div>
+
 <div class="pages" id="page1">
 <div id="sekcija_1">
     <h1 class="virsraksts">Picu <span class="highlight">Top 3</span></h1>
@@ -317,7 +370,13 @@ hr {
                     <button class="neaktiva" id="chicken_curry_20cm_top3">20cm</button>
                 </div>
             </div>
-            <h1 class="cena" id="cena_chicken_curry_top3">€ 9.10</h1>
+                <div class="cena_grozs">
+                    <h1 class="cena" id="cena_chicken_curry_top3">€ 9.10</h1>
+                    <button id="cart_chicken_curry">
+                        <img class="cart" src="./images/cart.png" alt="cart_image">
+                        Pievienot
+                    </button>
+                </div>
             </div>
         </div>
         
@@ -493,7 +552,6 @@ function showPage(page) {
     };
 
 
-
     const gru20 = document.querySelector("#gruzinu_20cm");
     const gru30 = document.querySelector("#gruzinu_30cm");
     const gruC = document.querySelector("#cena_gruzinu")
@@ -603,8 +661,12 @@ function showPage(page) {
         fun20.style.color = "#000000";
         funC.innerHTML = "€ 7.40";
     };
-    
-    
+
+
+
+
+
+
 
 </script>
 </body>
