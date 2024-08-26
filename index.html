@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,7 +96,6 @@ header {
 
 .all {
     width: 30%;
-    border: none;
 }
 
 .pogas_div {
@@ -153,8 +152,7 @@ header {
 }
 
 .name {
-    height: 100px;
-    border: none;
+    height: 70px;
 }
 
 .highlight {
@@ -182,6 +180,44 @@ hr {
     display: none;
 }
 
+@media screen and (max-width: 768px) {
+    .all {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        
+
+        .fonts_h1 {
+            font-size: 18px;
+        }    
+    }
+    .container_picas {
+        flex-direction: column;
+    }
+    .pizza_photo {
+        width: 330px;
+    }
+    .sastavdalas {
+        font-size: 14px;
+    }
+    .kolona {
+        display: flex;
+        flex-direction: column;
+    }
+    .pogas_div {
+        width: 70%;
+    }
+    .aktiva, .neaktiva {
+        width: 50%;
+    }
+    .cena {
+        font-size: 26px;
+    }
+}
+
+
 
 
     </style>
@@ -199,16 +235,16 @@ hr {
 <main>
     <div class="container">
         <div class="lapas">
-            <button data-page="page1">Picas</button>
+            <button data-page="page1" class="page_buttons">Picas</button>
         </div>
         <div class="lapas">
-            <button data-page="page2">Dzērieni</button>
+            <button data-page="page2" class="page_buttons">Dzērieni</button>
         </div>
         <div class="lapas">
-            <button data-page="page3">Piegāde</button>
+            <button data-page="page3" class="page_buttons">Piegāde</button>
         </div>
         <div class="lapas">
-            <button data-page="page4">Kontakti</button>
+            <button data-page="page4" class="page_buttons">Kontakti</button>
         </div>
         <div class="lang_container">
             <div>
@@ -236,18 +272,20 @@ hr {
             <div class="photo">
                 <img src="./images/chicken_curry.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
             </div>
+            <div class="kolona">
             <div class="name">
                 <h1 class="fonts_h1">Chicken Curry</h1>
                 <p class="sastavdalas">Vistas fileja, paprika, tomāti, konservēti ananasi, karija mērce</p>
             </div>
-            <div>
+            <div class="bottom">
                 <p class="vards_izmers">Izmērs</p>
                 <div class="pogas_div">
                     <button class="aktiva" id="chicken_curry_30cm_top3">30cm</button>
                     <button class="neaktiva" id="chicken_curry_20cm_top3">20cm</button>
                 </div>
             </div>
-            <h1 id="cena_chicken_curry_top3">€ 9.10</h1>
+            <h1 class="cena" id="cena_chicken_curry_top3">€ 9.10</h1>
+            </div>
         </div>
         
 
@@ -382,7 +420,7 @@ hr {
             document.querySelector(`#${page}`).style.display = "block";
         }
 
-            document.querySelectorAll("button").forEach(button => {
+            document.querySelectorAll(".page_buttons").forEach(button => {
                 button.onclick = function() {
                     showPage(this.dataset.page);
                 }
