@@ -121,25 +121,13 @@ hr {
     border: 1px solid black;
 }
 
-#sekcija_1 {
-    margin-bottom: 40px;
-}
-
-#sekcija_2 {
-    margin-top: 40px;
-}
-
 .coming_soon {
     color: gray;
     margin-left: 20px;
 }
 
-#page2, #page3, #page4 {
+.pages {
     display: none;
-}
-
-#page1 {
-    display: block;
 }
 
 .cena {
@@ -173,6 +161,8 @@ hr {
 .pievienot {
     width: 50%;
 }
+
+
 
 
 

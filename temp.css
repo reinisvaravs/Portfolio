@@ -22,10 +22,13 @@
 }
 
 #myDiv {
+    margin: 0;
     position: fixed;
-    left: 35%;
     top: 90%;
-    display: block;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
 #grozs_button {

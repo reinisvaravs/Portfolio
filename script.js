@@ -1,19 +1,28 @@
-// function showPage(page) {
-//     document.querySelectorAll(".pages").forEach(div => {
-//         div.style.display = "none";
-//     })
-//     document.querySelector(`#${page}`).style.display = "block";
-// }
+function showPage(page) {
+    document.querySelectorAll(".pages").forEach(div => {
+        div.style.display = "none";
+    })
+    document.querySelector(`#${page}`).style.display = "block";
+}
 
-//     document.querySelectorAll(".page_buttons").forEach(button => {
-//         button.onclick = function() {
-//             showPage(this.dataset.page);
-//         }
-//     });
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".page_buttons").forEach(button => {
+        button.onclick = function() {
+            showPage(this.dataset.page);
+        }
+    });
+});
 
-// window.onload = function() {
-//     document.querySelector("#page1").style.display = "block";
-// }
+window.onload = function() {
+document.querySelector("#page1").style.display = "block";
+};
+
+
+
+
+
+
+
 
 
 // Top 3 rinda
@@ -38,35 +47,6 @@ CC30.onclick = function() {
     CC20.style.color = "#000000";
     CCC.innerHTML = "€ 9.10";
 };
-
-//counter
-let money = 0;
-
-//hidden div
-const myDiv = document.querySelector("#myDiv");
-const cartBtn = document.querySelector("#grozs_button");
-const fCena = document.querySelector("#final_cena");
-
-//pievienot poga
-const pievBtn = document.querySelector("#cart_chicken_curry");
-
-let a = 9.10;
-let b = 6.30;
-
-pievBtn.onclick = function() {    
-    money = Math.round((money + a) * 100) / 100;
-
-    console.log(money);
-
-    fCena.innerHTML = money.toFixed(2) + "€ | Pasūtīt";
-    myDiv.style.display = "block";
-}
-
-
-
-
-
-
 
 
 
@@ -113,75 +93,65 @@ nY30.onclick = function() {
 };
 
 
-
-// Rinda 1
-
-const mar20 = document.querySelector("#margarita_20cm");
-const mar30 = document.querySelector("#margarita_30cm");
-const marC = document.querySelector("#cena_margarita")
-
-mar20.onclick = function() {
-    mar20.style.background = "#f58220";
-    mar20.style.color = "#ffffff";
-    mar30.style.background = "#eef2f8";
-    mar30.style.color = "#000000";
-    marC.innerHTML = "€ 5.00";
-};
-
-mar30.onclick = function() {
-    mar30.style.background = "#f58220";
-    mar30.style.color = "#ffffff";
-    mar20.style.background = "#eef2f8";
-    mar20.style.color = "#000000";
-    marC.innerHTML = "€ 6.90";
-};
+//money total
+let money = 0;
 
 
+//hidden div elements
+const myDiv = document.querySelector("#myDiv");
+const fCena = document.querySelector("#final_cena");
 
-const sal20 = document.querySelector("#salami_20cm");
-const sal30 = document.querySelector("#salami_30cm");
-const salC = document.querySelector("#cena_salami")
-
-sal20.onclick = function() {
-    sal20.style.background = "#f58220";
-    sal20.style.color = "#ffffff";
-    sal30.style.background = "#eef2f8";
-    sal30.style.color = "#000000";
-    salC.innerHTML = "€ 5.20";
-};
-
-sal30.onclick = function() {
-    sal30.style.background = "#f58220";
-    sal30.style.color = "#ffffff";
-    sal20.style.background = "#eef2f8";
-    sal20.style.color = "#000000";
-    salC.innerHTML = "€ 7.40";
-};
+//pievienot grozam pogas
+const buyCC = document.querySelector("#cart_chicken_curry");
+const buyG = document.querySelector("#cart_gruzinu");
+const buyNY = document.querySelector("#cart_new_york");
 
 
+buyCC.onclick = function() {
+    if (CCC.innerHTML === "€ 9.10") {
+        money = Math.round((money + 9.10) * 100) / 100;
+        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    } 
+    else {
+        money = Math.round((money + 6.30) * 100) / 100;
+        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    }
+    myDiv.style.display = "block";
+    console.log("Pasūtijuma cena ir " + money.toFixed(2) + "€");
+}
 
-const fun20 = document.querySelector("#funghi_20cm");
-const fun30 = document.querySelector("#funghi_30cm");
-const funC = document.querySelector("#cena_funghi")
+buyG.onclick = function() {
+    if (gruC.innerHTML === "€ 9.10") {
+        money = Math.round((money + 9.10) * 100) / 100;
+        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    } 
+    else {
+        money = Math.round((money + 6.30) * 100) / 100;
+        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    }
+    myDiv.style.display = "block";
+    console.log("Pasūtijuma cena ir " + money.toFixed(2) + "€");
+}
 
-fun20.onclick = function() {
-    fun20.style.background = "#f58220";
-    fun20.style.color = "#ffffff";
-    fun30.style.background = "#eef2f8";
-    fun30.style.color = "#000000";
-    funC.innerHTML = "€ 5.20";
-};
+buyNY.onclick = function() {
+    if (NYC.innerHTML === "€ 10.40") {
+        money = Math.round((money + 10.40) * 100) / 100;
+        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    } 
+    else {
+        money = Math.round((money + 7.30) * 100) / 100;
+        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    }
+    myDiv.style.display = "block";
+    console.log("Pasūtijuma cena ir " + money.toFixed(2) + "€");
+}
 
-fun30.onclick = function() {
-    fun30.style.background = "#f58220";
-    fun30.style.color = "#ffffff";
-    fun20.style.background = "#eef2f8";
-    fun20.style.color = "#000000";
-    funC.innerHTML = "€ 7.40";
-};
+const openCart = document.querySelector("#grozs_button");
+openCart.onclick = function() {
 
 
 
 
 
-
+    console.log("x")
+}
