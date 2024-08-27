@@ -400,6 +400,11 @@ hr {
     .pievienot {
         margin-top: 12px;
     }
+    .info {
+        flex-direction: column;
+        height: 80%;
+        margin-right: 20px;
+    }
 }
 
 
@@ -418,7 +423,7 @@ hr {
     .cena {
         font-size: 20px;
     }
-}
+} 
 
 @media screen and (max-width: 450px) {
     .cena {
@@ -459,6 +464,23 @@ hr {
         button {
             font-size: 14px;
         }
+    }
+    .pilseta, .tel {
+        h1 {
+            font-size: 16px;
+        }
+    }
+    .loc_icon, .tel_icon {
+        width: 15px;
+        height: 15px;
+        margin-top: 11px;
+        margin-right: -6px;
+    }
+    .info {
+        margin-right: 10px;
+    }
+    header {
+        height: 100px;
     }
 }
 
