@@ -1,0 +1,386 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    overflow-x: hidden; 
+}
+
+.fonts_h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.container {
+    background-color: #f58220;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    justify-content: space-evenly;
+} 
+
+.lapas {
+    display: flex;
+    width: 25%;
+
+    button {
+        color: rgb(227, 227, 227);
+        background-color: #f58220;
+        border: none;
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        margin: auto;
+    }
+
+    button:hover {
+        color: #ffffff;
+    }
+}
+
+.container_picas {
+    margin: auto;
+    width: 90%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.all {
+    width: 30%;
+}
+
+.pogas_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.virsraksts {
+    text-align: center;
+    font-size: 45px;
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.pizza_photo {
+    width: 100%;
+}
+
+
+.aktiva {
+        width: 48%;
+        height: 35px;
+        border: none;
+        border-radius: 20px;
+        background: #f58220;
+        color: #ffffff;
+        cursor: pointer;
+}
+
+.neaktiva {
+        width: 48%;
+        height: 35px;
+        border: none;
+        border-radius: 20px;
+        background: #eef2f8;
+        color: #000000;
+        cursor: pointer;
+}
+
+.sastavdalas {
+    margin-top: -10px;
+    font-size: smaller;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.vards_izmers {
+    color: #7e8ca3;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.name {
+    height: 70px;
+}
+
+.highlight {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+#sekcija_1 {
+    margin-bottom: 40px;
+}
+
+#sekcija_2 {
+    margin-top: 40px;
+}
+
+.coming_soon {
+    color: gray;
+    margin-left: 20px;
+}
+
+#page2, #page3, #page4 {
+    display: none;
+}
+
+#page1 {
+    display: block;
+}
+
+.cena {
+    font-size: 22px;
+}
+
+.cena_grozs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pievienot {
+        width: 60%;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        background: #ff0000;
+        color: #ffffff;
+        cursor: pointer;
+        margin: auto;
+}
+
+.cart {
+    width: 20px;
+    margin-bottom: -2px;
+}
+
+.pievienot {
+    width: 50%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .all {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 230px;
+    }
+    .container_picas {
+        flex-direction: column;
+    }
+    .sastavdalas {
+        font-size: 14px;
+    }
+    .kolona {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        width: 50%;
+        height: 100%;
+    }
+    .pizza_photo {
+        width: 100%;
+    }
+    .pogas_div {
+        width: 70%;
+    }
+    .aktiva, .neaktiva {
+        width: 50%;
+    }
+    .cena {
+        font-size: 26px;
+    }
+    .fonts_h1 {
+        font-size: 18px;
+    } 
+    .photo {
+        width: 50%;
+    }
+    .lapas {
+        button {
+            font-size: 16px;
+        }
+    }
+    .cena_grozs {
+        margin-top: 10px;
+    }
+    .rinda {
+        margin-top: -5px;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    .all {
+        height: auto;
+    }
+    .kolona {
+        margin-left: -5px;
+    }
+    .pizza_photo {
+        width: 90%;
+    }
+    .cena {
+        font-size: 24px;
+    }
+    .sastavdalas {
+        font-size: 12px;
+    }
+    .aktiva, .neaktiva {
+        width: 50%;
+        height: 30px;
+    }
+    .pogas_div {
+        width: 70%;
+    }
+    .name {
+        height: 50px;
+        margin-top: -10px;
+    }
+    .rinda {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-top: 20px;
+    }
+    .cena_grozs {
+        margin-top: 5px;
+    }
+    .pievienot {
+        width: 50%;
+        height: 30px;
+        margin-top: 8px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .cena {
+        font-size: 22px;
+    }
+    .fonts_h1 {
+        font-size: 14px;
+    }
+    .sastavdalas {
+        font-size: 10px;
+    }
+    .vards_izmers {
+        font-size: 12px;
+    }
+    .aktiva, .neaktiva {
+        font-size: 10px;
+        height: 30px;
+    }
+    .rinda {
+        margin-top: 0;
+    }
+    .cena_grozs {
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    .pievienot {
+        margin-top: 12px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .pievienot {
+        width: 40%;
+        font-size: 10px;
+        margin-top: 8px;
+    }
+    .aktiva, .neaktiva {
+        height: 25px;
+    }
+    .cart {
+        width: 15px;
+    }
+    .cena {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cena {
+        font-size: 18px;
+    }
+    .cena_grozs {
+        margin-top: -5px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cart {
+        width: 10px;
+    }
+    .pievienot {
+        width: 45%;
+        height: 25px;
+        font-size: 9px;
+    }
+    .cena_grozs {
+        margin-top: 0;
+        margin-right: 0;
+    }
+    .cena {
+        font-size: 16px;
+    }
+    .sastavdalas {
+        font-size: 8px;
+    }
+    .aktiva, .neaktiva {
+        height: 20px;
+    }
+    .vards_izmers {
+        font-size: 10px;
+    }
+    .lapas {
+        button {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .cena {
+        font-size: 14px;
+    }
+    .pievienot {
+        width: 40%;
+        height: 20px;
+        font-size: 8px;
+        margin-top: 5px;
+    }
+    .cart {
+        width: 8px;
+    }
+    .aktiva, .neaktiva {
+        height: 16px;
+        font-size: 8px;
+    }
+    .vards_izmers {
+        font-size: 8px;
+    }
+}
