@@ -271,6 +271,32 @@ hr {
     font-family: "Montserrat", sans-serif;
 }
 
+#atpakal_div {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#atpakal {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background: #e5e5e5;
+    color: #515151;
+    cursor: pointer;
+}
+
+
+.kopa {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+}
+
+
 
 /* ========= RESPONSIVE DESIGN ========= */
 
@@ -503,5 +529,10 @@ hr {
     }
     .vards_izmers {
         font-size: 8px;
+    }
+    .lapas {
+        button {
+            font-size: 12px;
+        }
     }
 }

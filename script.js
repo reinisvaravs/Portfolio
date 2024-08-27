@@ -1,3 +1,6 @@
+/* ========= LOADING PAGES ========= */
+
+
 function showPage(page) {
     document.querySelectorAll(".pages").forEach(div => {
         div.style.display = "none";
@@ -5,27 +8,38 @@ function showPage(page) {
     document.querySelector(`#${page}`).style.display = "block";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".page_buttons").forEach(button => {
-        button.onclick = function() {
-            showPage(this.dataset.page);
-        }
-    });
+document.querySelectorAll(".page_buttons").forEach(button => {
+    button.onclick = function() {
+        showPage(this.dataset.page);
+    }
 });
 
+
 window.onload = function() {
-document.querySelector("#page1").style.display = "block";
+    document.querySelector("#page1").style.display = "block";
 };
 
 
 
 
 
+/* ========= CART ~ PAGE 6 ========= */
 
 
 
+let money = 0;
 
-// Top 3 rinda
+
+const kopa = document.querySelector("#kopa");
+
+function totalAmount() {
+    kopa.innerHTML = "Kopā: " + money.toFixed(2) + "€";
+};
+
+
+
+/* ========= BUTTONS ========= */
+
 
 
 const CC20 = document.querySelector("#chicken_curry_20cm_top3");
@@ -93,15 +107,13 @@ nY30.onclick = function() {
 };
 
 
-//money total
-let money = 0;
+
+/* ========= PURCHASING ========= */
 
 
-//hidden div elements
 const myDiv = document.querySelector("#myDiv");
 const fCena = document.querySelector("#final_cena");
 
-//pievienot grozam pogas
 const buyCC = document.querySelector("#cart_chicken_curry");
 const buyG = document.querySelector("#cart_gruzinu");
 const buyNY = document.querySelector("#cart_new_york");
@@ -117,7 +129,8 @@ buyCC.onclick = function() {
         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
     }
     myDiv.style.display = "block";
-    console.log("Pasūtijuma cena ir " + money.toFixed(2) + "€");
+
+    totalAmount();
 }
 
 buyG.onclick = function() {
@@ -130,7 +143,8 @@ buyG.onclick = function() {
         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
     }
     myDiv.style.display = "block";
-    console.log("Pasūtijuma cena ir " + money.toFixed(2) + "€");
+
+    totalAmount();
 }
 
 buyNY.onclick = function() {
@@ -143,15 +157,20 @@ buyNY.onclick = function() {
         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
     }
     myDiv.style.display = "block";
-    console.log("Pasūtijuma cena ir " + money.toFixed(2) + "€");
+
+    totalAmount();
 }
 
-const openCart = document.querySelector("#grozs_button");
-openCart.onclick = function() {
 
 
 
 
 
-    console.log("x")
-}
+
+
+
+
+
+
+
+
