@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picas | Picu darbnīca</title>
+    <title>Picas | Picu darbnīca 2</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="item.css">
 </head>
 <body>
 
@@ -57,7 +56,7 @@
     <button data-page="page6" class="page_buttons" id="grozs_button">
             <div class="container-1">
                 <img class="cart-1" src="./images/cart.png" alt="cart_image">
-                <h1 class="nauda-1" id="final_cena">0€ | Pasūtīt</h1>
+                <h1 class="nauda-1" id="fCena">0€ | Pasūtīt</h1>
             </div>
     </button>
 </div>
@@ -82,21 +81,28 @@
                 <div class="rinda">
                     <p class="vards_izmers">Izmērs</p>
                     <div class="pogas_div">
-                        <button class="aktiva" id="chicken_curry_30cm_top3">30cm</button>
-                        <button class="neaktiva" id="chicken_curry_20cm_top3">20cm</button>
+                        <button class="aktiva" id="CC30">30cm</button>
+                        <button class="neaktiva" id="CC20">20cm</button>
                     </div>
                 </div>
                 <div class="cena_grozs">
-                    <h1 class="cena" id="cena_chicken_curry_top3">€ 9.10</h1>
-                    <button class="pievienot" id="cart_chicken_curry">
+                    <h1 class="cena" id="cenaCC">€ 9.10</h1>
+                    <button class="pievienot" id="buyCC">
                         <img class="cart" src="./images/cart.png" alt="cart_image">
                         Pievienot
                     </button>
-                    <div class="skaititajs_parent">
+                    <div class="skaititajs_parent" id="skaitCC30">
                         <div class="skaititajs">
-                            <button id="minus_0">-</button>
-                            <h1>0</h1>
-                            <button id="plus_0">+</button>
+                            <button id="minusCC30">-</button>
+                            <h1 id="counterCC30">0</h1>
+                            <button id="plusCC30">+</button>
+                        </div>
+                    </div>
+                    <div class="skaititajs_parent" id="skaitCC20">
+                        <div class="skaititajs">
+                            <button id="minusCC20">-</button>
+                            <h1 id="counterCC20">0</h1>
+                            <button id="plusCC20">+</button>
                         </div>
                     </div>
                 </div>
@@ -179,51 +185,55 @@
     <div id="atpakal_div">
         <button class="page_buttons" data-page="page1" id="atpakal">Atpakaļ</button>
     </div>
-    <h1 class="virsraksts-1">Pasūtīt</h1>
+    <h1 class="virsraksts-1">Grozs</h1>
     <div class="cart_items">
-        <div class="item" id="item_1">
-            <div class="kreisa_puse_div">
-                <div class="bilde_div">
-                    <img id="bilde_1" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+        <div id="itemCC30">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img id="bilde_1" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 id="nosaukums_1" class="nosaukums">Chicken Curry</h1>
+                        <h1 id="izmers_1" class="izmers">30cm</h1>
+                    </div>
                 </div>
-                <div class="nosaukums_div">
-                    <h1 id="nosaukums_1" class="nosaukums">Chicken Curry</h1>
-                    <h1 id="izmers_1" class="izmers">30cm</h1>
-                </div>
-            </div>
-            <div class="laba_puse_div">
-                <div class="cena_display">
-                    <h1 id="item_cena_1">€ 9.10</h1>
-                </div>
-                <div class="counter_parent">
-                    <div class="counter">
-                        <button id="minus_1" class="minus">-</button>
-                        <h1 id="counter_1">0</h1>
-                        <button id="plus_1" class="plus">+</button>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="CC30GrozsCena">€ 9.10</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusCC30Grozs" class="minus">-</button>
+                            <h1 id="counterCC30Grozs">0</h1>
+                            <button id="plusCC30Grozs" class="plus">+</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="item" id="item_2">
-            <div class="kreisa_puse_div">
-                <div class="bilde_div">
-                    <img id="bilde_2" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+        <div id="itemCC20">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img id="bilde_2" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 id="nosaukums_2" class="nosaukums">Chicken Curry</h1>
+                        <h1 id="izmers_2" class="izmers">20cm</h1>
+                    </div>
                 </div>
-                <div class="nosaukums_div">
-                    <h1 id="nosaukums_2" class="nosaukums">Chicken Curry</h1>
-                    <h1 id="izmers_2" class="izmers">20cm</h1>
-                </div>
-            </div>
-            <div class="laba_puse_div">
-                <div class="cena_display">
-                    <h1 id="item_cena_2">€ 6.30</h1>
-                </div>
-                <div class="counter_parent">
-                    <div class="counter">
-                        <button id="minus_2" class="minus">-</button>
-                        <h1 id="counter_2">0</h1>
-                        <button id="plus_2" class="plus">+</button>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="CC20GrozsCena">€ 6.30</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusCC20Grozs" class="minus">-</button>
+                            <h1 id="counterCC20Grozs">0</h1>
+                            <button id="plusCC20Grozs" class="plus">+</button>
+                        </div>
                     </div>
                 </div>
             </div>
