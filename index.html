@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="item.css">
 </head>
 <body>
 
@@ -91,6 +92,13 @@
                         <img class="cart" src="./images/cart.png" alt="cart_image">
                         Pievienot
                     </button>
+                    <div class="skaititajs_parent">
+                        <div class="skaititajs">
+                            <button id="minus_0">-</button>
+                            <h1>0</h1>
+                            <button id="plus_0">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -171,7 +179,56 @@
     <div id="atpakal_div">
         <button class="page_buttons" data-page="page1" id="atpakal">Atpakaļ</button>
     </div>
-    <h1 class="virsraksts">Grozs</h1>
+    <h1 class="virsraksts-1">Pasūtīt</h1>
+    <div class="cart_items">
+        <div class="item" id="item_1">
+            <div class="kreisa_puse_div">
+                <div class="bilde_div">
+                    <img id="bilde_1" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                </div>
+                <div class="nosaukums_div">
+                    <h1 id="nosaukums_1" class="nosaukums">Chicken Curry</h1>
+                    <h1 id="izmers_1" class="izmers">30cm</h1>
+                </div>
+            </div>
+            <div class="laba_puse_div">
+                <div class="cena_display">
+                    <h1 id="item_cena_1">€ 9.10</h1>
+                </div>
+                <div class="counter_parent">
+                    <div class="counter">
+                        <button id="minus_1" class="minus">-</button>
+                        <h1 id="counter_1">0</h1>
+                        <button id="plus_1" class="plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" id="item_2">
+            <div class="kreisa_puse_div">
+                <div class="bilde_div">
+                    <img id="bilde_2" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                </div>
+                <div class="nosaukums_div">
+                    <h1 id="nosaukums_2" class="nosaukums">Chicken Curry</h1>
+                    <h1 id="izmers_2" class="izmers">20cm</h1>
+                </div>
+            </div>
+            <div class="laba_puse_div">
+                <div class="cena_display">
+                    <h1 id="item_cena_2">€ 6.30</h1>
+                </div>
+                <div class="counter_parent">
+                    <div class="counter">
+                        <button id="minus_2" class="minus">-</button>
+                        <h1 id="counter_2">0</h1>
+                        <button id="plus_2" class="plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <h1 class="kopa" id="kopa">Grozs ir tukšs</h1>
 </div>
 

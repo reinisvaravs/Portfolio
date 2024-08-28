@@ -127,6 +127,12 @@ body {
 .virsraksts {
     text-align: center;
     font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.virsraksts-1 {
+    text-align: left;
+    font-size: 35px;
     padding-left: 20px;
     font-family: "Montserrat", sans-serif;
 }
@@ -212,15 +218,12 @@ hr {
         color: #ffffff;
         cursor: pointer;
         margin: auto;
+        width: 50%;
 }
 
 .cart {
     width: 20px;
     margin-bottom: -2px;
-}
-
-.pievienot {
-    width: 50%;
 }
 
 

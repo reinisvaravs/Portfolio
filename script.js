@@ -19,22 +19,30 @@ window.onload = function() {
     document.querySelector("#page1").style.display = "block";
 };
 
+// window.onload = function() {
+//     document.querySelector("#page6").style.display = "block";
+// };
 
 
-
-
-/* ========= CART ~ PAGE 6 ========= */
-
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM fully loaded and parsed");
+    buyCC.style.display = "none";
+    
+});
 
 
 let money = 0;
+let count_1 = 0;
+let count_2 = 0;
 
-
-const kopa = document.querySelector("#kopa");
 
 function totalAmount() {
-    kopa.innerHTML = "Kopā: " + money.toFixed(2) + "€";
+    document.querySelector("#kopa").innerHTML = "Kopā: " + money.toFixed(2) + "€";
 };
+
+function showHiddenCart() {
+    myDiv.style.display = "block";
+}
 
 
 
@@ -118,8 +126,10 @@ const buyCC = document.querySelector("#cart_chicken_curry");
 const buyG = document.querySelector("#cart_gruzinu");
 const buyNY = document.querySelector("#cart_new_york");
 
+const skaitCC = document.querySelector("#skaitCC");
 
-buyCC.onclick = function() {
+
+function pirktCC() {
     if (CCC.innerHTML === "€ 9.10") {
         money = Math.round((money + 9.10) * 100) / 100;
         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
@@ -128,49 +138,159 @@ buyCC.onclick = function() {
         money = Math.round((money + 6.30) * 100) / 100;
         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
     }
-    myDiv.style.display = "block";
-
+    showHiddenCart()
     totalAmount();
 }
 
-buyG.onclick = function() {
-    if (gruC.innerHTML === "€ 9.10") {
-        money = Math.round((money + 9.10) * 100) / 100;
+function nonemtCC() {
+    if (CCC.innerHTML === "€ 9.10") {
+        money = Math.round((money - 9.10) * 100) / 100;
         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
     } 
     else {
-        money = Math.round((money + 6.30) * 100) / 100;
+        money = Math.round((money - 6.30) * 100) / 100;
         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
     }
-    myDiv.style.display = "block";
+    showHiddenCart()
+    totalAmount();
+}
+
+buyCC.onclick = function() {
+    pirktCC();
+}
+
+// function pirktG() {
+//     if (gruC.innerHTML === "€ 9.10") {
+//         money = Math.round((money + 9.10) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     } 
+//     else {
+//         money = Math.round((money + 6.30) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     }
+//     showHiddenCart()
+//     totalAmount();
+// }
+
+// function nonemtG() {
+//     if (gruC.innerHTML === "€ 9.10") {
+//         money = Math.round((money - 9.10) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     } 
+//     else {
+//         money = Math.round((money - 6.30) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     }
+//     showHiddenCart()
+//     totalAmount();
+// }
+
+// buyG.onclick = function () {
+//     pirktG();
+// }
+
+// function pirktNY() {
+//     if (NYC.innerHTML === "€ 10.40") {
+//         money = Math.round((money + 10.40) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     } 
+//     else {
+//         money = Math.round((money + 7.30) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     }
+//     showHiddenCart()
+//     totalAmount();
+// }
+
+// function pirktNY() {
+//     if (NYC.innerHTML === "€ 10.40") {
+//         money = Math.round((money - 10.40) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     } 
+//     else {
+//         money = Math.round((money - 7.30) * 100) / 100;
+//         fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+//     }
+//     showHiddenCart()
+//     totalAmount();
+// }
+
+// buyNY.onclick = function pirktNY() {
+//     pirktNY();
+// }
+
+
+const itemCena1 = document.querySelector("#item_cena_1");
+const itemCena2 = document.querySelector("#item_cena_2");
+
+
+function pirktCC30() {
+    money = Math.round((money + 9.10) * 100) / 100;
+    fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    
+    showHiddenCart()
+    totalAmount();
+}
+
+function nonemtCC30() {
+    money = Math.round((money - 9.10) * 100) / 100;
+    fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
 
     totalAmount();
 }
 
-buyNY.onclick = function() {
-    if (NYC.innerHTML === "€ 10.40") {
-        money = Math.round((money + 10.40) * 100) / 100;
-        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
-    } 
-    else {
-        money = Math.round((money + 7.30) * 100) / 100;
-        fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
-    }
-    myDiv.style.display = "block";
 
+
+function pirktCC20() {
+    money = Math.round((money + 6.30) * 100) / 100;
+    fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    
+    showHiddenCart()
+    totalAmount();
+}
+
+function nonemtCC20() {
+    money = Math.round((money - 6.30) * 100) / 100;
+    fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
+    
     totalAmount();
 }
 
 
 
+const counter_1 = document.querySelector("#counter_1");
+const counter_2 = document.querySelector("#counter_2");
 
 
+const minus_1 = document.querySelector("#minus_1");
+const plus_1 = document.querySelector("#plus_1");
+const minus_2 = document.querySelector("#minus_2");
+const plus_2 = document.querySelector("#plus_2");
 
 
+plus_1.onclick = function() {
+    count_1 = count_1 + 1;
+    counter_1.innerHTML = count_1;
+    pirktCC30();
+}
 
+minus_1.onclick = function() {
+    count_1 = count_1 - 1;
+    counter_1.innerHTML = count_1;
+    nonemtCC30();
+}
 
+plus_2.onclick = function() {
+    count_2 = count_2 + 1;
+    counter_2.innerHTML = count_2;
+    pirktCC20();
+}
 
-
+minus_2.onclick = function() {
+    count_2 = count_2 - 1;
+    counter_2.innerHTML = count_2;
+    nonemtCC20();
+}
 
 
 
