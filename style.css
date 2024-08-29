@@ -214,7 +214,7 @@ hr {
         height: 40px;
         border: none;
         border-radius: 20px;
-        background: #ff0000;
+        background: #e01d3c;
         color: #ffffff;
         cursor: pointer;
         margin: auto;
@@ -255,7 +255,7 @@ hr {
 #myDiv {
     margin: 0;
     position: fixed;
-    top: 90%;
+    top: 95%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -265,13 +265,14 @@ hr {
 #grozs_button {
     width: auto;
     min-width: 300px;
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-    background: #ff0000;
+    height: 50px;
+    border: 7px solid white;
+    border-radius: 30px;
+    background: #e01d3c;
     color: #ffffff;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
+    padding: 5px;
 }
 
 #atpakal_div {
@@ -361,6 +362,8 @@ hr {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         cursor: pointer;
+        background-color: #e01d3c;
+        color: white;
     }
 
     h1 {
@@ -405,15 +408,14 @@ hr {
 }
 
 .skaititajs_parent {
-    height: 30px;
-    width: 100px;
-    margin-top: 15px;
-    margin-right: 10px;
+    height: 35px;
+    width: 140px;
+    margin: auto;
     display: none;
 
     .skaititajs {
-        height: 30px;
-        width: 100px;
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -421,29 +423,29 @@ hr {
         margin: auto;
         background-color: rgb(218, 218, 218);
         border-radius: 30px;
-        
     }
 
     button {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         margin-top: 0px;
         cursor: pointer;
         border: none;
         border-radius: 20px;
-        background: #ff0000;            
+        background: #e01d3c;            
         margin: auto;
         color: white;
     }
 
 
-    #minus_0 {
+    #minusCC30, #minusCC20 {
         margin-left: 0px;
     }
 
-    #plus_0 {
+    #plusCC30, #plusCC20 {
         margin-right: 0px;
     }
+
 
     h1 {
         font-size: 20px;
@@ -512,6 +514,24 @@ hr {
     .rinda {
         margin-top: -5px;
     }
+    .skaititajs_parent {
+        height: 40px;
+        width: 150px;
+        margin: auto;
+    
+    
+        button {
+            width: 40px;
+            height: 40px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    
+    
+        h1 {
+            font-size: 22px;
+        }
+    }
 }
 
 
@@ -559,11 +579,34 @@ hr {
         margin-top: 8px;
         margin-right: 10px;
     }
+    .skaititajs_parent {
+        height: 35px;
+        width: 120px;
+        margin-top: 8px;
+        margin-right: 10px;
+    
+    
+        button {
+            width: 35px;
+            height: 35px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    
+    
+        h1 {
+            font-size: 18px;
+            margin-left: 2px;
+        }
+    }
 }
 
 @media screen and (max-width: 540px) {
     .cena {
         font-size: 22px;
+    }
+    .cena_grozs {
+        margin-top: 0;
     }
     .fonts_h1 {
         font-size: 14px;
@@ -593,6 +636,26 @@ hr {
         height: 80%;
         margin-right: 20px;
     }
+    .skaititajs_parent {
+        height: 30px;
+        width: 100px;
+        margin-top: 12px;
+        margin-right: 10px;
+    
+    
+        button {
+            width: 30px;
+            height: 30px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    
+    
+        h1 {
+            font-size: 16px;
+            margin-left: 2px;
+        }
+    }
 }
 
 
@@ -611,6 +674,29 @@ hr {
     .cena {
         font-size: 20px;
     }
+    .cena_grozs {
+        margin-top: 0;
+    }
+    .skaititajs_parent {
+        height: 30px;
+        width: 90px;
+        margin-top: 8px;
+        margin-right: 10px;
+    
+    
+        button {
+            width: 30px;
+            height: 30px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    
+    
+        h1 {
+            font-size: 14px;
+            margin-left: 2px;
+        }
+    }
 } 
 
 @media screen and (max-width: 450px) {
@@ -620,6 +706,26 @@ hr {
     .cena_grozs {
         margin-top: -5px;
         margin-right: 0;
+    }
+    .skaititajs_parent {
+        height: 25px;
+        width: 85px;
+        margin-top: 8px;
+        margin-right: 15px;
+    
+    
+        button {
+            width: 25px;
+            height: 25px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    
+    
+        h1 {
+            font-size: 14px;
+            margin-left: 2px;
+        }
     }
 }
 
@@ -670,9 +776,29 @@ hr {
     header {
         height: 100px;
     }
+    .skaititajs_parent {
+        height: 25px;
+        width: 80px;
+        margin-top: 8px;
+        margin-right: 10px;
+    
+    
+        button {
+            width: 25px;
+            height: 25px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    
+    
+        h1 {
+            font-size: 14px;
+            margin-left: 2px;
+        }
+    }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 345px) {
     .cena {
         font-size: 14px;
     }
@@ -695,6 +821,26 @@ hr {
     .lapas {
         button {
             font-size: 12px;
+        }
+    }
+    .skaititajs_parent {
+        height: 20px;
+        width: 70px;
+        margin-top: 5px;
+        margin-right: 10px;
+    
+    
+        button {
+            width: 20px;
+            height: 20px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    
+    
+        h1 {
+            font-size: 14px;
+            margin-left: 2px;
         }
     }
 }
