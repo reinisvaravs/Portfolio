@@ -25,7 +25,6 @@ header {
 }
 
 .info {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,6 +57,9 @@ header {
 
 /* ========= BODY ========= */
 
+button {
+    cursor: pointer;
+}
 
 body {
     margin: 0;
@@ -93,7 +95,6 @@ body {
         font-size: 20px;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
-        cursor: pointer;
         margin: auto;
     }
 
@@ -103,7 +104,7 @@ body {
 }
 
 .container_picas {
-    margin: auto;
+    margin: auto auto 50px auto;
     width: 90%;
     max-width: 1150px;
     display: flex;
@@ -126,14 +127,7 @@ body {
 
 .virsraksts {
     text-align: center;
-    font-size: 45px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.virsraksts-1 {
-    text-align: left;
     font-size: 35px;
-    padding-left: 20px;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -149,7 +143,6 @@ body {
         border-radius: 20px;
         background: #f58220;
         color: #ffffff;
-        cursor: pointer;
 }
 
 .neaktiva {
@@ -159,7 +152,6 @@ body {
         border-radius: 20px;
         background: #eef2f8;
         color: #000000;
-        cursor: pointer;
 }
 
 .sastavdalas {
@@ -216,7 +208,6 @@ hr {
         border-radius: 20px;
         background: #e01d3c;
         color: #ffffff;
-        cursor: pointer;
         margin: auto;
         width: 50%;
 }
@@ -270,7 +261,6 @@ hr {
     border-radius: 30px;
     background: #e01d3c;
     color: #ffffff;
-    cursor: pointer;
     font-family: "Montserrat", sans-serif;
     padding: 5px;
 }
@@ -278,7 +268,6 @@ hr {
 #atpakal_div {
     display: flex;
     justify-content: right;
-    margin-right: 20px;
     margin-top: 20px;
 }
 
@@ -287,23 +276,41 @@ hr {
     height: 35px;
     border: none;
     border-radius: 20px;
-    background: #e5e5e5;
-    color: #515151;
-    cursor: pointer;
+
+    background-color: rgba(51, 51, 51, 0.1);
+    color: #333333;
+}
+
+#atcelt_div {
+    display: none;
+    justify-content: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#atcelt {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.05);
+    color: #333333;
 }
 
 
 .kopa {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 34px;
-    text-align: center;
+    font-size: 25px;
+    text-align: right;
+    margin-right: 5%;
 }
 
 
 .cart_items {
     background-color: rgb(241, 241, 241);
-    width: 90%;
+    width: 100%;
+    max-width: 1000px;
     margin: auto;   
 }
 
@@ -361,7 +368,6 @@ hr {
         font-size: 20px;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
-        cursor: pointer;
         background-color: #e01d3c;
         color: white;
     }
@@ -409,7 +415,7 @@ hr {
 
 .skaititajs_parent {
     height: 35px;
-    width: 140px;
+    width: 120px;
     margin: auto;
     display: none;
 
@@ -429,7 +435,6 @@ hr {
         width: 35px;
         height: 35px;
         margin-top: 0px;
-        cursor: pointer;
         border: none;
         border-radius: 20px;
         background: #e01d3c;            
@@ -450,7 +455,7 @@ hr {
     h1 {
         font-size: 20px;
         font-family: "Montserrat", sans-serif;
-        font-weight: 400;
+        font-weight: 500;
         text-align: center;
         margin-left: 2px;
     }
@@ -460,9 +465,16 @@ hr {
     display: none;
 }
 
+#page6 {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
 
 
 /* ========= RESPONSIVE DESIGN ========= */
+
 
 
 @media screen and (max-width: 768px) {
@@ -843,4 +855,9 @@ hr {
             margin-left: 2px;
         }
     }
+}
+
+footer {
+    height: 100px;
+    width: 100%;
 }

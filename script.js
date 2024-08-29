@@ -16,21 +16,169 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 
 window.onload = function() {
     document.querySelector("#page1").style.display = "block";
+
+    showToDo();
 };
 
-// window.onload = function() {
-//     document.querySelector("#page6").style.display = "block";
-// };
+/* ========= GLOBAL VARIABLES ========= */
+
+let money = 0;    // total order sum
+
+let totalCC30 = 0;    // how many chicken curry 30cm pizzas
+let totalCC20 = 0;    // how many chicken curry 20cm pizzas
+
+let totalGru30 = 0;
+let totalGru20 = 0;
+
+
+
+const fCena = document.querySelector("#fCena");    //cena displayed on hidden div
+
+const atcelt = document.querySelector("#atcelt");
+const atceltDiv = document.querySelector("#atcelt_div");
+const grozsh1 = document.querySelector("#grozsh1");
+
+
+/* === Chicken Curry Variables === */
+
+
+const CC30 = document.querySelector("#CC30");    //30cm button CC
+const CC20 = document.querySelector("#CC20");    //20cm button CC
+const CCC = document.querySelector("#cenaCC");    //CC cena h1 blakus pievienot pogai
+const buyCC = document.querySelector("#buyCC");    //pievienot button
+
+const skaitCC30 = document.querySelector("#skaitCC30");    //div
+const skaitCC20 = document.querySelector("#skaitCC20");    //div
+
+const plusCC30 = document.querySelector("#plusCC30");    //hidden plus button 30cm
+const minusCC30 = document.querySelector("#minusCC30");    //hidden minus button 30cm
+
+const plusCC20 = document.querySelector("#plusCC20");    //hidden plus button 20cm
+const minusCC20 = document.querySelector("#minusCC20");    //hidden minus button 20cm
+
+const counterCC30 = document.querySelector("#counterCC30");    //hidden h1 counter 30cm
+const counterCC20 = document.querySelector("#counterCC20");    //hidden h1 counter 20cm
+
+const plusCC30Grozs = document.querySelector("#plusCC30Grozs");
+const minusCC30Grozs = document.querySelector("#minusCC30Grozs");
+const plusCC20Grozs = document.querySelector("#plusCC20Grozs");
+const minusCC20Grozs = document.querySelector("#minusCC20Grozs");
+
+const counterCC30Grozs = document.querySelector("#counterCC30Grozs");
+const counterCC20Grozs = document.querySelector("#counterCC20Grozs");
+
+
+
+
+
+/* === Gruzīnu Variables === */
+
+
+const Gru30 = document.querySelector("#Gru30");    //30cm button Gru
+const Gru20 = document.querySelector("#Gru20");    //20cm button Gru
+const GruC = document.querySelector("#cenaGru");    //Gru cena h1 blakus pievienot pogai
+const buyGru = document.querySelector("#buyGru");    //pievienot button
+
+const skaitGru30 = document.querySelector("#skaitGru30");    //div
+const skaitGru20 = document.querySelector("#skaitGru20");    //div
+
+const plusGru30 = document.querySelector("#plusGru30");    //hidden plus button 30cm
+const minusGru30 = document.querySelector("#minusGru30");    //hidden minus button 30cm
+
+const plusGru20 = document.querySelector("#plusGru20");    //hidden plus button 20cm
+const minusGru20 = document.querySelector("#minusGru20");    //hidden minus button 20cm
+
+const counterGru30 = document.querySelector("#counterGru30");    //hidden h1 counter 30cm
+const counterGru20 = document.querySelector("#counterGru20");    //hidden h1 counter 20cm
+
+const plusGru30Grozs = document.querySelector("#plusGru30Grozs");
+const minusGru30Grozs = document.querySelector("#minusGru30Grozs");
+const plusGru20Grozs = document.querySelector("#plusGru20Grozs");
+const minusGru20Grozs = document.querySelector("#minusGru20Grozs");
+
+const counterGru30Grozs = document.querySelector("#counterGru30Grozs");
+const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
+
+
+
+
 
 /* ========= ALL FUNCTIONS ========= */
 
+
+function showToDo() {
+    console.log("TO DO: ");
+    console.log("1. Navigation bar fixed to the top on scroll.");
+    console.log("2. #myDiv in nav bar and then on the bottom.");
+    console.log("3. Be able to call the number on click.");
+    console.log("4. Send a text message when the order is done.");
+    console.log("5. Finish all other pages.");
+    console.log("6. Domain paths, history, local order info.");
+    console.log("7. Something original");
+}
+
+function askToShowGrozs() {
+    if (money > 0) {
+        grozsh1.innerHTML = "Pasūtīt";
+        atceltDiv.style.display = "flex";
+    }
+    else {
+        grozsh1.innerHTML = "Grozs ir tukšs";
+        atceltDiv.style.display = "none";
+    }
+}
+
+function updateAll() {
+    updateFCena();
+    totalAmount();
+
+    updateCounterCC30();
+    updateCounterCC20();
+    updateCounterGru30();
+    updateCounterGru20();
+
+    updateCounterCC30Grozs();
+    updateCounterCC20Grozs();
+    updateCounterGru30Grozs();
+    updateCounterGru20Grozs();
+
+    askToShowCC30();
+    askToShowCC20();
+    askToShowGru30();
+    askToShowGru20();
+
+    askToShowGrozsCC30();
+    askToShowGrozsCC20();
+    askToShowGrozsGru30();
+    askToShowGrozsGru20();
+
+    orderSummary();
+    console.log("money = " + money);
+}
+
+
+function atceltGrozu() {
+    totalCC30 = 0; 
+    totalCC20 = 0;
+    totalGru30 = 0;
+    totalGru20 = 0;
+    
+    money = 0;
+
+    updateAll();
+}
 
 function updateFCena() {
     fCena.innerHTML = money.toFixed(2) + " € | Pasūtīt";
 };
 
 function totalAmount() {
-    document.querySelector("#kopa").innerHTML = "Kopā: " + money.toFixed(2) + "€";
+    if (money > 0) {
+        document.querySelector("#kopa").innerHTML = "Kopā: " + money.toFixed(2) + "€";
+    }
+    else {
+        document.querySelector("#kopa").innerHTML = "";
+    }
 };
 
 function askToShowCC30() {
@@ -216,6 +364,7 @@ function nonemtCCGrozs20() {
 function askToShowGrozsCC30() {
     if (totalCC30 > 0) {
         itemCC30.style.display = "block";
+        atceltDiv.style.display = "flex";
     }
     else {
         itemCC30.style.display = "none";
@@ -225,6 +374,7 @@ function askToShowGrozsCC30() {
 function askToShowGrozsCC20() {
     if (totalCC20 > 0) {
         itemCC20.style.display = "block";
+        atceltDiv.style.display = "flex";
     }
     else {
         itemCC20.style.display = "none";
@@ -240,8 +390,11 @@ function updateGrozs() {
 };
 
 function orderSummary() {
+
     console.log("");
     console.log("");
+
+    askToShowGrozs();
 
     console.log("Tavs pasūtijums: ");
 
@@ -427,6 +580,7 @@ function nonemtGruGrozs20() {
 function askToShowGrozsGru30() {
     if (totalGru30 > 0) {
         itemGru30.style.display = "block";
+        atceltDiv.style.display = "flex";
     }
     else {
         itemGru30.style.display = "none";
@@ -436,89 +590,12 @@ function askToShowGrozsGru30() {
 function askToShowGrozsGru20() {
     if (totalGru20 > 0) {
         itemGru20.style.display = "block";
+        atceltDiv.style.display = "flex";
     }
     else {
         itemGru20.style.display = "none";
     }
 };
-
-
-/* ========= GLOBAL VARIABLES ========= */
-
-let money = 0;    // total order sum
-
-let totalCC30 = 0;    // how many chicken curry 30cm pizzas
-let totalCC20 = 0;    // how many chicken curry 20cm pizzas
-
-let totalGru30 = 0;
-let totalGru20 = 0;
-
-
-
-const fCena = document.querySelector("#fCena");    //cena displayed on hidden div
-
-
-
-
-/* === Chicken Curry Variables === */
-
-
-const CC30 = document.querySelector("#CC30");    //30cm button CC
-const CC20 = document.querySelector("#CC20");    //20cm button CC
-const CCC = document.querySelector("#cenaCC");    //CC cena h1 blakus pievienot pogai
-const buyCC = document.querySelector("#buyCC");    //pievienot button
-
-const skaitCC30 = document.querySelector("#skaitCC30");    //div
-const skaitCC20 = document.querySelector("#skaitCC20");    //div
-
-const plusCC30 = document.querySelector("#plusCC30");    //hidden plus button 30cm
-const minusCC30 = document.querySelector("#minusCC30");    //hidden minus button 30cm
-
-const plusCC20 = document.querySelector("#plusCC20");    //hidden plus button 20cm
-const minusCC20 = document.querySelector("#minusCC20");    //hidden minus button 20cm
-
-const counterCC30 = document.querySelector("#counterCC30");    //hidden h1 counter 30cm
-const counterCC20 = document.querySelector("#counterCC20");    //hidden h1 counter 20cm
-
-const plusCC30Grozs = document.querySelector("#plusCC30Grozs");
-const minusCC30Grozs = document.querySelector("#minusCC30Grozs");
-const plusCC20Grozs = document.querySelector("#plusCC20Grozs");
-const minusCC20Grozs = document.querySelector("#minusCC20Grozs");
-
-const counterCC30Grozs = document.querySelector("#counterCC30Grozs");
-const counterCC20Grozs = document.querySelector("#counterCC20Grozs");
-
-
-
-
-
-/* === Gruzīnu Variables === */
-
-
-const Gru30 = document.querySelector("#Gru30");    //30cm button Gru
-const Gru20 = document.querySelector("#Gru20");    //20cm button Gru
-const GruC = document.querySelector("#cenaGru");    //Gru cena h1 blakus pievienot pogai
-const buyGru = document.querySelector("#buyGru");    //pievienot button
-
-const skaitGru30 = document.querySelector("#skaitGru30");    //div
-const skaitGru20 = document.querySelector("#skaitGru20");    //div
-
-const plusGru30 = document.querySelector("#plusGru30");    //hidden plus button 30cm
-const minusGru30 = document.querySelector("#minusGru30");    //hidden minus button 30cm
-
-const plusGru20 = document.querySelector("#plusGru20");    //hidden plus button 20cm
-const minusGru20 = document.querySelector("#minusGru20");    //hidden minus button 20cm
-
-const counterGru30 = document.querySelector("#counterGru30");    //hidden h1 counter 30cm
-const counterGru20 = document.querySelector("#counterGru20");    //hidden h1 counter 20cm
-
-const plusGru30Grozs = document.querySelector("#plusGru30Grozs");
-const minusGru30Grozs = document.querySelector("#minusGru30Grozs");
-const plusGru20Grozs = document.querySelector("#plusGru20Grozs");
-const minusGru20Grozs = document.querySelector("#minusGru20Grozs");
-
-const counterGru30Grozs = document.querySelector("#counterGru30Grozs");
-const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 
 
 
@@ -571,7 +648,7 @@ minusCC20.onclick = function() {
 
 
 
-/* ========= CC GROZA BUTTONS ========= */
+/* ========= Chicken Curry GROZA BUTTONS ========= */
 
 
 
@@ -640,7 +717,7 @@ minusGru20.onclick = function() {
 };
 
 
-/* ========= Gru GROZA BUTTONS ========= */
+/* ========= Gruzīnu GROZA BUTTONS ========= */
 
 
 
@@ -658,3 +735,13 @@ plusGru20Grozs.onclick = function() {
 minusGru20Grozs.onclick = function() {
     nonemtGruGrozs20();
 };
+
+
+
+// ===== GROZA BUTTONS ====== //
+
+
+
+atcelt.onclick = function() {
+    atceltGrozu();
+}
