@@ -152,6 +152,8 @@ function updateAll() {
     askToShowGrozsGru30();
     askToShowGrozsGru20();
 
+    askToShowMyDiv();
+
     orderSummary();
     console.log("money = " + money);
 }
