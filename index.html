@@ -28,7 +28,7 @@
         </div>
     </div>
 </header>
-
+ 
 <main>
     <div class="container">
         <div class="lapas">
@@ -69,6 +69,7 @@
     <h1 class="virsraksts">Picu <span class="highlight">Top 3</span></h1>
 
     <div class="container_picas">
+
         <div class="all">
             <div class="photo">
                 <img src="./images/chicken_curry.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
@@ -111,26 +112,40 @@
 
         <div class="all">
             <div class="photo">
-                <img src="./images/gruzinu.jpg" class="pizza_photo" alt="gruzinu_picas_foto">
+                <img src="./images/gruzinu.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
             </div>
             <div class="kolona">
-            <div class="name">
-                <h1 class="fonts_h1">Gruzīnu</h1>
-                <p class="sastavdalas">Salami, bekons, ķiploku mērce</p>
-            </div>
-            <div class="rinda">
-                <p class="vards_izmers">Izmērs</p>
-                <div class="pogas_div">
-                    <button class="aktiva" id="gruzinu_30cm_top3">30cm</button>
-                    <button class="neaktiva" id="gruzinu_20cm_top3">20cm</button>
+                <div class="name">
+                    <h1 class="fonts_h1">Gruzīnu</h1>
+                    <p class="sastavdalas">Salami, bekons, ķiploku mērce</p>
                 </div>
-            </div>
+                <div class="rinda">
+                    <p class="vards_izmers">Izmērs</p>
+                    <div class="pogas_div">
+                        <button class="aktiva" id="Gru30">30cm</button>
+                        <button class="neaktiva" id="Gru20">20cm</button>
+                    </div>
+                </div>
                 <div class="cena_grozs">
-                    <h1 class="cena" id="cena_gruzinu_top3">€ 9.10</h1>
-                    <button class="pievienot" id="cart_gruzinu">
+                    <h1 class="cena" id="cenaGru">€ 9.10</h1>
+                    <button class="pievienot" id="buyGru">
                         <img class="cart" src="./images/cart.png" alt="cart_image">
                         Pievienot
                     </button>
+                    <div class="skaititajs_parent" id="skaitGru30">
+                        <div class="skaititajs">
+                            <button id="minusGru30">-</button>
+                            <h1 id="counterGru30">0</h1>
+                            <button id="plusGru30">+</button>
+                        </div>
+                    </div>
+                    <div class="skaititajs_parent" id="skaitGru20">
+                        <div class="skaititajs">
+                            <button id="minusGru20">-</button>
+                            <h1 id="counterGru20">0</h1>
+                            <button id="plusGru20">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -191,11 +206,11 @@
             <div class="item">
                 <div class="kreisa_puse_div">
                     <div class="bilde_div">
-                        <img id="bilde_1" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                        <img src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
                     </div>
                     <div class="nosaukums_div">
-                        <h1 id="nosaukums_1" class="nosaukums">Chicken Curry</h1>
-                        <h1 id="izmers_1" class="izmers">30cm</h1>
+                        <h1 class="nosaukums">Chicken Curry</h1>
+                        <h1 class="izmers">30cm</h1>
                     </div>
                 </div>
                 <div class="laba_puse_div">
@@ -217,11 +232,11 @@
             <div class="item">
                 <div class="kreisa_puse_div">
                     <div class="bilde_div">
-                        <img id="bilde_2" src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                        <img src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
                     </div>
                     <div class="nosaukums_div">
-                        <h1 id="nosaukums_2" class="nosaukums">Chicken Curry</h1>
-                        <h1 id="izmers_2" class="izmers">20cm</h1>
+                        <h1 class="nosaukums">Chicken Curry</h1>
+                        <h1 class="izmers">20cm</h1>
                     </div>
                 </div>
                 <div class="laba_puse_div">
@@ -233,6 +248,58 @@
                             <button id="minusCC20Grozs" class="minus">-</button>
                             <h1 id="counterCC20Grozs">0</h1>
                             <button id="plusCC20Grozs" class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="itemGru30">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img src="./images/gruzinu.jpg" alt="gruzinu_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 class="nosaukums">Gruzīnu</h1>
+                        <h1 class="izmers">30cm</h1>
+                    </div>
+                </div>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="Gru30GrozsCena">€ 9.10</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusGru30Grozs" class="minus">-</button>
+                            <h1 id="counterGru30Grozs">0</h1>
+                            <button id="plusGru30Grozs" class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="itemGru20">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img src="./images/gruzinu.jpg" alt="gruzinu_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 class="nosaukums">Gruzīnu</h1>
+                        <h1 class="izmers">20cm</h1>
+                    </div>
+                </div>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="Gru20GrozsCena">€ 6.30</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusGru20Grozs" class="minus">-</button>
+                            <h1 id="counterGru20Grozs">0</h1>
+                            <button id="plusGru20Grozs" class="plus">+</button>
                         </div>
                     </div>
                 </div>

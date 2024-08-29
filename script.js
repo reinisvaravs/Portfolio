@@ -87,12 +87,9 @@ function updateCounterCC20() {
 function pirktCC() {
     if (CCC.innerHTML === "€ 9.10") {
         totalCC30 = totalCC30 + 1;
-        console.log("Tavs pasūtijums: ");
-        console.log("CC30 skaits: " + totalCC30);
-        console.log("CC20 skaits: " + totalCC20);
         money = Math.round((money + 9.10) * 100) / 100;
-        console.log("kopā: " + money.toFixed(2) + "€");
         
+        orderSummary();
         updateFCena();
         totalAmount();
         askToShowCC30();
@@ -103,12 +100,9 @@ function pirktCC() {
     }
     else {
         totalCC20 = totalCC20 + 1;
-        console.log("Tavs pasūtijums: ");
-        console.log("CC30 skaits: " + totalCC30);
-        console.log("CC20 skaits: " + totalCC20);
         money = Math.round((money + 6.30) * 100) / 100;
-        console.log("kopā: " + money.toFixed(2) + "€");
 
+        orderSummary();
         updateFCena();
         totalAmount();
         askToShowCC20();
@@ -123,12 +117,9 @@ function pirktCC() {
 function nonemtCC() {
     if (CCC.innerHTML === "€ 9.10") {
         totalCC30 = totalCC30 - 1;
-        console.log("Tavs pasūtijums: ");
-        console.log("CC30 skaits: " + totalCC30);
-        console.log("CC20 skaits: " + totalCC20);
         money = Math.round((money - 9.10) * 100) / 100;
-        console.log("kopā: " + money.toFixed(2) + "€");
         
+        orderSummary();
         updateFCena();
         totalAmount();
         askToShowCC30();
@@ -139,12 +130,9 @@ function nonemtCC() {
     }
     else {
         totalCC20 = totalCC20 - 1;
-        console.log("Tavs pasūtijums: ");
-        console.log("CC30 skaits: " + totalCC30);
-        console.log("CC20 skaits: " + totalCC20);
         money = Math.round((money - 6.30) * 100) / 100;
-        console.log("kopā: " + money.toFixed(2) + "€");
 
+        orderSummary();
         updateFCena();
         totalAmount();
         askToShowCC20();
@@ -165,14 +153,13 @@ function updateCounterCC20Grozs() {
 
 
 
+
+
 function pirktCCGrozs30() {
     totalCC30 = totalCC30 + 1;
-    console.log("Tavs pasūtijums: ");
-    console.log("CC30 skaits: " + totalCC30);
-    console.log("CC20 skaits: " + totalCC20);
     money = Math.round((money + 9.10) * 100) / 100;
-    console.log("kopā: " + money.toFixed(2) + "€");
     
+    orderSummary();
     updateFCena();
     totalAmount();
     askToShowCC30();
@@ -184,12 +171,9 @@ function pirktCCGrozs30() {
 
 function nonemtCCGrozs30() {
     totalCC30 = totalCC30 - 1;
-    console.log("Tavs pasūtijums: ");
-    console.log("CC30 skaits: " + totalCC30);
-    console.log("CC20 skaits: " + totalCC20);
     money = Math.round((money - 9.10) * 100) / 100;
-    console.log("kopā: " + money.toFixed(2) + "€");
-    
+
+    orderSummary();
     updateFCena();
     totalAmount();
     askToShowCC30();
@@ -201,12 +185,9 @@ function nonemtCCGrozs30() {
 
 function pirktCCGrozs20() {
     totalCC20 = totalCC20 + 1;
-    console.log("Tavs pasūtijums: ");
-    console.log("CC30 skaits: " + totalCC30);
-    console.log("CC20 skaits: " + totalCC20);
     money = Math.round((money + 6.30) * 100) / 100;
-    console.log("kopā: " + money.toFixed(2) + "€");
 
+    orderSummary();
     updateFCena();
     totalAmount();
     askToShowCC20();
@@ -218,12 +199,9 @@ function pirktCCGrozs20() {
 
 function nonemtCCGrozs20() {
     totalCC20 = totalCC20 - 1;
-    console.log("Tavs pasūtijums: ");
-    console.log("CC30 skaits: " + totalCC30);
-    console.log("CC20 skaits: " + totalCC20);
     money = Math.round((money - 6.30) * 100) / 100;
-    console.log("kopā: " + money.toFixed(2) + "€");
 
+    orderSummary();
     updateFCena();
     totalAmount();
     askToShowCC20();
@@ -257,7 +235,213 @@ function askToShowGrozsCC20() {
 function updateGrozs() {
     askToShowGrozsCC30();
     askToShowGrozsCC20();
+    askToShowGrozsGru30();
+    askToShowGrozsGru20();
 };
+
+function orderSummary() {
+    console.log("");
+    console.log("");
+
+    console.log("Tavs pasūtijums: ");
+
+    console.log("CC30 skaits: " + totalCC30);
+    console.log("CC20 skaits: " + totalCC20);
+
+    console.log("Gru30 skaits: " + totalGru30);
+    console.log("Gru20 skaits: " + totalGru20);
+
+    console.log("kopā: " + money.toFixed(2) + "€");
+}
+
+
+/* ========= GRUZĪNU FUNCTIONS ========= */
+
+function askToShowGru30() {
+    if (totalGru30 > 0) {
+        buyGru.style.display = "none";
+        skaitGru30.style.display = "block";
+        skaitGru20.style.display = "none";
+    }
+    else {
+        buyGru.style.display = "block";
+        skaitGru30.style.display = "none";
+        skaitGru20.style.display = "none";
+    }
+};
+
+function askToShowGru20() {
+    if (totalGru20 > 0) {
+        buyGru.style.display = "none";
+        skaitGru30.style.display = "none";
+        skaitGru20.style.display = "block";
+    }
+    else {
+        buyGru.style.display = "block";
+        skaitGru30.style.display = "none";
+        skaitGru20.style.display = "none";
+    }
+};
+
+
+
+function updateCounterGru30() {
+    counterGru30.innerHTML = totalGru30;
+};
+
+function updateCounterGru20() {
+    counterGru20.innerHTML = totalGru20;
+};
+
+
+
+
+function pirktGru() {
+    if (GruC.innerHTML === "€ 9.10") {
+        totalGru30 = totalGru30 + 1;
+        money = Math.round((money + 9.10) * 100) / 100;
+        
+        orderSummary();
+        updateFCena();
+        totalAmount();
+        askToShowGru30();
+        updateCounterGru30();
+        updateCounterGru30Grozs();
+        askToShowMyDiv();
+        updateGrozs();
+    }
+    else {
+        totalGru20 = totalGru20 + 1;
+        money = Math.round((money + 6.30) * 100) / 100;
+
+        orderSummary();
+        updateFCena();
+        totalAmount();
+        askToShowGru20();
+        updateCounterGru20();
+        updateCounterGru20Grozs();
+        askToShowMyDiv();
+        updateGrozs();
+    }
+};
+
+
+function nonemtGru() {
+    if (GruC.innerHTML === "€ 9.10") {
+        totalGru30 = totalGru30 - 1;
+        money = Math.round((money - 9.10) * 100) / 100;
+
+        orderSummary();
+        updateFCena();
+        totalAmount();
+        askToShowGru30();
+        updateCounterGru30();
+        updateCounterGru30Grozs();
+        askToShowMyDiv();
+        updateGrozs();
+    }
+    else {
+        totalGru20 = totalGru20 - 1;
+        money = Math.round((money - 6.30) * 100) / 100;
+
+        orderSummary();
+        updateFCena();
+        totalAmount();
+        askToShowGru20();
+        updateCounterGru20();
+        updateCounterGru20Grozs();
+        askToShowMyDiv();
+        updateGrozs();
+    }
+};
+
+
+function updateCounterGru30Grozs() {
+    counterGru30Grozs.innerHTML = totalGru30;
+};
+
+function updateCounterGru20Grozs() {
+    counterGru20Grozs.innerHTML = totalGru20;
+};
+
+
+
+function pirktGruGrozs30() {
+    totalGru30 = totalGru30 + 1;
+    money = Math.round((money + 9.10) * 100) / 100;
+    
+    orderSummary();
+    updateFCena();
+    totalAmount();
+    askToShowGru30();
+    updateCounterGru30();
+    updateCounterGru30Grozs();
+    askToShowMyDiv();
+    updateGrozs();
+};
+
+function nonemtGruGrozs30() {
+    totalGru30 = totalGru30 - 1;
+    money = Math.round((money - 9.10) * 100) / 100;
+
+    orderSummary();
+    updateFCena();
+    totalAmount();
+    askToShowGru30();
+    updateCounterGru30();
+    updateCounterGru30Grozs();
+    askToShowMyDiv();
+    updateGrozs();
+};
+
+function pirktGruGrozs20() {
+    totalGru20 = totalGru20 + 1;
+    money = Math.round((money + 6.30) * 100) / 100;
+
+    orderSummary();
+    updateFCena();
+    totalAmount();
+    askToShowGru20();
+    updateCounterGru20();
+    updateCounterGru20Grozs();
+    askToShowMyDiv();
+    updateGrozs();
+};
+
+function nonemtGruGrozs20() {
+    totalGru20 = totalGru20 - 1;
+    money = Math.round((money - 6.30) * 100) / 100;
+
+    orderSummary();
+    updateFCena();
+    totalAmount();
+    askToShowGru20();
+    updateCounterGru20();
+    updateCounterGru20Grozs();
+    askToShowMyDiv();
+    updateGrozs();
+};
+
+
+
+function askToShowGrozsGru30() {
+    if (totalGru30 > 0) {
+        itemGru30.style.display = "block";
+    }
+    else {
+        itemGru30.style.display = "none";
+    }
+};
+
+function askToShowGrozsGru20() {
+    if (totalGru20 > 0) {
+        itemGru20.style.display = "block";
+    }
+    else {
+        itemGru20.style.display = "none";
+    }
+};
+
 
 /* ========= GLOBAL VARIABLES ========= */
 
@@ -266,13 +450,23 @@ let money = 0;    // total order sum
 let totalCC30 = 0;    // how many chicken curry 30cm pizzas
 let totalCC20 = 0;    // how many chicken curry 20cm pizzas
 
+let totalGru30 = 0;
+let totalGru20 = 0;
+
+
+
+const fCena = document.querySelector("#fCena");    //cena displayed on hidden div
+
+
+
+
+/* === Chicken Curry Variables === */
+
+
 const CC30 = document.querySelector("#CC30");    //30cm button CC
 const CC20 = document.querySelector("#CC20");    //20cm button CC
 const CCC = document.querySelector("#cenaCC");    //CC cena h1 blakus pievienot pogai
 const buyCC = document.querySelector("#buyCC");    //pievienot button
-
-const fCena = document.querySelector("#fCena");    //cena displayed on hidden div
-
 
 const skaitCC30 = document.querySelector("#skaitCC30");    //div
 const skaitCC20 = document.querySelector("#skaitCC20");    //div
@@ -294,12 +488,43 @@ const minusCC20Grozs = document.querySelector("#minusCC20Grozs");
 const counterCC30Grozs = document.querySelector("#counterCC30Grozs");
 const counterCC20Grozs = document.querySelector("#counterCC20Grozs");
 
-const CC30GrozsCena = document.querySelector("#CC30GrozsCena");
-const CC20GrozsCena = document.querySelector("#CC20GrozsCena");
 
 
 
-/* ========= PICAS BUTTONS ========= */
+
+/* === Gruzīnu Variables === */
+
+
+const Gru30 = document.querySelector("#Gru30");    //30cm button Gru
+const Gru20 = document.querySelector("#Gru20");    //20cm button Gru
+const GruC = document.querySelector("#cenaGru");    //Gru cena h1 blakus pievienot pogai
+const buyGru = document.querySelector("#buyGru");    //pievienot button
+
+const skaitGru30 = document.querySelector("#skaitGru30");    //div
+const skaitGru20 = document.querySelector("#skaitGru20");    //div
+
+const plusGru30 = document.querySelector("#plusGru30");    //hidden plus button 30cm
+const minusGru30 = document.querySelector("#minusGru30");    //hidden minus button 30cm
+
+const plusGru20 = document.querySelector("#plusGru20");    //hidden plus button 20cm
+const minusGru20 = document.querySelector("#minusGru20");    //hidden minus button 20cm
+
+const counterGru30 = document.querySelector("#counterGru30");    //hidden h1 counter 30cm
+const counterGru20 = document.querySelector("#counterGru20");    //hidden h1 counter 20cm
+
+const plusGru30Grozs = document.querySelector("#plusGru30Grozs");
+const minusGru30Grozs = document.querySelector("#minusGru30Grozs");
+const plusGru20Grozs = document.querySelector("#plusGru20Grozs");
+const minusGru20Grozs = document.querySelector("#minusGru20Grozs");
+
+const counterGru30Grozs = document.querySelector("#counterGru30Grozs");
+const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
+
+
+
+
+
+/* ========= Chicken Curry PICAS BUTTONS ========= */
 
 
 
@@ -346,7 +571,7 @@ minusCC20.onclick = function() {
 
 
 
-/* ========= GROZA BUTTONS ========= */
+/* ========= CC GROZA BUTTONS ========= */
 
 
 
@@ -363,4 +588,73 @@ plusCC20Grozs.onclick = function() {
 };
 minusCC20Grozs.onclick = function() {
     nonemtCCGrozs20();
+};
+
+
+
+/* ========= Gruzīnu PICAS BUTTONS ========= */
+
+
+
+Gru30.onclick = function() {
+    Gru30.style.background = "#f58220";
+    Gru30.style.color = "#ffffff";
+    Gru20.style.background = "#eef2f8";
+    Gru20.style.color = "#000000";
+    GruC.innerHTML = "€ 9.10";
+    askToShowGru30();
+};
+
+
+Gru20.onclick = function() {
+    Gru20.style.background = "#f58220";
+    Gru20.style.color = "#ffffff";
+    Gru30.style.background = "#eef2f8";
+    Gru30.style.color = "#000000";
+    GruC.innerHTML = "€ 6.30";
+    askToShowGru20();
+};
+
+
+
+
+buyGru.onclick = function() {
+    pirktGru();
+};
+
+
+plusGru30.onclick = function() {
+    pirktGru();
+};
+minusGru30.onclick = function() {
+    nonemtGru();
+};
+
+
+
+plusGru20.onclick = function() {
+    pirktGru();
+};
+minusGru20.onclick = function() {
+    nonemtGru();
+};
+
+
+/* ========= Gru GROZA BUTTONS ========= */
+
+
+
+plusGru30Grozs.onclick = function() {
+    pirktGruGrozs30();
+};
+minusGru30Grozs.onclick = function() {
+    nonemtGruGrozs30();
+};
+
+
+plusGru20Grozs.onclick = function() {
+    pirktGruGrozs20();
+};
+minusGru20Grozs.onclick = function() {
+    nonemtGruGrozs20();
 };

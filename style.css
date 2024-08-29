@@ -438,11 +438,11 @@ hr {
     }
 
 
-    #minusCC30, #minusCC20 {
+    #minusCC30, #minusCC20, #minusGru30, #minusGru20 {
         margin-left: 0px;
     }
 
-    #plusCC30, #plusCC20 {
+    #plusCC30, #plusCC20, #plusGru30, #plusGru20 {
         margin-right: 0px;
     }
 
@@ -456,7 +456,7 @@ hr {
     }
 }
 
-#itemCC30, #itemCC20 {
+#itemCC30, #itemCC20, #itemGru30, #itemGru20 {
     display: none;
 }
 
