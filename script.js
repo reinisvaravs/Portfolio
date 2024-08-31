@@ -38,6 +38,9 @@ const atcelt = document.querySelector("#atcelt");
 const atceltDiv = document.querySelector("#atcelt_div");
 const grozsh1 = document.querySelector("#grozsh1");
 
+const pasutit = document.querySelector("#pasutit");
+const pasutitDiv = document.querySelector("#pasutit_div");
+
 
 /* === Chicken Curry Variables === */
 
@@ -121,10 +124,12 @@ function askToShowGrozs() {
     if (money > 0) {
         grozsh1.innerHTML = "Pasūtīt";
         atceltDiv.style.display = "flex";
+        pasutitDiv.style.display = "flex";
     }
     else {
         grozsh1.innerHTML = "Grozs ir tukšs";
         atceltDiv.style.display = "none";
+        pasutitDiv.style.display = "none";
     }
 }
 
@@ -398,7 +403,7 @@ function orderSummary() {
 
     askToShowGrozs();
 
-    console.log("Tavs pasūtijums: ");
+    console.log("Tavs pasūtījums: ");
 
     console.log("CC30 skaits: " + totalCC30);
     console.log("CC20 skaits: " + totalCC20);
@@ -746,4 +751,11 @@ minusGru20Grozs.onclick = function() {
 
 atcelt.onclick = function() {
     atceltGrozu();
+}
+
+pasutit.onclick = function() {
+    console.log("Pasūtījums ir aizsūtīts!");
+    atceltGrozu();
+    kopa.innerHTML = "Pasūtījums ir aizsūtīts!";
+    grozsh1.innerHTML = "";
 }

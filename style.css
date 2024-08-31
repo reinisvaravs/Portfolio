@@ -297,6 +297,21 @@ hr {
     color: #333333;
 }
 
+#pasutit_div {
+    display: none;
+    justify-content: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#pasutit {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e01d3c;
+    color: white;
+}
 
 .kopa {
     font-family: "Montserrat", sans-serif;
