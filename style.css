@@ -1,3 +1,17 @@
+#NY30, #mar30, #sal30, #fun30 {
+    background-color: #8c8987;
+    color: #000000;
+}
+
+#NY20, #mar20, #sal20, #fun20 {
+    background-color: #dad5d2;
+}
+
+#buyNY, #buyMar, #buySal, #buyFun {
+    background-color: #6f6c6a;
+    color: #000000;
+}
+
 /* ========= HEADER ========= */
 
 header {
