@@ -30,7 +30,6 @@ let totalCC20 = 0;    // how many chicken curry 20cm pizzas
 let totalGru30 = 0;
 let totalGru20 = 0;
 
-const login = document.querySelector("#login");
 
 const fCena = document.querySelector("#fCena");    //cena displayed on hidden div
 
@@ -764,7 +763,3 @@ pasutit.onclick = function() {
 
 // ===== HEADER BUTTONS ====== //
 
-
-login.onclick = function() {
-    console.log("trying to login");
-}
