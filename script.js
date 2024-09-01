@@ -20,6 +20,8 @@ window.onload = function() {
     showToDo();
 };
 
+
+
 /* ========= GLOBAL VARIABLES ========= */
 
 let money = 0;    // total order sum
