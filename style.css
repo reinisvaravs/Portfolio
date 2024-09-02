@@ -20,8 +20,22 @@
 
     border: none;
     border-radius: 40px;
-    background: #eef2f8;
-    color: #000000;
+    background-color: #e01d3c;
+    color: white;
+
+    display: block;
+}
+
+.profile {
+    width: 70%;
+    height: 50px;
+
+    border: none;
+    border-radius: 40px;
+    background-color: #e01d3c;
+    color: white;
+
+    display: none;
 }
 
 .register_div {
@@ -945,7 +959,7 @@ hr {
 
 @media screen and (max-width: 345px) {
     .cena {
-        font-size: 14px;
+        font-size: 12px;
     }
     .pievienot {
         width: 40%;

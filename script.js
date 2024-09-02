@@ -42,6 +42,10 @@ const grozsh1 = document.querySelector("#grozsh1");
 const pasutit = document.querySelector("#pasutit");
 const pasutitDiv = document.querySelector("#pasutit_div");
 
+const register = document.querySelector("#register");
+const profile = document.querySelector("#profile");
+
+
 
 /* === Chicken Curry Variables === */
 
@@ -765,3 +769,8 @@ pasutit.onclick = function() {
 
 // ===== HEADER BUTTONS ====== //
 
+
+
+register.onclick = function() {
+    alert();
+}
