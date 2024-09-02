@@ -16,6 +16,8 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 
 window.onload = function() {
     document.querySelector("#page1").style.display = "block";
+    
+    openForm();
 
     showToDo();
 };
@@ -44,6 +46,7 @@ const pasutitDiv = document.querySelector("#pasutit_div");
 
 const register = document.querySelector("#register");
 const profile = document.querySelector("#profile");
+const closeFormBtn = document.querySelector("#close-btn");
 
 
 
@@ -112,6 +115,19 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 
 
 /* ========= ALL FUNCTIONS ========= */
+
+
+function openForm() {
+    const overlay = document.getElementById('popup-overlay');
+    overlay.style.display = 'flex';
+    setTimeout(() => overlay.classList.add('show'), 10);
+}
+
+function closeForm() {
+    const overlay = document.getElementById('popup-overlay');
+    overlay.classList.remove('show');
+    setTimeout(() => overlay.style.display = 'none', 500);
+}
 
 
 function showToDo() {
@@ -770,7 +786,10 @@ pasutit.onclick = function() {
 // ===== HEADER BUTTONS ====== //
 
 
-
 register.onclick = function() {
-    alert();
+    openForm();
+}
+
+closeFormBtn.onclick = function() {
+    closeForm();
 }
