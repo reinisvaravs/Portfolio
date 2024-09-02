@@ -132,7 +132,7 @@ body {
     width: 25%;
 
     button {
-        color: rgb(227, 227, 227);
+        color: rgb(216, 216, 216);
         background-color: #f58220;
         border: none;
         font-size: 20px;
@@ -197,15 +197,18 @@ body {
 #NY30, #mar30, #sal30, #fun30 {
     background-color: #dad5d2;
     color: #000000;
+    cursor: not-allowed;
 }
 
 #NY20, #mar20, #sal20, #fun20 {
     background-color: #dad5d2;
+    cursor: not-allowed;
 }
 
 #buyNY, #buyMar, #buySal, #buyFun {
     background-color: #dad5d2;
     color: #000000;
+    cursor: not-allowed;
 }
 
 .sastavdalas {
@@ -523,7 +526,7 @@ hr {
     display: none;
 }
 
-#page6 {
+#page5 {
     width: 90%;
     max-width: 1000px;
     margin: auto;
@@ -1146,4 +1149,31 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.page_buttons.active {
+    background-color: #f58220;
+    color: #ffffff;
+}
+
+
+.centered {
+    text-align: center;
+}
+
+#error_div {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+.error_image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
 }

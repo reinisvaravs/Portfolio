@@ -4,8 +4,15 @@
 function showPage(page) {
     document.querySelectorAll(".pages").forEach(div => {
         div.style.display = "none";
-    })
+    });
+
     document.querySelector(`#${page}`).style.display = "block";
+
+    document.querySelectorAll(".page_buttons").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.querySelector(`button[data-page="${page}"]`).classList.add("active");
 }
 
 document.querySelectorAll(".page_buttons").forEach(button => {
@@ -16,7 +23,7 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 
 window.onload = function() {
     document.querySelector("#page1").style.display = "block";
-
+    document.querySelector(`button[data-page="page1"]`).classList.add("active");
 };
 
 
@@ -48,9 +55,7 @@ const registerFinal = document.querySelector("#registerFinal")
 const profile = document.querySelector("#profile");
 const profileName = document.querySelector("#profile_name");
 
-const username = document.querySelector("#username");
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
+const error_div = document.querySelector("#error_div");
 
 
 /* === Chicken Curry Variables === */
@@ -120,6 +125,7 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 /* ========= ALL FUNCTIONS ========= */
 
 
+
 function openForm() {
     const overlay = document.getElementById('popup-overlay');
     overlay.style.display = 'flex';
@@ -139,6 +145,7 @@ function askToShowGrozs() {
         grozsh1.innerHTML = "Pasūtīt";
         atceltDiv.style.display = "flex";
         pasutitDiv.style.display = "flex";
+        kopa.classList.remove("centered");
     }
     else {
         grozsh1.innerHTML = "Grozs ir tukšs";
@@ -768,10 +775,11 @@ atcelt.onclick = function() {
 }
 
 pasutit.onclick = function() {
-    console.log("Pasūtījums ir aizsūtīts!");
     atceltGrozu();
-    kopa.innerHTML = "Pasūtījums ir aizsūtīts!";
+    kopa.innerHTML = "Pasūtījumus vēl nav iespējams veikt...";
     grozsh1.innerHTML = "";
+    kopa.classList.add("centered");
+    error_div.style.display = "flex";
 }
 
 
@@ -786,4 +794,5 @@ register.onclick = function() {
 closeFormBtn.onclick = function() {
     closeForm();
 }
+
 
