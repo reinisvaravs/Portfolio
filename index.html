@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picas | Picu darbnīca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header_div">
+        <div class="logo_div">
+            <a href="https://www.picudarbnica.lv/jelgava/picas/" target="_blank">
+                <img src="./images/pica_logo_balts.png" alt="picu_darbnicas_logo" class="logo">
+            </a>
+        </div>
+        <div class="info">
+            <div class="pilseta">
+                <img class="loc_icon" src="images/location_icon.png" alt="">
+                <h1>Jelgava<span class="span1">, </span><span class="span1">Rīgas iela 1</span></h1>
+            </div>
+            <div class="tel">
+                <img class="tel_icon" src="images/phone.svg" alt="">
+                <h1>2000 3993</h1>
+            </div>
+        </div>
+        <div class="register_div">
+            <button class="register" id="register">Pieslēgties</button>
+            <button class="profile" id="profile">
+                <h1 id="profile_name"></h1>
+            </button>
+        </div>
+    </div>
+</header>
+ 
+<main>
+<div class="container">
+    <div class="lapas">
+        <button data-page="page1" class="page_buttons">Picas</button>
+    </div>
+    <div class="lapas">
+        <button data-page="page2" class="page_buttons">Dzērieni</button>
+        </div>
+    <div class="lapas">
+        <button data-page="page3" class="page_buttons">Piegāde</button>
+    </div>
+    <div class="lapas">
+        <button data-page="page4" class="page_buttons">Kontakti</button>
+    </div>
+    <div class="lapas">
+        <button data-page="page6" class="page_buttons">Grozs</button>
+    </div>
+</div>
+
+<div id="myDiv">
+    <button data-page="page6" class="page_buttons" id="grozs_button">
+            <div class="container-1">
+                <img class="cart-1" src="./images/cart.png" alt="cart_image">
+                <h1 class="nauda-1" id="fCena">0€ | Pasūtīt</h1>
+            </div>
+    </button>
+</div>
+ 
+
+<div class="pages" id="page1">
+    <h1 class="virsraksts">Picu <span class="highlight">Top 3</span></h1>
+
+    <div class="container_picas">
+
+        <div class="all">
+            <div class="photo">
+                <img src="./images/chicken_curry.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
+            </div>
+            <div class="kolona">
+                <div class="name">
+                    <h1 class="fonts_h1">Chicken Curry</h1>
+                    <p class="sastavdalas">Vistas fileja, paprika, tomāti, konservēti ananasi, karija mērce</p>
+                </div>
+                <div class="rinda">
+                    <p class="vards_izmers">Izmērs</p>
+                    <div class="pogas_div">
+                        <button class="aktiva" id="CC30">30cm</button>
+                        <button class="neaktiva" id="CC20">20cm</button>
+                    </div>
+                </div>
+                <div class="cena_grozs">
+                    <h1 class="cena" id="cenaCC">€ 9.10</h1>
+                    <button class="pievienot" id="buyCC">
+                        <img class="cart" src="./images/cart.png" alt="cart_image">
+                        Pievienot
+                    </button>
+                    <div class="skaititajs_parent" id="skaitCC30">
+                        <div class="skaititajs">
+                            <button id="minusCC30">-</button>
+                            <h1 id="counterCC30">0</h1>
+                            <button id="plusCC30">+</button>
+                        </div>
+                    </div>
+                    <div class="skaititajs_parent" id="skaitCC20">
+                        <div class="skaititajs">
+                            <button id="minusCC20">-</button>
+                            <h1 id="counterCC20">0</h1>
+                            <button id="plusCC20">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="all">
+            <div class="photo">
+                <img src="./images/gruzinu.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
+            </div>
+            <div class="kolona">
+                <div class="name">
+                    <h1 class="fonts_h1">Gruzīnu</h1>
+                    <p class="sastavdalas">Salami, bekons, ķiploku mērce</p>
+                </div>
+                <div class="rinda">
+                    <p class="vards_izmers">Izmērs</p>
+                    <div class="pogas_div">
+                        <button class="aktiva" id="Gru30">30cm</button>
+                        <button class="neaktiva" id="Gru20">20cm</button>
+                    </div>
+                </div>
+                <div class="cena_grozs">
+                    <h1 class="cena" id="cenaGru">€ 9.10</h1>
+                    <button class="pievienot" id="buyGru">
+                        <img class="cart" src="./images/cart.png" alt="cart_image">
+                        Pievienot
+                    </button>
+                    <div class="skaititajs_parent" id="skaitGru30">
+                        <div class="skaititajs">
+                            <button id="minusGru30">-</button>
+                            <h1 id="counterGru30">0</h1>
+                            <button id="plusGru30">+</button>
+                        </div>
+                    </div>
+                    <div class="skaititajs_parent" id="skaitGru20">
+                        <div class="skaititajs">
+                            <button id="minusGru20">-</button>
+                            <h1 id="counterGru20">0</h1>
+                            <button id="plusGru20">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="all">
+            <div class="photo">
+                <img src="./images/new_york.jpg" class="pizza_photo" alt="new_york_picas_foto">
+            </div>
+            <div class="kolona">
+            <div class="name">
+                <h1 class="fonts_h1">New York</h1>
+                <p class="sastavdalas">Šķiņķis, vistas fileja, šampinjoni, sīpoli, marinēti gurķi, ķiploku mērce</p>
+            </div>
+            <div class="rinda">
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button class="aktiva" id="NY30">30cm</button>
+                    <button class="neaktiva" id="NY20">20cm</button>
+                </div>
+            </div>
+                <div class="cena_grozs">
+                    <h1 class="cena" id="cenaNY">€ 10.40</h1>
+                    <button class="pievienot" id="buyNY">
+                        <img class="cart" src="./images/cart.png" alt="cart_image">
+                        Pievienot
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <h1 class="virsraksts">Pica</h1>
+
+    <div class="container_picas">
+
+        <div class="all">
+            <div class="photo">
+                <img src="./images/margarita.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
+            </div>
+            <div class="kolona">
+                <div class="name">
+                    <h1 class="fonts_h1">Margarita</h1>
+                    <p class="sastavdalas">Extra siers, tomāti, oregano</p>
+                </div>
+                <div class="rinda">
+                    <p class="vards_izmers">Izmērs</p>
+                    <div class="pogas_div">
+                        <button class="aktiva" id="mar30">30cm</button>
+                        <button class="neaktiva" id="mar20">20cm</button>
+                    </div>
+                </div>
+                <div class="cena_grozs">
+                    <h1 class="cena" id="cenaCC">€ 6.90</h1>
+                    <button class="pievienot" id="buyMar">
+                        <img class="cart" src="./images/cart.png" alt="cart_image">
+                        Pievienot
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="all">
+            <div class="photo">
+                <img src="./images/salami.jpg" class="pizza_photo" alt="chicken_curry_picas_foto">
+            </div>
+            <div class="kolona">
+                <div class="name">
+                    <h1 class="fonts_h1">Salami</h1>
+                    <p class="sastavdalas">Salami</p>
+                </div>
+                <div class="rinda">
+                    <p class="vards_izmers">Izmērs</p>
+                    <div class="pogas_div">
+                        <button class="aktiva" id="sal30">30cm</button>
+                        <button class="neaktiva" id="sal20">20cm</button>
+                    </div>
+                </div>
+                <div class="cena_grozs">
+                    <h1 class="cena" id="cenaGru">€ 7.40</h1>
+                    <button class="pievienot" id="buySal">
+                        <img class="cart" src="./images/cart.png" alt="cart_image">
+                        Pievienot
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="all">
+            <div class="photo">
+                <img src="./images/new_york.jpg" class="pizza_photo" alt="new_york_picas_foto">
+            </div>
+            <div class="kolona">
+            <div class="name">
+                <h1 class="fonts_h1">Funghi</h1>
+                <p class="sastavdalas">Šampinjoni</p>
+            </div>
+            <div class="rinda">
+                <p class="vards_izmers">Izmērs</p>
+                <div class="pogas_div">
+                    <button class="aktiva" id="fun30">30cm</button>
+                    <button class="neaktiva" id="fun20">20cm</button>
+                </div>
+            </div>
+                <div class="cena_grozs">
+                    <h1 class="cena" id="cena_new_york_top3">€ 7.40</h1>
+                    <button class="pievienot" id="buyFun">
+                        <img class="cart" src="./images/cart.png" alt="cart_image">
+                        Pievienot
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<div class="pages" id="page2">
+    <h1>Dzērieni</h1>
+</div>
+
+
+<div class="pages" id="page3">
+    <h1>Piegāde</h1>
+    <hr>
+    <p>
+        Picu pasūtījums jāveic pa telefonu, zvanot uz konkrēto picēriju.
+    </p>
+    <p>
+        <b>Picu un dzērienu piegāde:</b>
+    </p>
+    <p>
+        <b>Jelgavas un Ozolnieku pilsētās:</b>
+        <br>
+        pasūtījumiem virs € 15.00 - bez maksas
+        <br>
+        pasūtījumiem līdz € 15.00 - € 3.00
+    </p>
+    <p>
+        <b>Reģionos ap Jelgavu un Ozolniekiem līdz 10km:</b>
+        <br>
+        pasūtījumiem virs € 22.00 - bez maksas
+        <br>
+        pasūtījumiem no €12.00 līdz € 22.00 - €2.00
+        <br>
+        pasūtījumiem līdz € 12.00 - € 3.50
+    </p>
+    <p>
+        <b>Svarīgi!
+        - Minimālā summa pasūtījumam ar piegādi - 5 eur, neieskaitot piegādes maksu.
+        <br>
+        - Pasūtījumus ar piegādi pieņemam, ja līdz darba laika beigām palikušas vairāk kā 30 min., un ņemot vērā esošo pasūtījumu rindu.
+        <br>
+        - Par piegādātajām picām un dzērieniem var norēķināties gan ar skaidru naudu, gan arī ar bankas maksājumu karti.
+        <br>
+        - Ja Jums ir atlaižu karte vai pienākas jubilāra atlaide (dāvinām 15% atlaidi tieši dzimšanas vai vārda dienā), par to lūdzam informēt pasūtījuma veikšanas brīdī.</b>
+    </p>
+    <hr>
+</div>
+
+
+<div class="pages" id="page4">
+    <h1>Kontakti</h1>
+    <p>
+        <b>SIA "Picu Darbnīca"</b>
+        <br>
+        Rīgas iela 1, Jelgava
+        <br>
+        Tel. <span style="text-decoration: underline; font-size: large;">2000 3993</span>
+        <br>
+        e-pasts: info@picudarbnica.lv
+        <br>
+        <br>
+        Darba laiks:
+        <br>
+        No svētdienas līdz ceturtdienai: 10 - 21
+        <br>
+        Piektdien un sestdien: 10 - 23
+    </p>
+    <br>
+    <hr>
+    <h1>Par mums</h1>
+    <p>
+        Picu Darbnīca ikvienam piedāvā sātīgas un bagātīgas picas par labu cenu.
+        <br><br>
+        Picas tiek gatavotas klientu acu priekšā, un klienti picas saņem tieši no krāsns - vēl karstas un kūpošas. Turklāt profesionālie un draudzīgie picu meistari ļauj klientam arī pašam noteikt savas picas saturu.
+        <br><br>
+        Picu Darbnīca pirmo reizi durvis vēra 2010.gada 8.augustā, piedāvājot gardas picas Jelgavas iedzīvotājiem un viesiem. Šajā laikā Picu Darbnīcas picas saņēmušas labas atsauksmes un atzinību.
+    </p>
+    <br>
+    <hr>
+    <h1>Jaunumi</h1>
+    <p>
+        13.08.2024.
+        <br><br>
+        “Picu darbnīca” SIA ir uzsākusi dalību EENergy projektā (EENergy - Enterprise Europe Network Energy grants for European SMEs), lai samazinātu enerģijas patēriņu un uz klimatu atstāto ietekmi.
+        <br><br>
+        Projekts tiek realizēts Picu darbnīcas filiālē Rīgā, Melnsila ielā 23, siltinot šīs telpas, lai mazinātu izmešus, kas nepieciešami apkures un kondicionēšanas nodrošināšanai.
+        <br><br><br>
+        09.04.2024.
+        <br><br>
+        <b>Otrdien, 9.04.24. atveram picēriju Daugavgrīvā - Parādes ielā 4.</b>
+        <br>
+        Laipni aicināti!
+    </p>
+    <br>
+    <hr>
+    <h1>Seko mums</h1>
+    <div class="social_media">
+        <a href="https://www.facebook.com/picudarbnica" target="_blank">
+            <img src="./images/facebook_icon.svg" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/picudarbnica/" target="_blank">
+            <img src="./images/instagram_icon.svg" alt="instagram">
+        </a>
+        <a href="https://www.twitter.com/picudarbnica" target="_blank">
+            <img src="./images/twitter_icon.svg" alt="twitter">
+        </a>
+    </div>
+</div>
+
+
+<div class="pages" id="page6">
+    <div id="atpakal_div">
+        <button class="page_buttons" data-page="page1" id="atpakal">Atpakaļ</button>
+    </div>
+    <h1 id="grozsh1" class="virsraksts">Grozs ir tukšs</h1>
+    <div class="cart_items">
+        <div id="itemCC30">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 class="nosaukums">Chicken Curry</h1>
+                        <h1 class="izmers">30cm</h1>
+                    </div>
+                </div>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="CC30GrozsCena">€ 9.10</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusCC30Grozs" class="minus">-</button>
+                            <h1 id="counterCC30Grozs">0</h1>
+                            <button id="plusCC30Grozs" class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="itemCC20">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img src="./images/chicken_curry.jpg" alt="chicken_curry_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 class="nosaukums">Chicken Curry</h1>
+                        <h1 class="izmers">20cm</h1>
+                    </div>
+                </div>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="CC20GrozsCena">€ 6.30</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusCC20Grozs" class="minus">-</button>
+                            <h1 id="counterCC20Grozs">0</h1>
+                            <button id="plusCC20Grozs" class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="itemGru30">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img src="./images/gruzinu.jpg" alt="gruzinu_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 class="nosaukums">Gruzīnu</h1>
+                        <h1 class="izmers">30cm</h1>
+                    </div>
+                </div>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="Gru30GrozsCena">€ 9.10</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusGru30Grozs" class="minus">-</button>
+                            <h1 id="counterGru30Grozs">0</h1>
+                            <button id="plusGru30Grozs" class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="itemGru20">
+            <div class="item">
+                <div class="kreisa_puse_div">
+                    <div class="bilde_div">
+                        <img src="./images/gruzinu.jpg" alt="gruzinu_pica">
+                    </div>
+                    <div class="nosaukums_div">
+                        <h1 class="nosaukums">Gruzīnu</h1>
+                        <h1 class="izmers">20cm</h1>
+                    </div>
+                </div>
+                <div class="laba_puse_div">
+                    <div class="cena_display">
+                        <h1 id="Gru20GrozsCena">€ 6.30</h1>
+                    </div>
+                    <div class="counter_parent">
+                        <div class="counter">
+                            <button id="minusGru20Grozs" class="minus">-</button>
+                            <h1 id="counterGru20Grozs">0</h1>
+                            <button id="plusGru20Grozs" class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="atcelt_div">
+        <button id="atcelt">Atcelt grozu</button>
+    </div>
+    <h1 class="kopa" id="kopa"></h1>
+    <div id="pasutit_div">
+        <button id="pasutit">Pasūtīt</button>
+    </div>
+</div>
+
+
+<div id="popup-overlay">
+    <div id="popup-form">
+        <button type="button" id="close-btn">x</button>
+        <div class="logo_form_div">
+            <img class="logo_form" src="./images/pica_logo_balts.png" alt="picu_darbnīcas_logo">
+        </div>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" autocomplete="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" id="registerFinal">Pieslēgties</button>
+            
+        </form>
+    </div>
+</div>
+
+
+</main>
+<footer></footer>
+<script src="script.js"></script>
+</body>
+</html>
