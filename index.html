@@ -31,8 +31,7 @@
         <div class="register_div">
             <button class="register" id="register">Pieslēgties</button>
             <button class="profile" id="profile">
-                <img src="./images/cart.png" alt="profile_picture" class="cart">
-                Mans profils
+                <h1 id="profile_name"></h1>
             </button>
         </div>
     </div>
@@ -512,15 +511,15 @@
         </div>
         <form>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" autocomplete="name" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Pieslēgties</button>
+            <button type="submit" id="registerFinal">Pieslēgties</button>
             
         </form>
     </div>

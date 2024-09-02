@@ -16,10 +16,7 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 
 window.onload = function() {
     document.querySelector("#page1").style.display = "block";
-    
-    openForm();
 
-    showToDo();
 };
 
 
@@ -45,9 +42,15 @@ const pasutit = document.querySelector("#pasutit");
 const pasutitDiv = document.querySelector("#pasutit_div");
 
 const register = document.querySelector("#register");
-const profile = document.querySelector("#profile");
 const closeFormBtn = document.querySelector("#close-btn");
+const registerFinal = document.querySelector("#registerFinal")
 
+const profile = document.querySelector("#profile");
+const profileName = document.querySelector("#profile_name");
+
+const username = document.querySelector("#username");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
 
 
 /* === Chicken Curry Variables === */
@@ -130,16 +133,6 @@ function closeForm() {
 }
 
 
-function showToDo() {
-    console.log("TO DO: ");
-    console.log("1. Navigation bar fixed to the top on scroll.");
-    console.log("2. #myDiv in nav bar and then on the bottom.");
-    console.log("3. Be able to call the number on click.");
-    console.log("4. Send a text message when the order is done.");
-    console.log("5. Finish all other pages.");
-    console.log("6. Domain paths, history, local order info.");
-    console.log("7. Something original");
-}
 
 function askToShowGrozs() {
     if (money > 0) {
@@ -793,3 +786,4 @@ register.onclick = function() {
 closeFormBtn.onclick = function() {
     closeForm();
 }
+
