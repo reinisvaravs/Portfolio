@@ -48,9 +48,8 @@ const grozsh1 = document.querySelector("#grozsh1");
 const pasutit = document.querySelector("#pasutit");
 const pasutitDiv = document.querySelector("#pasutit_div");
 
-const register = document.querySelector("#register");
+const registerBtn = document.querySelector("#register");
 const closeFormBtn = document.querySelector("#close-btn");
-const registerFinal = document.querySelector("#registerFinal")
 
 const profile = document.querySelector("#profile");
 const profileName = document.querySelector("#profile_name");
@@ -122,7 +121,10 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 
 
 
+
 /* ========= ALL FUNCTIONS ========= */
+
+
 
 
 
@@ -787,7 +789,7 @@ pasutit.onclick = function() {
 // ===== HEADER BUTTONS ====== //
 
 
-register.onclick = function() {
+registerBtn.onclick = function() {
     openForm();
 }
 
