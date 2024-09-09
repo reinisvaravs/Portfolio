@@ -235,9 +235,16 @@ hr {
     border: 1px solid black;
 }
 
-.coming_soon {
-    color: gray;
-    margin-left: 20px;
+.dzerieni_div {
+    margin: auto;
+    width: 50%;
+    max-width: 400px;
+    margin-top: 50px;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .pages {
@@ -534,6 +541,137 @@ hr {
 
 
 
+/* ========= POPUP CSS ========= */
+
+
+/* Popup overlay styling */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Popup form styling */
+#popup-form {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 700px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#popup-form input {
+    width: 95%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#popup-form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    background-color: #e01d3c;
+    color: white;
+    cursor: pointer;
+}
+
+#popup-form button[type="button"] {
+    background-color: rgb(217, 217, 217, 0.5);
+    color: rgb(109, 109, 109);
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 0 91%;
+}
+
+#popup-form button[type="button"]:hover {
+    background-color: rgb(161, 161, 161);
+    color: #000000;
+}
+
+#popup-form button:hover {
+    opacity: 0.8;
+}
+
+#popup-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+
+
+/* ========= OTHER ========= */
+
+
+.logo_form {
+    width: 70%;
+    max-width: 200px;
+    margin-bottom: 40px;
+}
+
+.logo_form_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page_buttons.active {
+    background-color: #f58220;
+    color: #ffffff;
+}
+
+
+.centered {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.zvaniet {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#error_div {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+.error_image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+
+
 /* ========= RESPONSIVE DESIGN ========= */
 
 @media screen and (max-width: 900px) {
@@ -720,7 +858,7 @@ hr {
 
 @media screen and (max-width: 540px) {
     .cena {
-        font-size: 22px;
+        font-size: 18px;
     }
     .cena_grozs {
         margin-top: 0;
@@ -961,7 +1099,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
     .cena {
         font-size: 12px;
     }
@@ -1062,118 +1200,3 @@ footer {
 }
 
 
-/* ========= POPUP CSS ========= */
-
-
-/* Popup overlay styling */
-#popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Popup form styling */
-#popup-form {
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    width: 400px;
-    height: 700px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-#popup-form input {
-    width: 95%;
-    padding: 8px;
-    margin: 10px 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-#popup-form button {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    border-radius: 4px;
-    border: none;
-    background-color: #e01d3c;
-    color: white;
-    cursor: pointer;
-}
-
-#popup-form button[type="button"] {
-    background-color: rgb(217, 217, 217, 0.5);
-    color: rgb(109, 109, 109);
-    width: 30px;
-    height: 30px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0 0 91%;
-}
-
-#popup-form button[type="button"]:hover {
-    background-color: rgb(161, 161, 161);
-    color: #000000;
-}
-
-#popup-form button:hover {
-    opacity: 0.8;
-}
-
-#popup-overlay.show {
-    display: flex;
-    opacity: 1;
-}
-
-.logo_form {
-    width: 70%;
-    max-width: 200px;
-    margin-bottom: 40px;
-}
-
-.logo_form_div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.page_buttons.active {
-    background-color: #f58220;
-    color: #ffffff;
-}
-
-
-.centered {
-    text-align: center;
-}
-
-#error_div {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 200px;
-    margin: auto;
-}
-
-.error_image {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
-}

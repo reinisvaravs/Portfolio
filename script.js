@@ -22,7 +22,7 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 });
 
 window.onload = function() {
-    document.querySelector("#page1").style.display = "block";
+    document.querySelector("#page2").style.display = "block";
     document.querySelector(`button[data-page="page1"]`).classList.add("active");
 };
 
@@ -55,6 +55,9 @@ const profile = document.querySelector("#profile");
 const profileName = document.querySelector("#profile_name");
 
 const error_div = document.querySelector("#error_div");
+const kopa = document.querySelector("#kopa");
+
+const zvaniet = document.querySelector("#zvaniet");
 
 
 /* === Chicken Curry Variables === */
@@ -125,7 +128,11 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 /* ========= ALL FUNCTIONS ========= */
 
 
-
+function askToHideError() {
+    if (error_div.style.display = "block") {
+        error_div.style.display = "none";
+    }
+}
 
 
 function openForm() {
@@ -148,6 +155,7 @@ function askToShowGrozs() {
         atceltDiv.style.display = "flex";
         pasutitDiv.style.display = "flex";
         kopa.classList.remove("centered");
+        askToHideError();
     }
     else {
         grozsh1.innerHTML = "Grozs ir tukšs";
@@ -183,7 +191,6 @@ function updateAll() {
     askToShowMyDiv();
 
     orderSummary();
-    console.log("money = " + money);
 }
 
 
@@ -204,10 +211,10 @@ function updateFCena() {
 
 function totalAmount() {
     if (money > 0) {
-        document.querySelector("#kopa").innerHTML = "Kopā: " + money.toFixed(2) + "€";
+        kopa.innerHTML = "Kopā: " + money.toFixed(2) + "€";
     }
     else {
-        document.querySelector("#kopa").innerHTML = "";
+        kopa.innerHTML = "";
     }
 };
 
@@ -421,20 +428,34 @@ function updateGrozs() {
 
 function orderSummary() {
 
-    console.log("");
-    console.log("");
-
     askToShowGrozs();
 
-    console.log("Tavs pasūtījums: ");
+    console.log("");
+    console.log("");
+    console.log("");
+    console.log("");
 
-    console.log("CC30 skaits: " + totalCC30);
-    console.log("CC20 skaits: " + totalCC20);
-
-    console.log("Gru30 skaits: " + totalGru30);
-    console.log("Gru20 skaits: " + totalGru20);
-
-    console.log("kopā: " + money.toFixed(2) + "€");
+    if (money > 0) {
+        console.log("Tavs pasūtījums: ");
+    }
+    if (totalCC30 > 0) {
+        console.log("CC30 skaits: " + totalCC30);
+    }
+    if (totalCC20 > 0) {
+        console.log("CC20 skaits: " + totalCC20);
+    }
+    if (totalGru30 > 0) {
+        console.log("Gru30 skaits: " + totalGru30);
+    }
+    if (totalGru20 > 0) {
+        console.log("Gru20 skaits: " + totalGru20);
+    }
+    if (money > 0) {
+        console.log("kopā: " + money.toFixed(2) + "€");
+    }
+    else {
+        console.log("Pasūtījums atcelts!")
+    }
 }
 
 
@@ -778,9 +799,11 @@ atcelt.onclick = function() {
 
 pasutit.onclick = function() {
     atceltGrozu();
-    kopa.innerHTML = "Pasūtījumus vēl nav iespējams veikt...";
+    kopa.innerHTML = "Pasūtījumus vēl nav iespējams veikt caur mājaslapu.";
+    zvaniet.innerHTML = "Lai pasūtītu zvaniet pa tel. 2000 3993 !";
     grozsh1.innerHTML = "";
     kopa.classList.add("centered");
+    zvaniet.classList.add("zvaniet");
     error_div.style.display = "flex";
 }
 
