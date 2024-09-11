@@ -629,7 +629,12 @@ hr {
     opacity: 1;
 }
 
-
+.hide {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    font-size: 1px;
+}
 
 /* ========= OTHER ========= */
 
