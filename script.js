@@ -22,7 +22,7 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 });
 
 window.onload = function() {
-    document.querySelector("#page2").style.display = "block";
+    document.querySelector("#page1").style.display = "block";
     document.querySelector(`button[data-page="page1"]`).classList.add("active");
 };
 
@@ -58,6 +58,23 @@ const error_div = document.querySelector("#error_div");
 const kopa = document.querySelector("#kopa");
 
 const zvaniet = document.querySelector("#zvaniet");
+
+const sticky = document.querySelector("#sticky");
+const header = document.querySelector("header");
+
+
+
+/* === REGISTER FORM === */
+
+
+const username = document.querySelector("#username");
+const email = document.querySelector("#email");
+const phone = document.querySelector("#phone");
+const password = document.querySelector("#password");
+const address = document.querySelector("#address");
+
+const submit = document.querySelector("#submit");
+
 
 
 /* === Chicken Curry Variables === */
@@ -126,6 +143,18 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 
 
 /* ========= ALL FUNCTIONS ========= */
+
+
+
+window.onscroll = () => {
+    if (window.scrollY >= 140) {
+        sticky.classList.add("sticky");
+        header.classList.add("stickyHeader")
+    } else {
+        sticky.classList.remove("sticky");
+        header.classList.remove("stickyHeader");
+    }
+}
 
 
 function askToHideError() {
@@ -223,11 +252,13 @@ function askToShowCC30() {
         buyCC.style.display = "none";
         skaitCC30.style.display = "block";
         skaitCC20.style.display = "none";
+        CC30.innerHTML = "30cm (" + totalCC30 + ")";
     }
     else {
         buyCC.style.display = "block";
         skaitCC30.style.display = "none";
         skaitCC20.style.display = "none";
+        CC30.innerHTML = "30cm";
     }
 };
 
@@ -236,11 +267,13 @@ function askToShowCC20() {
         buyCC.style.display = "none";
         skaitCC30.style.display = "none";
         skaitCC20.style.display = "block";
+        CC20.innerHTML = "20cm (" + totalCC20 + ")";
     }
     else {
         buyCC.style.display = "block";
         skaitCC30.style.display = "none";
         skaitCC20.style.display = "none";
+        CC20.innerHTML = "20cm";
     }
 };
 
@@ -466,11 +499,13 @@ function askToShowGru30() {
         buyGru.style.display = "none";
         skaitGru30.style.display = "block";
         skaitGru20.style.display = "none";
+        Gru30.innerHTML = "30cm (" + totalGru30 + ")";
     }
     else {
         buyGru.style.display = "block";
         skaitGru30.style.display = "none";
         skaitGru20.style.display = "none";
+        Gru30.innerHTML = "30cm";
     }
 };
 
@@ -479,11 +514,13 @@ function askToShowGru20() {
         buyGru.style.display = "none";
         skaitGru30.style.display = "none";
         skaitGru20.style.display = "block";
+        Gru20.innerHTML = "20cm (" + totalGru20 + ")";
     }
     else {
         buyGru.style.display = "block";
         skaitGru30.style.display = "none";
         skaitGru20.style.display = "none";
+        Gru20.innerHTML = "20cm";
     }
 };
 
@@ -819,5 +856,7 @@ registerBtn.onclick = function() {
 closeFormBtn.onclick = function() {
     closeForm();
 }
+
+
 
 
