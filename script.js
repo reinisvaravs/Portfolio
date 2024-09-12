@@ -857,48 +857,11 @@ closeFormBtn.onclick = function() {
     closeForm();
 }
 
-submit.onclick = function() {
-    document.getElementById("form").addEventListener("submit", function(event) {
-        event.preventDefault();
-    });
-
-    if (validateAll() == false) {
-        alert('Fill the form correctly!')
-        return
-    }
-
-    console.log("name: " + name.value);
-    console.log("email: " + email.value);
-    console.log("phone: " + phone.value);
-    console.log("password: " + password.value);
-    console.log("address: " + address.value);
-}
-
-function validateAll() {
-    if (name.value.length < 4) {
-        return false;
-    }
-    if (email.value.length < 14) {
-        return false;
-    }
-    if (phone.value.length < 4) {
-        return false;
-    }
-    if (password.value.length < 6) {
-        return false;
-    }
-    if (address.value.length < 6) {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
-
 
 document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent the default form submission
     document.getElementById("submit").disabled = true;
+    
 
     // Collect the form data
     var formData = new FormData(this);
