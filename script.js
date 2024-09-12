@@ -904,4 +904,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
         // Handle errors, you can display an error message here
         console.error(error);
       });
+
+      closeForm();
   });
