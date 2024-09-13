@@ -1,4 +1,10 @@
+.pages {
+    display: none;
+}
 
+#page1 {
+    display: block;
+}
 
 /* ========= HEADER ========= */
 
@@ -14,17 +20,6 @@
     display: block;
 }
 
-.profile {
-    width: 70%;
-    height: 50px;
-
-    border: none;
-    border-radius: 40px;
-    background-color: #e01d3c;
-    color: white;
-
-    display: none;
-}
 
 .register_div {
     width: 30%;
@@ -258,9 +253,7 @@ hr {
     }
 }
 
-.pages {
-    display: none;
-}
+
 
 .cena {
     font-size: 22px;

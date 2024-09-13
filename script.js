@@ -22,7 +22,6 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 });
 
 window.onload = function() {
-    document.querySelector("#page1").style.display = "block";
     document.querySelector(`button[data-page="page1"]`).classList.add("active");
 };
 
