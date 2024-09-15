@@ -309,13 +309,64 @@ hr {
 }
 
 #myDiv {
-    margin: 0;
     position: fixed;
-    top: 95%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    display: none;
+    top: 20%;
+    left: -2000px;
+}
+
+@keyframes show {
+    from {
+        opacity: 0%;
+        margin: 0;
+        top: 95%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 100%;
+        margin: 0;
+        top: 95%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes remove {
+    0% {
+        opacity: 100%;
+        margin: 0;
+        top: 95%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    99% {
+        opacity: 0%;
+        margin: 0;
+        top: 100%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0%;
+        top: 20%;
+        left: -2000px;
+    }
+}
+
+.animation1 {
+    animation-name: show;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.animation2 {
+    animation-name: remove;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 #grozs_button {

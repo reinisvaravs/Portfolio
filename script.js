@@ -1,3 +1,5 @@
+
+
 /* ========= LOADING THE PAGES ========= */
 
 
@@ -280,10 +282,14 @@ function askToShowCC20() {
 
 function askToShowMyDiv() {
     if (money > 0) {
-        myDiv.style.display = "block";
+        myDiv.classList.remove("animation2");
+        myDiv.classList.add("animation1");
+        console.log(money);
     }
     else {
-        myDiv.style.display = "none";
+        myDiv.classList.remove("animation1");
+        myDiv.classList.add("animation2");
+        console.log(money);
     }
 };
 
