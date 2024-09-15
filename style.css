@@ -966,6 +966,9 @@ footer {
     .footer_h1 {
         font-size: 18px;
     }
+    footer {
+        height: 400px;
+    }
 }
 
 
@@ -1056,7 +1059,7 @@ footer {
         width: 30px;
     }
     footer {
-        height: 400px;
+        height: 370px;
     }
 }
 
