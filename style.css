@@ -963,6 +963,9 @@ footer {
             font-size: 22px;
         }
     }
+    .footer_h1 {
+        font-size: 18px;
+    }
 }
 
 
@@ -1051,9 +1054,6 @@ footer {
     }
     .footer_sm_icons {
         width: 30px;
-    }
-    .footer_h1 {
-        font-size: 18px;
     }
     footer {
         height: 400px;
