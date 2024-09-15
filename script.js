@@ -1,5 +1,4 @@
 
-
 /* ========= LOADING THE PAGES ========= */
 
 
@@ -14,8 +13,14 @@ function showPage(page) {
         button.classList.remove("active");
     });
 
-    document.querySelector(`button[data-page="${page}"]`).classList.add("active");
-}
+    document.querySelectorAll(".page_buttons").forEach(button => {
+        
+    });
+
+    document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
+        button.classList.add("active");
+    });
+};
 
 document.querySelectorAll(".page_buttons").forEach(button => {
     button.onclick = function() {
