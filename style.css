@@ -750,6 +750,9 @@ hr {
     .register_div {
         margin-right: 20px;
     }
+    .cena {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {

@@ -284,12 +284,10 @@ function askToShowMyDiv() {
     if (money > 0) {
         myDiv.classList.remove("animation2");
         myDiv.classList.add("animation1");
-        console.log(money);
     }
     else {
         myDiv.classList.remove("animation1");
         myDiv.classList.add("animation2");
-        console.log(money);
     }
 };
 
