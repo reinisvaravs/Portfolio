@@ -56,6 +56,8 @@ const pasutitDiv = document.querySelector("#pasutit_div");
 
 const registerBtn = document.querySelector("#register");
 const closeFormBtn = document.querySelector("#close-btn");
+const closeFormBtn2 = document.querySelector("#close-btn2");
+
 
 const profile = document.querySelector("#profile");
 const profileName = document.querySelector("#profile_name");
@@ -182,7 +184,17 @@ function closeForm() {
     setTimeout(() => overlay.style.display = 'none', 500);
 }
 
+function openForm2() {
+    const overlay2 = document.getElementById('popup-overlay2');
+    overlay2.style.display = 'flex';
+    setTimeout(() => overlay2.classList.add('show'), 10);
+}
 
+function closeForm2() {
+    const overlay2 = document.getElementById('popup-overlay2');
+    overlay2.classList.remove('show');
+    setTimeout(() => overlay2.style.display = 'none', 500);
+}
 
 function askToShowGrozs() {
     if (money > 0) {
@@ -858,9 +870,16 @@ pasutit.onclick = function() {
 
 
 registerBtn.onclick = function() {
-    openForm();
+    openForm2();
+}
+closeFormBtn2.onclick = function() {
+    closeForm2();
 }
 
+
+pasutit.onclick = function() {
+    openForm();
+}
 closeFormBtn.onclick = function() {
     closeForm();
 }
@@ -914,4 +933,5 @@ document.getElementById("form").addEventListener("submit", function (e) {
       });
 
       closeForm();
+      atceltGrozu();
   });

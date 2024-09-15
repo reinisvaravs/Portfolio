@@ -265,7 +265,7 @@
 
 <div class="pages" id="page2">
     <div class="dzerieni_div">
-        <h1>Coming soon...</h1>
+        <h1 class="coming_soon">Coming soon...</h1>
     </div>
 </div>
 
@@ -493,7 +493,6 @@
     </div>
 </div>
 
-
 <div id="popup-overlay">
     <div id="popup-form">
         <button type="button" id="close-btn">x</button>
@@ -513,18 +512,47 @@
             <label for="Parole">Parole</label>
             <input type="password" id="password" name="Parole" required>
 
-            <!-- <label for="Adrese">Adrese</label>
+            <label for="Adrese">Adrese</label>
             <input type="text" id="address" name="Adrese" autocomplete="street-address" required>
+
             <label for="Papildus Info">Papildus Info</label>
             <input type="text" id="Note" name="Papildus Info">
             <label for="Pilseta">Pilseta</label>
-            <input type="text" name="Pilseta" autocomplete="address-level2"> -->
 
+            <input type="text" name="Pilseta" autocomplete="address-level2">
+
+            <input type="hidden" id="adresse" name="adresse">
 
             <button type="submit" id="submit">Pieslēgties</button>
         </form>
     </div>
 </div>
+
+<div id="popup-overlay2">
+    <div id="popup-form2">
+        <button type="button" id="close-btn2">x</button>
+        <div class="logo_form_div">
+            <img class="logo_form" src="./images/pica_logo_balts.png" alt="picu_darbnīcas_logo">
+        </div>
+        <form id="form2">
+            <label for="Vards">Vards</label>
+            <input type="text" autocomplete="name" required>
+
+            <label for="E-pasts">E-pasts</label>
+            <input type="email" autocomplete="email" required>
+
+            <label for="Telefona Numurs">Telefona Numurs</label>
+            <input type="text" autocomplete="tel" required>
+
+            <label for="Parole">Parole</label>
+            <input type="password" required>
+
+            <button type="submit" id="submit2">Pieslēgties</button>
+        </form>
+    </div>
+</div>
+
+
 
 
 </main>
@@ -541,6 +569,9 @@
                 <button data-page="page3" class="footer_buttons page_buttons">Piegāde</button>
                 <button data-page="page4" class="footer_buttons page_buttons">Kontakti</button>
                 <button data-page="page5" class="footer_buttons page_buttons">Grozs</button>
+                <a href="https://www.picudarbnica.lv/wp-content/uploads/2021/10/alergeni_picas-un-giross_updated_2021.pdf" target="_blank">
+                    <button class="footer_buttons">Alergēni</button>
+                </a>
             </div>
         </div>
         <div class="footer_item">
@@ -572,7 +603,6 @@
         </div>
     </div>
 </footer>
-
 
 <script src="script.js"></script>
 </body>
