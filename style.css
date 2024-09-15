@@ -774,6 +774,7 @@ hr {
 
 footer {
     width: 100%;
+    height: 430px;
     padding-top: 10px;
     background-color: rgb(206, 0, 0, 0.8);
     color: white;
@@ -807,7 +808,6 @@ footer {
 }
 
 .footer_item {
-    height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: left;
