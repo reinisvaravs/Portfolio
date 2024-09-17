@@ -28,9 +28,6 @@
                 <h1>2000 3993</h1>
             </div>
         </div>
-        <div class="register_div">
-            <button class="register" id="register">Pieslēgties</button>
-        </div>
     </div>
 </header>
  
@@ -503,13 +500,13 @@
             <label for="Vards">Vārds:</label>
             <input type="text" id="name" name="Vards" autocomplete="name" required>
 
-            <!-- <label for="E-pasts">E-pasts:</label>
-            <input type="email" id="email" name="E-pasts" autocomplete="email" required> -->
+            <label for="E-pasts">E-pasts:</label>
+            <input type="email" id="email" name="E-pasts" autocomplete="email" required>
 
             <label for="Telefona Numurs">Tālrunis:</label>
             <input type="text" id="phone" name="Telefona Numurs" autocomplete="tel" required>
-
-            <!-- <label for="Parole">Parole:</label>
+<!-- 
+            <label for="Parole">Parole:</label>
             <input type="password" id="password" name="Parole" required> -->
 
             <label for="Adrese">Adrese:</label>
@@ -520,36 +517,17 @@
 
             <label>Apmaksas sistēma drīzumā...</label>
 
-            <!-- <input class="virsraksts2" type="text" name="country" autocomplete="country">
-            <input class="virsraksts2" type="text" name="Pilseta" autocomplete="address-level2">
-            <input class="virsraksts2" type="text" name="postal-code" autocomplete="postal-code">
-            <input class="virsraksts2" type="text" name="organization" autocomplete="organization"> -->
+            <input class="virsraksts2" type="text" id="country" name="country" autocomplete="country">
+            <input class="virsraksts2" type="text" id="pilseta" name="Pilseta" autocomplete="address-level2">
+            <input class="virsraksts2" type="text" id="postalCode" name="postal-code" autocomplete="postal-code">
+            <input class="virsraksts2" type="text" id="organization" name="organization" autocomplete="organization">
+
+            <input class="virsraksts2" type="text" id="orderCC30" name="CC30">
+            <input class="virsraksts2" type="text" id="orderCC20" name="CC20">
+            <input class="virsraksts2" type="text" id="orderGru30" name="Gru30">
+            <input class="virsraksts2" type="text" id="orderGru20" name="Gru20">
 
             <button type="submit" id="submit">Pieslēgties</button>
-        </form>
-    </div>
-</div>
-
-<div id="popup-overlay2">
-    <div id="popup-form2">
-        <button type="button" id="close-btn2">x</button>
-        <div class="logo_form_div">
-            <img class="logo_form" src="./images/pica_logo_balts.png" alt="picu_darbnīcas_logo">
-        </div>
-        <form id="form2">
-            <label for="Vards">Vards</label>
-            <input type="text" autocomplete="name" required>
-
-            <label for="E-pasts">E-pasts</label>
-            <input type="email" autocomplete="email" required>
-
-            <label for="Telefona Numurs">Telefona Numurs</label>
-            <input type="text" autocomplete="tel" required>
-
-            <label for="Parole">Parole</label>
-            <input type="password" required>
-
-            <button type="submit" id="submit2">Pieslēgties</button>
         </form>
     </div>
 </div>

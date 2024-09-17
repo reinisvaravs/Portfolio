@@ -14,27 +14,6 @@
 
 /* ========= HEADER ========= */
 
-.register {
-    width: 70%;
-    height: 50px;
-
-    border: none;
-    border-radius: 40px;
-    background-color: #e01d3c;
-    color: white;
-
-    display: block;
-}
-
-
-.register_div {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 10px;
-}
 
 header {
     width: 100%;

@@ -30,19 +30,51 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 
 window.onload = function() {
     document.querySelector(`button[data-page="page1"]`).classList.add("active");
+    updateAll();
 };
 
+  
 
 
 /* ========= GLOBAL VARIABLES ========= */
 
-let money = 0;    // total order sum
+if (!localStorage.getItem("money")) {
+    localStorage.setItem("money", 0)
+}
+if (!localStorage.getItem("totalCC30")) {
+    localStorage.setItem("totalCC30", 0)
+}
+if (!localStorage.getItem("totalCC20")) {
+    localStorage.setItem("totalCC20", 0)
+}
+if (!localStorage.getItem("totalGru30")) {
+    localStorage.setItem("totalGru30", 0)
+}
+if (!localStorage.getItem("totalGru20")) {
+    localStorage.setItem("totalGru20", 0)
+}
 
-let totalCC30 = 0;    // how many chicken curry 30cm pizzas
-let totalCC20 = 0;    // how many chicken curry 20cm pizzas
+let money = Number(localStorage.getItem("money"));
+let totalCC30 = Number(localStorage.getItem("totalCC30"));
+let totalCC20 = Number(localStorage.getItem("totalCC20"));
+let totalGru30 = Number(localStorage.getItem("totalGru30"));
+let totalGru20 = Number(localStorage.getItem("totalGru20"));
 
-let totalGru30 = 0;
-let totalGru20 = 0;
+function updateLS() {
+    localStorage.setItem("money", money)
+    localStorage.setItem("totalCC30", totalCC30)
+    localStorage.setItem("totalCC20", totalCC20)
+    localStorage.setItem("totalGru30", totalGru30)
+    localStorage.setItem("totalGru20", totalGru20)
+};
+
+function resetLS() {
+    localStorage.setItem("money", 0)
+    localStorage.setItem("totalCC30", 0)
+    localStorage.setItem("totalCC20", 0)
+    localStorage.setItem("totalGru30", 0)
+    localStorage.setItem("totalGru20", 0)
+};
 
 
 const fCena = document.querySelector("#fCena");    //cena displayed on hidden div
@@ -80,8 +112,14 @@ const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 const password = document.querySelector("#password");
 const address = document.querySelector("#address");
+const note = document.getElementById("note");
 
 const submit = document.querySelector("#submit");
+
+const country = document.getElementById("country");
+const pilseta = document.getElementById("pilseta");
+const postalCode = document.getElementById("postalCode");
+const organization = document.getElementById("organization");
 
 
 
@@ -225,10 +263,10 @@ function updateAll() {
     updateCounterGru30Grozs();
     updateCounterGru20Grozs();
 
-    askToShowCC30();
     askToShowCC20();
-    askToShowGru30();
     askToShowGru20();
+    askToShowCC30();
+    askToShowGru30();
 
     askToShowGrozsCC30();
     askToShowGrozsCC20();
@@ -238,6 +276,7 @@ function updateAll() {
     askToShowMyDiv();
 
     orderSummary();
+    updateLS();
 }
 
 
@@ -264,6 +303,7 @@ function totalAmount() {
         kopa.innerHTML = "";
     }
 };
+
 
 function askToShowCC30() {
     if (totalCC30 > 0) {
@@ -477,6 +517,8 @@ function updateGrozs() {
     askToShowGrozsCC20();
     askToShowGrozsGru30();
     askToShowGrozsGru20();
+
+    updateLS();
 };
 
 function orderSummary() {
@@ -869,20 +911,51 @@ pasutit.onclick = function() {
 // ===== HEADER BUTTONS ====== //
 
 
-registerBtn.onclick = function() {
-    openForm2();
-}
-closeFormBtn2.onclick = function() {
-    closeForm2();
-}
-
 
 pasutit.onclick = function() {
     openForm();
+
+    if (localStorage.getItem("name")) {
+        name.value = localStorage.getItem("name");
+    }
+    if (localStorage.getItem("email")) {
+        email.value = localStorage.getItem("email");
+    }
+    if (localStorage.getItem("phone")) {
+        phone.value = localStorage.getItem("phone");
+    }
+    if (localStorage.getItem("address")) {
+        address.value = localStorage.getItem("address");
+    }
+    if (localStorage.getItem("country")) {
+        country.value = localStorage.getItem("country");
+    }
+    if (localStorage.getItem("pilseta")) {
+        pilseta.value = localStorage.getItem("pilseta");
+    }
+    if (localStorage.getItem("postalCode")) {
+        postalCode.value = localStorage.getItem("postalCode");
+    }
+    if (localStorage.getItem("organization")) {
+        organization.value = localStorage.getItem("organization");
+    }
+    if (totalCC30 > 0) {
+        orderCC30.value = totalCC30;
+    }
+    if (totalCC20 > 0) {
+        orderCC20.value = totalCC20;
+    }
+    if (totalGru30 > 0) {
+        orderGru30.value = totalGru30;
+    }
+    if (totalGru20 > 0) {
+        orderGru20.value = totalGru20;
+    }
 }
 closeFormBtn.onclick = function() {
     closeForm();
 }
+
 
 
 document.getElementById("form").addEventListener("submit", function (e) {
@@ -928,10 +1001,25 @@ document.getElementById("form").addEventListener("submit", function (e) {
         }, 2600);
       })
       .catch(function (error) {
-        // Handle errors, you can display an error message here
+        // Handle errors
         console.error(error);
       });
 
+      getInfo();
       closeForm();
       atceltGrozu();
+      updateLS();
   });
+
+function getInfo() {
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("phone", phone.value);
+    localStorage.setItem("address", address.value);
+    localStorage.setItem("country", country.value);
+    localStorage.setItem("pilseta", pilseta.value);
+    localStorage.setItem("postalCode", postalCode.value);
+    localStorage.setItem("organization", organization.value);
+}
+
+  
