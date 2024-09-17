@@ -290,6 +290,7 @@ hr {
     top: 20%;
     left: -2000px;
     z-index: 9999;
+    opacity: 0%;
 }
 
 @keyframes show {
@@ -346,12 +347,14 @@ hr {
     animation-name: show;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
 }
 
 .animation2 {
     animation-name: hide;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
 }
 
 
@@ -775,22 +778,6 @@ hr {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-}
-
-#error_div {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 200px;
-    margin: auto;
-}
-
-.error_image {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
 }
 
 

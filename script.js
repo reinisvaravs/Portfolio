@@ -209,13 +209,6 @@ window.onscroll = () => {
 }
 
 
-function askToHideError() {
-    if (error_div.style.display = "block") {
-        error_div.style.display = "none";
-    }
-}
-
-
 function openForm() {
     const overlay = document.getElementById('popup-overlay');
     overlay.style.display = 'flex';
@@ -283,7 +276,6 @@ function askToShowGrozs() {
         atceltDiv.style.display = "flex";
         pasutitDiv.style.display = "flex";
         kopa.classList.remove("centered");
-        askToHideError();
     }
     else {
         grozsh1.innerHTML = "Grozs ir tukšs";
@@ -385,10 +377,11 @@ function askToShowMyDiv() {
         myDiv.classList.add("animation1");
     }
     else {
-        myDiv.classList.remove("animation1");
         myDiv.classList.add("animation2");
+        myDiv.classList.remove("animation1");
     }
 };
+
 
 
 
