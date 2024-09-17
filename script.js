@@ -86,7 +86,7 @@ const grozsh1 = document.querySelector("#grozsh1");
 const pasutit = document.querySelector("#pasutit");
 const pasutitDiv = document.querySelector("#pasutit_div");
 
-const registerBtn = document.querySelector("#register");
+const pasutitBtn = document.querySelector("#pasutitBtn");
 const closeFormBtn = document.querySelector("#close-btn");
 const closeFormBtn2 = document.querySelector("#close-btn2");
 
@@ -214,6 +214,43 @@ function openForm() {
     const overlay = document.getElementById('popup-overlay');
     overlay.style.display = 'flex';
     setTimeout(() => overlay.classList.add('show'), 10);
+
+    if (localStorage.getItem("name")) {
+        name.value = localStorage.getItem("name");
+    }
+    if (localStorage.getItem("email")) {
+        email.value = localStorage.getItem("email");
+    }
+    if (localStorage.getItem("phone")) {
+        phone.value = localStorage.getItem("phone");
+    }
+    if (localStorage.getItem("address")) {
+        address.value = localStorage.getItem("address");
+    }
+    if (localStorage.getItem("country")) {
+        country.value = localStorage.getItem("country");
+    }
+    if (localStorage.getItem("pilseta")) {
+        pilseta.value = localStorage.getItem("pilseta");
+    }
+    if (localStorage.getItem("postalCode")) {
+        postalCode.value = localStorage.getItem("postalCode");
+    }
+    if (localStorage.getItem("organization")) {
+        organization.value = localStorage.getItem("organization");
+    }
+    if (totalCC30 > 0) {
+        orderCC30.value = totalCC30;
+    }
+    if (totalCC20 > 0) {
+        orderCC20.value = totalCC20;
+    }
+    if (totalGru30 > 0) {
+        orderGru30.value = totalGru30;
+    }
+    if (totalGru20 > 0) {
+        orderGru20.value = totalGru20;
+    }
 }
 
 function closeForm() {
@@ -896,61 +933,16 @@ atcelt.onclick = function() {
     atceltGrozu();
 }
 
-pasutit.onclick = function() {
-    atceltGrozu();
-    kopa.innerHTML = "Pasūtījumus vēl nav iespējams veikt caur mājaslapu.";
-    zvaniet.innerHTML = "Lai pasūtītu zvaniet pa tel. 2000 3993 !";
-    grozsh1.innerHTML = "";
-    kopa.classList.add("centered");
-    zvaniet.classList.add("zvaniet");
-    error_div.style.display = "flex";
-}
-
 
 
 // ===== HEADER BUTTONS ====== //
 
 
-
+pasutitBtn.onclick = function() {
+    openForm();
+}
 pasutit.onclick = function() {
     openForm();
-
-    if (localStorage.getItem("name")) {
-        name.value = localStorage.getItem("name");
-    }
-    if (localStorage.getItem("email")) {
-        email.value = localStorage.getItem("email");
-    }
-    if (localStorage.getItem("phone")) {
-        phone.value = localStorage.getItem("phone");
-    }
-    if (localStorage.getItem("address")) {
-        address.value = localStorage.getItem("address");
-    }
-    if (localStorage.getItem("country")) {
-        country.value = localStorage.getItem("country");
-    }
-    if (localStorage.getItem("pilseta")) {
-        pilseta.value = localStorage.getItem("pilseta");
-    }
-    if (localStorage.getItem("postalCode")) {
-        postalCode.value = localStorage.getItem("postalCode");
-    }
-    if (localStorage.getItem("organization")) {
-        organization.value = localStorage.getItem("organization");
-    }
-    if (totalCC30 > 0) {
-        orderCC30.value = totalCC30;
-    }
-    if (totalCC20 > 0) {
-        orderCC20.value = totalCC20;
-    }
-    if (totalGru30 > 0) {
-        orderGru30.value = totalGru30;
-    }
-    if (totalGru20 > 0) {
-        orderGru20.value = totalGru20;
-    }
 }
 closeFormBtn.onclick = function() {
     closeForm();

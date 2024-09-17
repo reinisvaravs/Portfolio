@@ -82,6 +82,10 @@ header {
     font-weight: 500;
 }
 
+
+/* ========= BODY ========= */
+
+
 .container {
     background-color: #f58220;
     width: 100%;
@@ -98,7 +102,7 @@ header {
     top: 0;
 }
 
-/* ========= BODY ========= */
+
 
 button {
     cursor: pointer;
@@ -952,9 +956,6 @@ footer {
         margin: auto;
         margin-left: 50px;
     }
-    .register_div {
-        margin-right: 20px;
-    }
     .cena {
         font-size: 20px;
     }
@@ -1107,9 +1108,6 @@ footer {
             font-size: medium;
         }
     }
-    .register {
-        height: 40px;
-    }
     .contact_item {
         h1 {
             font-size: 12px;
@@ -1141,9 +1139,6 @@ footer {
         .pilseta, .tel {
             gap: 6px;
         }
-    }
-    .register {
-        width: 70%;
     }
     header {
         height: 100px;
@@ -1203,9 +1198,6 @@ footer {
     }
     .info {
         padding-right: 30px;
-    }
-    .register {
-        width: 100%;
     }
 }
 
@@ -1306,12 +1298,6 @@ footer {
         width: 15px;
         height: 15px;
     }
-    .register {
-        width: 80%;
-    }
-    .register_div {
-        width: 25%;
-    }
     header {
         height: 80px;
     }
@@ -1380,17 +1366,6 @@ footer {
             margin-bottom: 22px;
         }
     }
-    .register_div {
-        margin-right: 30px;
-        width: 22%;
-        padding: 0;
-    }
-    .register {
-        width: 100%;
-        margin: 0;
-        font-size: 12px;
-        height: 30px;
-    }
     .footer_sm_icons {
         width: 30px;
     }
@@ -1449,9 +1424,6 @@ footer {
     }
     header {
         height: 60px;
-    }
-    .register_div {
-        margin-right: 20px;
     }
     .info {
         margin-left: 45px;
