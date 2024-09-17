@@ -30,9 +30,11 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 
 window.onload = function() {
     document.querySelector(`button[data-page="page1"]`).classList.add("active");
-
-
     updateAll();
+    if (money > 0) {
+        myDiv.classList.remove("animation2");
+        myDiv.classList.add("animation1");
+    }
 };
 
     
@@ -308,7 +310,6 @@ function updateAll() {
     askToShowGrozsGru30();
     askToShowGrozsGru20();
 
-    askToShowMyDiv();
     orderSummary();
     updateLS();
 }
@@ -323,6 +324,7 @@ function atceltGrozu() {
     money = 0;
 
     updateAll();
+    askToShowMyDiv();
 }
 
 function updateFCena() {
