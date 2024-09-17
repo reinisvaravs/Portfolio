@@ -200,8 +200,18 @@ function askToShowGold() {
 }
 
 
+// window.onscroll = () => {
+//     if (window.scrollY >= 140) {
+//         sticky.classList.add("sticky");
+//         header.classList.add("stickyHeader")
+//     } else {
+//         sticky.classList.remove("sticky");
+//         header.classList.remove("stickyHeader");
+//     }
+// }
+
 window.onscroll = () => {
-    if (window.scrollY >= 140) {
+    if (window.scrollY >= header.clientHeight + 20) {
         sticky.classList.add("sticky");
         header.classList.add("stickyHeader")
     } else {
