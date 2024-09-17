@@ -30,10 +30,13 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 
 window.onload = function() {
     document.querySelector(`button[data-page="page1"]`).classList.add("active");
+
+
     updateAll();
 };
 
-  
+    
+
 
 
 /* ========= GLOBAL VARIABLES ========= */
@@ -66,14 +69,8 @@ function updateLS() {
     localStorage.setItem("totalCC20", totalCC20)
     localStorage.setItem("totalGru30", totalGru30)
     localStorage.setItem("totalGru20", totalGru20)
-};
 
-function resetLS() {
-    localStorage.setItem("money", 0)
-    localStorage.setItem("totalCC30", 0)
-    localStorage.setItem("totalCC20", 0)
-    localStorage.setItem("totalGru30", 0)
-    localStorage.setItem("totalGru20", 0)
+    askToShowGold();
 };
 
 
@@ -86,9 +83,7 @@ const grozsh1 = document.querySelector("#grozsh1");
 const pasutit = document.querySelector("#pasutit");
 const pasutitDiv = document.querySelector("#pasutit_div");
 
-const pasutitBtn = document.querySelector("#pasutitBtn");
 const closeFormBtn = document.querySelector("#close-btn");
-const closeFormBtn2 = document.querySelector("#close-btn2");
 
 
 const profile = document.querySelector("#profile");
@@ -102,7 +97,7 @@ const zvaniet = document.querySelector("#zvaniet");
 const sticky = document.querySelector("#sticky");
 const header = document.querySelector("header");
 
-
+const page5Btn = document.getElementById("page5Btn");
 
 /* === REGISTER FORM === */
 
@@ -190,6 +185,17 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 
 /* ========= ALL FUNCTIONS ========= */
 
+
+function askToShowGold() {
+    if (money > 0) {
+        page5Btn.classList.add("animation3");
+        page5Btn.style.color = "white";
+    }
+    else {
+        page5Btn.classList.remove("animation3");
+        page5Btn.style.color = "rgb(216, 216, 216)";
+    }
+}
 
 
 window.onscroll = () => {
@@ -311,7 +317,6 @@ function updateAll() {
     askToShowGrozsGru20();
 
     askToShowMyDiv();
-
     orderSummary();
     updateLS();
 }
@@ -938,9 +943,6 @@ atcelt.onclick = function() {
 // ===== HEADER BUTTONS ====== //
 
 
-pasutitBtn.onclick = function() {
-    openForm();
-}
 pasutit.onclick = function() {
     openForm();
 }

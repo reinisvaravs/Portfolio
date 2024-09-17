@@ -18,70 +18,50 @@
 header {
     width: 100%;
     height: 120px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
 }
 
-.stickyHeader {
-    margin-bottom: 75px;
+#logo_div {
+    width: 30%;
+    height: 100%;
 }
 
-.header_div {
-    width: 100%;
-    max-width: 1150px;
+.logo_header {
+    height: 100%;
+}
+
+#info {
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    margin: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.logo_div {
-    width: 20%;
-    height: 100%;
-}
-
-.logo {
-    height: 100%;
-}
-
-.info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-
-    width: 50%;
-    height: 100%;
-}
-
-.pilseta, .tel {
-    margin: auto;
-    height: 100%;
+.location_div, .phone_div {
+    width: auto;
+    max-width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+}   
 
-    h1 {
-        font-size: 20px;
-        margin-top: 17px;
-    } 
+.infoh1 {
+    font-size: 20px;
 }
 
-
-.loc_icon, .tel_icon {
-    width: 20px;
-    height: 20px;
-    margin: auto;
+.phone, .location {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    align-self: center;
 }
-
-.span1 {
-    font-weight: 500;
-}
-
 
 /* ========= BODY ========= */
 
@@ -95,6 +75,10 @@ header {
     flex-wrap: nowrap;
     flex-flow: row;
     justify-content: space-evenly;
+}
+
+.stickyHeader {
+    margin-bottom: 75px;
 }
 
 .sticky {
@@ -305,6 +289,7 @@ hr {
     position: fixed;
     top: 20%;
     left: -2000px;
+    z-index: 9999;
 }
 
 @keyframes show {
@@ -355,6 +340,8 @@ hr {
     }
 }
 
+
+
 .animation1 {
     animation-name: show;
     animation-duration: 2s;
@@ -366,6 +353,8 @@ hr {
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
+
+
 
 #grozs_button {
     width: auto;
@@ -946,16 +935,40 @@ footer {
     align-items: center;
 }
 
+
+
+/* ========= LAST LOADING CSS ========= */
+
+
+
+
+@keyframes glow {
+    0% {
+        opacity: 85%;
+        font-size: 100%;
+    }
+    50% {
+        opacity: 100%;
+        font-size: 105%;
+    }
+    100% {
+        opacity: 85%;
+        font-size: 100%;
+    }
+}
+
+.animation3 {
+    animation-name: glow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
 /* ========= RESPONSIVE DESIGN ========= */
 
 @media screen and (max-width: 900px) {
-    .info {
-        flex-direction: column;
-        height: 90%;
-        width: 40%;
-        margin: auto;
-        margin-left: 50px;
-    }
     .cena {
         font-size: 20px;
     }
@@ -1036,6 +1049,11 @@ footer {
     }
 }
 
+@media screen and (max-width: 700px) {
+    .infoh1 {
+        font-size: 16px;
+    }
+}
 
 @media screen and (max-width: 690px) {
     .all {
@@ -1101,13 +1119,6 @@ footer {
             margin-left: 2px;
         }
     }
-    .info {
-        padding-left: 15px;
-
-        h1 {
-            font-size: medium;
-        }
-    }
     .contact_item {
         h1 {
             font-size: 12px;
@@ -1125,25 +1136,15 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .info {        
-
-        h1 {
-            font-size: small;
-        }
-        .loc_icon, .tel_icon {
-            width: 15px;
-            height: 15px;
-            margin-top: 22px;
-        }
-        .pilseta, .tel {
-            gap: 6px;
-        }
+@media screen and (max-width: 590px) {
+    .infoh1 {
+        font-size: 14px;
     }
     header {
         height: 100px;
     }
 }
+
 
 @media screen and (max-width: 540px) {
     .cena {
@@ -1196,9 +1197,23 @@ footer {
             margin-left: 2px;
         }
     }
-    .info {
-        padding-right: 30px;
+    .infoh1 {
+        font-size: 14px;
     }
+    .phone, .location {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    #info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .location_div, .phone_div {
+        width: 100%;
+        max-width: 100%;
+        height: 50%;
+    }  
 }
 
 
@@ -1240,18 +1255,8 @@ footer {
             margin-left: 2px;
         }
     }
-    .span1 {
-        font-size: 0;
-    }
-    .info {
-        height: 100%;
-        width: 30%;
-        margin: auto;
-        margin-left: 60px;
-        padding: 0;
-    }
-    .loc_icon, .tel_icon {
-        margin-bottom: 15px;
+    #grozs_button {
+        min-width: 240px;
     }
 } 
 
@@ -1282,21 +1287,6 @@ footer {
             font-size: 14px;
             margin-left: 2px;
         }
-    }
-    .pilseta, .tel {
-        h1 {
-            font-size: 16px;
-            margin: auto;
-        }
-    }
-    .info {
-        margin-left: 50px;
-        margin-top: 0;
-        height: 50%;
-    }
-    .loc_icon, .tel_icon {
-        width: 15px;
-        height: 15px;
     }
     header {
         height: 80px;
@@ -1354,20 +1344,29 @@ footer {
             margin-left: 2px;
         }
     }
-    .info {
-        margin-left: 60px;
-
-        h1 {
-            font-size: small;
-        }
-        .loc_icon, .tel_icon {
-            width: 13px;
-            height: 13px;
-            margin-bottom: 22px;
-        }
-    }
     .footer_sm_icons {
         width: 30px;
+    }
+    #grozs_button {
+        min-width: 200px;
+    }
+    .nauda-1 {
+        font-size: 16px;
+    }
+    .cart-1 {
+        width: 25px;
+        height: 20px;
+    }
+    header {
+        height: 70px;
+    }
+    .infoh1 {
+        font-size: 12px;
+    }
+    .phone, .location {
+        width: 15px;
+        height: 15px;
+        margin-right: 4px;
     }
 }
 
@@ -1416,18 +1415,15 @@ footer {
             margin-left: 2px;
         }
     }
-    .pilseta, .tel {
-        h1 {
-            font-size: 12px;
-            margin-top: 6px;
-        }
+    #grozs_button {
+        min-width: 180px;
+        border: 3px solid white;
     }
-    header {
-        height: 60px;
+    .nauda-1 {
+        font-size: 14px;
     }
-    .info {
-        margin-left: 45px;
-        height: 40%;
-        margin-top: 7px;
+    .cart-1 {
+        width: 20px;
+        height: 15px;
     }
 }
