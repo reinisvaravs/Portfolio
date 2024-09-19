@@ -1,3 +1,81 @@
+const CCdiv = document.getElementById("CCdiv");
+const Grudiv = document.getElementById("Grudiv");
+const NYdiv = document.getElementById("NYdiv");
+const Mardiv = document.getElementById("Mardiv");
+const Saldiv = document.getElementById("Saldiv");
+const Fundiv = document.getElementById("Fundiv");
+const body = document.querySelector("body");
+const page2 = document.getElementById("page2");
+const page3 = document.getElementById("page3");
+const page4 = document.getElementById("page4");
+
+
+window.onload = function() {
+
+    setInterval(showPage2, 0);
+    setInterval(showPage3, 0);
+    setInterval(showPage4, 0);
+    setInterval(showPage5, 0);
+
+    setInterval(showCC, 0);
+    setInterval(showGru, 200);
+    setInterval(showNY, 400);
+    setInterval(showMar, 600);
+    setInterval(showSal, 800);
+    setInterval(showFun, 1000);
+
+
+    document.querySelector(`button[data-page="page1"]`).classList.add("active");
+    updateAll();
+
+    if (money > 0) {
+        myDiv.classList.remove("animation2");
+        myDiv.classList.add("animation1");
+        orderSummary();
+    }
+};
+
+function showPage5() {
+    page5.classList.add("animation_onload_fast");
+}
+
+function showPage4() {
+    page4.classList.add("animation_onload_fast");
+}
+
+function showPage3() {
+    page3.classList.add("animation_onload_fast");
+}
+
+function showPage2() {
+    page2.classList.add("animation_onload_fast");
+}
+
+function showCC() {
+    CCdiv.classList.add("animation_onload");
+}
+
+function showGru() {
+    Grudiv.classList.add("animation_onload");
+}
+
+function showNY() {
+    NYdiv.classList.add("animation_onload");
+}
+
+function showMar() {
+    Mardiv.classList.add("animation_onload");
+}
+
+function showSal() {
+    Saldiv.classList.add("animation_onload");
+}
+
+function showFun() {
+    Fundiv.classList.add("animation_onload");
+}
+
+
 
 /* ========= LOADING THE PAGES ========= */
 
@@ -28,14 +106,6 @@ document.querySelectorAll(".page_buttons").forEach(button => {
     }
 });
 
-window.onload = function() {
-    document.querySelector(`button[data-page="page1"]`).classList.add("active");
-    updateAll();
-    if (money > 0) {
-        myDiv.classList.remove("animation2");
-        myDiv.classList.add("animation1");
-    }
-};
 
     
 
@@ -320,7 +390,6 @@ function updateAll() {
     askToShowGrozsGru30();
     askToShowGrozsGru20();
 
-    orderSummary();
     updateLS();
 }
 
@@ -335,6 +404,7 @@ function atceltGrozu() {
 
     updateAll();
     askToShowMyDiv();
+    orderSummary();
 }
 
 function updateFCena() {
