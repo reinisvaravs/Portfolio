@@ -1,115 +1,3 @@
-const CCdiv = document.getElementById("CCdiv");
-const Grudiv = document.getElementById("Grudiv");
-const NYdiv = document.getElementById("NYdiv");
-const Mardiv = document.getElementById("Mardiv");
-const Saldiv = document.getElementById("Saldiv");
-const Fundiv = document.getElementById("Fundiv");
-const body = document.querySelector("body");
-const page2 = document.getElementById("page2");
-const page3 = document.getElementById("page3");
-const page4 = document.getElementById("page4");
-
-
-window.onload = function() {
-
-    setInterval(showPage2, 0);
-    setInterval(showPage3, 0);
-    setInterval(showPage4, 0);
-    setInterval(showPage5, 0);
-
-    setInterval(showCC, 0);
-    setInterval(showGru, 200);
-    setInterval(showNY, 400);
-    setInterval(showMar, 600);
-    setInterval(showSal, 800);
-    setInterval(showFun, 1000);
-
-
-    document.querySelector(`button[data-page="page1"]`).classList.add("active");
-    updateAll();
-
-    if (money > 0) {
-        myDiv.classList.remove("animation2");
-        myDiv.classList.add("animation1");
-        orderSummary();
-    }
-};
-
-function showPage5() {
-    page5.classList.add("animation_onload_fast");
-}
-
-function showPage4() {
-    page4.classList.add("animation_onload_fast");
-}
-
-function showPage3() {
-    page3.classList.add("animation_onload_fast");
-}
-
-function showPage2() {
-    page2.classList.add("animation_onload_fast");
-}
-
-function showCC() {
-    CCdiv.classList.add("animation_onload");
-}
-
-function showGru() {
-    Grudiv.classList.add("animation_onload");
-}
-
-function showNY() {
-    NYdiv.classList.add("animation_onload");
-}
-
-function showMar() {
-    Mardiv.classList.add("animation_onload");
-}
-
-function showSal() {
-    Saldiv.classList.add("animation_onload");
-}
-
-function showFun() {
-    Fundiv.classList.add("animation_onload");
-}
-
-
-
-/* ========= LOADING THE PAGES ========= */
-
-
-function showPage(page) {
-    document.querySelectorAll(".pages").forEach(div => {
-        div.style.display = "none";
-    });
-
-    document.querySelector(`#${page}`).style.display = "block";
-
-    document.querySelectorAll(".page_buttons").forEach(button => {
-        button.classList.remove("active");
-    });
-
-    document.querySelectorAll(".page_buttons").forEach(button => {
-        
-    });
-
-    document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
-        button.classList.add("active");
-    });
-};
-
-document.querySelectorAll(".page_buttons").forEach(button => {
-    button.onclick = function() {
-        showPage(this.dataset.page);
-    }
-});
-
-
-    
-
-
 
 /* ========= GLOBAL VARIABLES ========= */
 
@@ -144,6 +32,21 @@ function updateLS() {
 
     askToShowGold();
 };
+
+
+
+const CCdiv = document.getElementById("CCdiv");
+const Grudiv = document.getElementById("Grudiv");
+const NYdiv = document.getElementById("NYdiv");
+const Mardiv = document.getElementById("Mardiv");
+const Saldiv = document.getElementById("Saldiv");
+const Fundiv = document.getElementById("Fundiv");
+const body = document.querySelector("body");
+const page2 = document.getElementById("page2");
+const page3 = document.getElementById("page3");
+const page4 = document.getElementById("page4");
+
+
 
 
 const fCena = document.querySelector("#fCena");    //cena displayed on hidden div
@@ -255,7 +158,110 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 
 
 
+/* ========= LOADING THE PAGES ========= */
+
+
+function showPage(page) {
+    document.querySelectorAll(".pages").forEach(div => {
+        div.style.display = "none";
+    });
+
+    document.querySelector(`#${page}`).style.display = "block";
+
+    document.querySelectorAll(".page_buttons").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.querySelectorAll(".page_buttons").forEach(button => {
+        
+    });
+
+    document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
+        button.classList.add("active");
+    });
+};
+
+document.querySelectorAll(".page_buttons").forEach(button => {
+    button.onclick = function() {
+        showPage(this.dataset.page);
+    }
+});
+
+window.onload = function() {
+
+    setInterval(showPage2, 0);
+    setInterval(showPage3, 0);
+    setInterval(showPage4, 0);
+    setInterval(showPage5, 0);
+    setInterval(showCC, 0);
+    setInterval(showGru, 200);
+    setInterval(showNY, 400);
+    setInterval(showMar, 600);
+    setInterval(showSal, 800);
+    setInterval(showFun, 1000);
+
+    document.querySelector(`button[data-page="page1"]`).classList.add("active");
+    updateAll();
+
+    if (money > 0) {
+        myDiv.classList.remove("animation2");
+        myDiv.classList.add("animation1");
+        orderSummary();
+    }
+};
+    
+
+
+
+
+
+
 /* ========= ALL FUNCTIONS ========= */
+
+
+
+function showPage5() {
+    page5.classList.add("animation_onload_fast");
+}
+
+function showPage4() {
+    page4.classList.add("animation_onload_fast");
+}
+
+function showPage3() {
+    page3.classList.add("animation_onload_fast");
+}
+
+function showPage2() {
+    page2.classList.add("animation_onload_fast");
+}
+
+function showCC() {
+    CCdiv.classList.add("animation_onload");
+}
+
+function showGru() {
+    Grudiv.classList.add("animation_onload");
+}
+
+function showNY() {
+    NYdiv.classList.add("animation_onload");
+}
+
+function showMar() {
+    Mardiv.classList.add("animation_onload");
+}
+
+function showSal() {
+    Saldiv.classList.add("animation_onload");
+}
+
+function showFun() {
+    Fundiv.classList.add("animation_onload");
+}
+
+
+
 
 
 function askToShowGold() {
@@ -269,16 +275,6 @@ function askToShowGold() {
     }
 }
 
-
-// window.onscroll = () => {
-//     if (window.scrollY >= 140) {
-//         sticky.classList.add("sticky");
-//         header.classList.add("stickyHeader")
-//     } else {
-//         sticky.classList.remove("sticky");
-//         header.classList.remove("stickyHeader");
-//     }
-// }
 
 window.onscroll = () => {
     if (window.scrollY >= header.clientHeight + 20) {
@@ -1090,5 +1086,3 @@ function getInfo() {
     localStorage.setItem("postalCode", postalCode.value);
     localStorage.setItem("organization", organization.value);
 }
-
-  
