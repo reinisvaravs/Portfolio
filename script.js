@@ -1048,7 +1048,12 @@ document.getElementById("form").addEventListener("submit", function (e) {
       });
 
       getInfo();
-      closeForm();
+      
+      const overlay = document.getElementById('popup-overlay');
+      overlay.classList.remove('show');
+      setTimeout(() => overlay.style.display = 'none', 500);
+      console.log("closing form");
+
       atceltGrozu();
       updateLS();
   });
