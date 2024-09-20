@@ -32,6 +32,7 @@
 .all {
     width: 30%;
     opacity: 0%;
+    z-index: 1;
 }
 
 
