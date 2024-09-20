@@ -304,18 +304,6 @@ function openForm() {
     if (localStorage.getItem("address")) {
         address.value = localStorage.getItem("address");
     }
-    if (localStorage.getItem("country")) {
-        country.value = localStorage.getItem("country");
-    }
-    if (localStorage.getItem("pilseta")) {
-        pilseta.value = localStorage.getItem("pilseta");
-    }
-    if (localStorage.getItem("postalCode")) {
-        postalCode.value = localStorage.getItem("postalCode");
-    }
-    if (localStorage.getItem("organization")) {
-        organization.value = localStorage.getItem("organization");
-    }
     if (totalCC30 > 0) {
         orderCC30.value = totalCC30;
     }
@@ -334,18 +322,6 @@ function closeForm() {
     const overlay = document.getElementById('popup-overlay');
     overlay.classList.remove('show');
     setTimeout(() => overlay.style.display = 'none', 500);
-}
-
-function openForm2() {
-    const overlay2 = document.getElementById('popup-overlay2');
-    overlay2.style.display = 'flex';
-    setTimeout(() => overlay2.classList.add('show'), 10);
-}
-
-function closeForm2() {
-    const overlay2 = document.getElementById('popup-overlay2');
-    overlay2.classList.remove('show');
-    setTimeout(() => overlay2.style.display = 'none', 500);
 }
 
 function askToShowGrozs() {
@@ -1026,7 +1002,7 @@ closeFormBtn.onclick = function() {
 document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent the default form submission
     document.getElementById("submit").disabled = true;
-    
+
 
     // Collect the form data
     var formData = new FormData(this);
@@ -1036,6 +1012,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     }
 
     var formDataString = keyValuePairs.join("&");
+
 
     // Send a POST request to your Google Apps Script
     fetch(
@@ -1081,8 +1058,4 @@ function getInfo() {
     localStorage.setItem("email", email.value);
     localStorage.setItem("phone", phone.value);
     localStorage.setItem("address", address.value);
-    localStorage.setItem("country", country.value);
-    localStorage.setItem("pilseta", pilseta.value);
-    localStorage.setItem("postalCode", postalCode.value);
-    localStorage.setItem("organization", organization.value);
 }
