@@ -1046,7 +1046,6 @@ function validateFields() {
     submit.disabled = true;
     submit.style.background = "gray";
     submit.style.cursor = "not-allowed";
-    console.log("validating fields...")
     
 
     if (name.value.length < 3) {
@@ -1065,7 +1064,6 @@ function validateFields() {
         submit.disabled = false;
         submit.style.background = "#e01d3c";
         submit.style.cursor = "pointer";
-        console.log("form ir valid!")
     }
 }
 
