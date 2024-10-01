@@ -1,3 +1,55 @@
+.fadeOut {
+    animation: fadeOut 0.5s ease;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+.all {
+    width: 30%;
+    opacity: 0%;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: #000000 1px;
+
+}
+
+.border {
+    transition: .5s ease;
+} 
+.border:hover {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: .5s ease;
+}
+
+
+.container_picas {
+    margin: auto auto 50px auto;
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+}
+
+.pizza_photo {
+    width: 90%;
+    margin: 15px auto;
+}
 
 .pages {
     display: none;
@@ -27,13 +79,6 @@
     to {
         opacity: 100%;
     }
-}
-
-
-.all {
-    width: 30%;
-    opacity: 0%;
-    z-index: 1;
 }
 
 
@@ -173,16 +218,6 @@ button {
     }
 }
 
-.container_picas {
-    margin: auto auto 50px auto;
-    width: 90%;
-    max-width: 1150px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 5%;
-}
 
 
 .coming_soon {
@@ -199,10 +234,6 @@ button {
 .virsraksts {
     text-align: center;
     font-size: 35px;
-}
-
-.pizza_photo {
-    width: 100%;
 }
 
 .aktiva {

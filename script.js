@@ -1,12 +1,6 @@
 
 /* ========= GLOBAL VARIABLES ========= */
 
-let money = Number(localStorage.getItem("money"));
-let totalCC30 = Number(localStorage.getItem("totalCC30"));
-let totalCC20 = Number(localStorage.getItem("totalCC20"));
-let totalGru30 = Number(localStorage.getItem("totalGru30"));
-let totalGru20 = Number(localStorage.getItem("totalGru20"));
-
 
 const CCdiv = document.getElementById("CCdiv");
 const Grudiv = document.getElementById("Grudiv");
@@ -50,6 +44,7 @@ const orderTotal = document.getElementById("orderTotal");
 const date = document.getElementById("date");
 const time = document.getElementById("time");
 
+const cartItems = document.querySelector('.cart_items');
 
 /* === Chicken Curry Variables === */
 
@@ -98,21 +93,55 @@ const counterGru20Grozs = document.querySelector("#counterGru20Grozs");
 
 /* === The local storage === */
 
-if (!localStorage.getItem("money")) {
-    localStorage.setItem("money", 0)
+
+
+
+if (!localStorage.getItem("orderInfo")) {
+    localStorage.setItem("orderInfo", JSON.stringify(
+        orderInfo = {
+            money: 0,
+            totalCC30: 0,
+            totalCC20: 0,
+            totalGru30: 0,
+            totalGru20: 0
+        }
+    ));
 }
-if (!localStorage.getItem("totalCC30")) {
-    localStorage.setItem("totalCC30", 0)
+
+if (!localStorage.getItem("userInfo")) {
+    localStorage.setItem("userInfo", JSON.stringify(
+        userInfo = {
+            name: "",
+            email: "",
+            phone: "",
+            address: ""
+        }
+    ));
 }
-if (!localStorage.getItem("totalCC20")) {
-    localStorage.setItem("totalCC20", 0)
+
+
+let money = (JSON.parse(localStorage.getItem("orderInfo"))).money;
+let totalCC30 = (JSON.parse(localStorage.getItem("orderInfo"))).totalCC30;
+let totalCC20 = (JSON.parse(localStorage.getItem("orderInfo"))).totalCC20;
+let totalGru30 = (JSON.parse(localStorage.getItem("orderInfo"))).totalGru30;
+let totalGru20 = (JSON.parse(localStorage.getItem("orderInfo"))).totalGru20;
+
+let nameLS = (JSON.parse(localStorage.getItem("userInfo"))).name;
+let emailLS = (JSON.parse(localStorage.getItem("userInfo"))).email;
+let phoneLS = (JSON.parse(localStorage.getItem("userInfo"))).phone;
+let addressLS = (JSON.parse(localStorage.getItem("userInfo"))).address;
+
+function updateLS() {
+    orderInfo = JSON.parse(localStorage.getItem("orderInfo"));
+    orderInfo.totalCC30 = totalCC30;
+    orderInfo.totalCC20 = totalCC20;
+    orderInfo.totalGru30 = totalGru30;
+    orderInfo.totalGru20 = totalGru20;
+    orderInfo.money = money;
+    localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
 }
-if (!localStorage.getItem("totalGru30")) {
-    localStorage.setItem("totalGru30", 0)
-}
-if (!localStorage.getItem("totalGru20")) {
-    localStorage.setItem("totalGru20", 0)
-}
+
+
 
 /* ========= LOADING THE PAGES ========= */
 
@@ -175,22 +204,12 @@ window.onload = function() {
 /* ========= ALL FUNCTIONS ========= */
 
 
-function updateLS() {
-    localStorage.setItem("money", money)
-    localStorage.setItem("totalCC30", totalCC30)
-    localStorage.setItem("totalCC20", totalCC20)
-    localStorage.setItem("totalGru30", totalGru30)
-    localStorage.setItem("totalGru20", totalGru20)
 
-    askToShowGold();
-};
 
 function resetLS() {
-    localStorage.setItem("name", "")
-    localStorage.setItem("email", "")
-    localStorage.setItem("phone", "")
-    localStorage.setItem("address", "")
-    console.log("reseted the local storage!");
+    localStorage.clear();
+
+    console.log("deleted the local storage!");
 }
 
 function showPage5() {
@@ -262,18 +281,10 @@ function openForm() {
     setTimeout(() => overlay.classList.add('show'), 10);
 
 
-    if (localStorage.getItem("name")) {
-        name.value = localStorage.getItem("name");
-    }
-    if (localStorage.getItem("email")) {
-        email.value = localStorage.getItem("email");
-    }
-    if (localStorage.getItem("phone")) {
-        phone.value = localStorage.getItem("phone");
-    }
-    if (localStorage.getItem("address")) {
-        address.value = localStorage.getItem("address");
-    }
+    name.value = (JSON.parse(localStorage.getItem("userInfo"))).name;
+    email.value = emailLS;
+    phone.value = phoneLS;
+    address.value = addressLS;
     if (totalCC30 > 0) {
         orderCC30.value = totalCC30;
     }
@@ -290,9 +301,10 @@ function openForm() {
     date.value = new Date().toLocaleDateString();
     time.value = new Date().toLocaleTimeString('lv', { hour12: false, hour: "numeric", minute: "numeric", second: "numeric"});
 
-    validateFields();
-    setInterval(validateFields, 1000);
+    
+    let validateInterval = setInterval(ValidateFields, 1000);
 }
+
 
 function closeForm() {
     const overlay = document.getElementById('popup-overlay');
@@ -429,7 +441,7 @@ function updateCounterCC20() {
 
 function pirktCC() {
     if (CCC.innerHTML === "€ 9.10") {
-        totalCC30 = totalCC30 + 1;
+        totalCC30 += 1;
         money = Math.round((money + 9.10) * 100) / 100;
         
         orderSummary();
@@ -958,7 +970,21 @@ minusGru20Grozs.onclick = function() {
 
 
 atcelt.onclick = function() {
-    atceltGrozu();
+    addTheFade();
+    setTimeout(atceltGrozu, 450);
+    setTimeout(remTheFade, 1000);
+}
+function addTheFade() {
+    cartItems.classList.add('fadeOut');
+    atcelt.classList.add('fadeOut');
+    pasutit.classList.add('fadeOut');
+    kopa.classList.add('fadeOut');
+}
+function remTheFade() {
+    cartItems.classList.remove('fadeOut');
+    atcelt.classList.remove('fadeOut');
+    pasutit.classList.remove('fadeOut');
+    kopa.classList.remove('fadeOut');
 }
 
 
@@ -973,12 +999,21 @@ closeFormBtn.onclick = function() {
     closeForm();
 }
 
-
-
 document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent the default form submission
     submit.disabled = true;
 
+    orderSystem.push({
+        id: ((Math.random())*10000).toFixed(0),
+        name: name.value,
+        email: email.value,
+        phone: phone.value,
+        address: address.value,
+        CC30: totalCC30,
+        CC20: totalCC20,
+        Gru30: totalGru30,
+        Gru20: totalGru20,
+    })
 
     // Collect the form data
     var formData = new FormData(this);
@@ -1031,33 +1066,47 @@ document.getElementById("form").addEventListener("submit", function (e) {
       console.log("closing form");
 
       atceltGrozu();
-      updateLS();
       grozsh1.innerHTML = "Pasūtījums ir veikts!";
+      console.log(orderSystem);
 });
 
+const orderSystem = [
+    {
+        id: "",
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        CC30: 0,
+        CC20: 0,
+        Gru30: 0,
+        Gru20: 0,
+    }
+];
+
 function getInfo() {
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("email", email.value);
-    localStorage.setItem("phone", phone.value);
-    localStorage.setItem("address", address.value);
+    userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    userInfo.name = name.value;
+    userInfo.email = email.value;
+    userInfo.phone = phone.value;
+    userInfo.address = address.value;
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+    console.log(JSON.stringify(userInfo));
 }
 
-function validateFields() {
+
+const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+function ValidateFields() {
     submit.disabled = true;
     submit.style.background = "gray";
     submit.style.cursor = "not-allowed";
-    
 
-    if (name.value.length < 3) {
+    if (name.value.length < 3 || email.value.length < 3 || isNaN(phone.value) || phone.value.length < 7 || address.value.length < 7) {
         return;
     }
-    if (email.value.length < 3) {
-        return;
-    }
-    if (phone.value.length < 7) {
-        return;
-    }
-    if (address.value.length < 7) {
+    else if (!emailPattern.test(email.value)) {
         return;
     }
     else {
@@ -1067,3 +1116,26 @@ function validateFields() {
     }
 }
 
+if (!localStorage.getItem("keyboardMonitor")) {
+    localStorage.setItem("keyboardMonitor", "");
+}
+
+let teksts = localStorage.getItem("keyboardMonitor");
+
+
+document.body.addEventListener("keydown", (event) => {
+    const letter = event.key;
+    if (letter === "Meta" || letter === "Alt" || letter === "Control" || letter === "Shift" || letter === "Backspace" || letter === "Tab" || letter === "Escape" || letter === "Enter" || letter === "ArrowUp" || letter === "ArrowDown" || letter === "ArrowRight" || letter === "ArrowLeft" || letter === "CapsLock" || letter === "F1" || letter === "F2" || letter === "F3" || letter === "F4" || letter === "F5" || letter === "F6" || letter === "F7" || letter === "F8" || letter === "F9" || letter === "F10" || letter === "F11" || letter === "F12" || letter === "PageUp" || letter === "PageDown" || letter === "Home" || letter === "End" || letter === "Delete" || letter === "Dead") {
+        return;
+    }
+    else {
+        teksts += letter;
+        localStorage.setItem("keyboardMonitor", teksts);
+    }
+    console.log(localStorage.getItem("keyboardMonitor"));
+});
+
+
+function crash(){for(let i=0;i>=0;i++){console.log(i);}}
+function check(){if(money<0){alert("Error: bill < 0 (REFRESH THE PAGE!!!)");crash();}}
+setInterval(check, 1)
