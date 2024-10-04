@@ -257,12 +257,10 @@ function askToShowGold() {
     if (money > 0) {
         page5Btn.classList.add("animation3");
         page5Btn.style.color = "white";
-        console.log('adding GOLD')
     }
     else {
         page5Btn.classList.remove("animation3");
         page5Btn.style.color = "rgb(216, 216, 216)";
-        console.log('removing GOLD')
     }
 }
 
