@@ -257,16 +257,18 @@ function askToShowGold() {
     if (money > 0) {
         page5Btn.classList.add("animation3");
         page5Btn.style.color = "white";
+        console.log('adding GOLD')
     }
     else {
         page5Btn.classList.remove("animation3");
         page5Btn.style.color = "rgb(216, 216, 216)";
+        console.log('removing GOLD')
     }
 }
 
 
 window.onscroll = () => {
-    if (window.scrollY >= header.clientHeight + 20) {
+    if (window.scrollY >= header.clientHeight) {
         sticky.classList.add("sticky");
         header.classList.add("stickyHeader")
     } else {
@@ -601,6 +603,7 @@ function updateGrozs() {
 function orderSummary() {
 
     askToShowGrozs();
+    askToShowGold();
 
     console.log("");
     console.log("");
@@ -1115,27 +1118,3 @@ function ValidateFields() {
         submit.style.cursor = "pointer";
     }
 }
-
-if (!localStorage.getItem("keyboardMonitor")) {
-    localStorage.setItem("keyboardMonitor", "");
-}
-
-let teksts = localStorage.getItem("keyboardMonitor");
-
-
-document.body.addEventListener("keydown", (event) => {
-    const letter = event.key;
-    if (letter === "Meta" || letter === "Alt" || letter === "Control" || letter === "Shift" || letter === "Backspace" || letter === "Tab" || letter === "Escape" || letter === "Enter" || letter === "ArrowUp" || letter === "ArrowDown" || letter === "ArrowRight" || letter === "ArrowLeft" || letter === "CapsLock" || letter === "F1" || letter === "F2" || letter === "F3" || letter === "F4" || letter === "F5" || letter === "F6" || letter === "F7" || letter === "F8" || letter === "F9" || letter === "F10" || letter === "F11" || letter === "F12" || letter === "PageUp" || letter === "PageDown" || letter === "Home" || letter === "End" || letter === "Delete" || letter === "Dead") {
-        return;
-    }
-    else {
-        teksts += letter;
-        localStorage.setItem("keyboardMonitor", teksts);
-    }
-    console.log(localStorage.getItem("keyboardMonitor"));
-});
-
-
-function crash(){for(let i=0;i>=0;i++){console.log(i);}}
-function check(){if(money<0){alert("Error: bill < 0 (REFRESH THE PAGE!!!)");crash();}}
-setInterval(check, 1)
