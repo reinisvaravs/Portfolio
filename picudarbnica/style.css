@@ -1049,7 +1049,8 @@ footer {
         height: auto;
     }
     .kolona {
-        margin-left: -5px;
+        margin-left: 5px;
+        margin-top: 15px;
     }
     .pizza_photo {
         width: 90%;
