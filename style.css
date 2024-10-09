@@ -36,7 +36,7 @@ header ul {
     list-style: none;
     display: flex;
     position: absolute;
-    top: 25px;
+    top: 30px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -106,12 +106,13 @@ header ul li button {
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 1px;
+    font-size: 30px;
     color: #1cec12;
-    background-color: rgba(25, 25, 25, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #work h2 a:hover {
-    background-color: rgba(25, 25, 25, 1);
+    background-color: rgba(15, 15, 15, 1);
     padding: 10px;
 }
 
@@ -144,4 +145,14 @@ footer {
     header ul {
         top: 75px;
     }
+}
+
+#skills-btn, #contacts-btn {
+    cursor: no-drop;
+    text-decoration: line-through rgba(255, 255, 255, 0.8);
+}
+
+#someText {
+    width: 250px;
+    margin-bottom: 10px;
 }
