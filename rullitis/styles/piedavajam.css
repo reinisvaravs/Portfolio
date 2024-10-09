@@ -67,3 +67,21 @@
   min-width: 100%;
   min-height: 100%;
 }
+
+#logo-video {
+  width: 140px;
+}
+
+#rullitis {
+  font-size: 40px;
+  padding-bottom: 7px;
+}
+
+#tel {
+  text-decoration: none;
+}
+
+#tel-text {
+  border-top: 1px solid white;
+  padding-top: 3px;
+}

@@ -17,6 +17,10 @@ function showPage(page) {
     document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
         button.classList.add("active");
     });
+
+    window.scroll({
+        top: 0,
+    });
 }
 
 document.querySelectorAll(".page_buttons").forEach(button => {
@@ -31,3 +35,14 @@ window.onload = () => {
         button.classList.add("active");
     });
 }
+
+// document.getElementById('scrollButton').addEventListener('click', function() {
+//     const scrollAmount = 0; 
+
+//     // Scroll down
+//     window.scrollBy({
+//         top: scrollAmount,
+//         left: 0,
+//         behavior: 'smooth'
+//     });
+// });
