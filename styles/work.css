@@ -1,0 +1,55 @@
+#work {
+    color: #fff;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 40px 10%;
+}
+
+#rullitis-div {
+    width: 50%;
+    height: 200px;
+    text-align: center;
+}
+
+#picu-div {
+    width: 50%;
+    height: 200px;
+    text-align: center;
+}
+
+#work h2 a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 30px;
+    color: #23b71b;
+    margin-left: 5px;
+}
+
+#work h2 a:hover {
+    animation: hover 0.3s forwards ease-in;
+}
+
+@keyframes hover {
+    from {
+        padding-left: 0px;
+        color: #26d41d;
+    }
+    to {
+        padding-left: 5px;
+        color: #1cec12;
+    }
+}
+
+footer {
+    height: 100px;
+    padding-top: 500px;
+}
+
+.someText {
+    text-align: center;
+    color: white;
+}

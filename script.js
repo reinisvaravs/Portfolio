@@ -1,14 +1,17 @@
-const projectsBtn = document.getElementById("projects-btn")
-const work = document.getElementById("work");
-
-projectsBtn.onclick = () => {
+document.getElementById("projects-btn").onclick = () => {
     window.scroll({
-        top: 550, 
+        top: 700, 
         left: 0, 
         behavior: 'smooth' 
     });
 }
-
+document.getElementById("contacts-btn").onclick = () => {
+    window.scroll({
+        top: 1000, 
+        left: 0, 
+        behavior: 'smooth' 
+    });
+}
 
 function setupTypewriter(t) {
     var HTML = t.innerHTML;

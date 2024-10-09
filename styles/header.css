@@ -1,0 +1,36 @@
+header {
+    background: transparent;
+    color: #fff;
+    padding: 1rem 0;
+    margin-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+
+header ul li {
+    padding: 0 15px; 
+}
+
+header ul li button {
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
