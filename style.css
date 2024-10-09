@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+}
+
+header {
+    background: transparent;
+    color: #fff;
+    padding: 1rem 0;
+    margin-left: 20px;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 25px;
+    left: 2%;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li button {
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+}
+
+#bg {
+    background: url('../images/bg.gif');
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 50%;
+}
+
+#hero {
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 3rem;
+}
+
+.cta {
+    background: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#work {
+    color: #fff;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#work h2 a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    color: #1cec12;
+    background-color: rgba(25, 25, 25, 0.5);
+}
+
+#work h2 a:hover {
+    background-color: rgba(25, 25, 25, 1);
+    padding: 10px;
+}
+
+.loader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #fff, -20px 0 #fff2;background: #fff }
+    33% {box-shadow: 20px 0 #fff, -20px 0 #fff2;background: #fff2}
+    66% {box-shadow: 20px 0 #fff2,-20px 0 #fff; background: #fff2}
+    100%{box-shadow: 20px 0 #fff2,-20px 0 #fff; background: #fff }
+}
+
+footer {
+    height: 100px;
+    padding-top: 500px;
+}
+
+
+@media screen and (max-width: 650px) {
+    header ul {
+        top: 75px;
+    }
+}
