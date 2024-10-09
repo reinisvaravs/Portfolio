@@ -64,3 +64,15 @@
     width: 30%;
   }
 }
+
+@media screen and (max-width: 380px) {
+  li button {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  li button {
+    font-size: 10px;
+  }
+}
