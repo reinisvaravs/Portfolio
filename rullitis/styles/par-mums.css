@@ -5,10 +5,15 @@
 }
 
 .karte {
-    width: 100%;
-    border: 1px solid yellow;
-    border-radius: 20px;
-    margin-bottom: 40px;
+  width: 100%;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.karte:hover {
+  transform: scale(1.02);
 }
 
 p {

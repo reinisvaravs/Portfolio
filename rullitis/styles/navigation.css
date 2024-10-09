@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: row;
   padding: 0 30px;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -33,6 +32,11 @@
 
 #logo {
   height: 90%;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05);
 }
 
 ul {
@@ -59,10 +63,12 @@ li button {
   text-align: center;
   padding: 16px;
   background-color: black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 li button:hover {
   background-color: #1b1b1b;
+  transform: translateY(-2px);
 }
 
 .active {

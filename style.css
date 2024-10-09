@@ -3,33 +3,37 @@ body {
     padding: 0;
     background-color: #151515;
     color: white;
+    font-family: monospace;
 }
 h1 {
     margin-top: 50px;
     text-align: center;
 }
-.footer_sm {
-    width: 20%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
 .work {
+    font-size: 22px;
     text-decoration: none;
     color: white;
+    margin: 0;
+    font-weight: 400;
 }
 #all-work {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 100px;
-    padding: 20px 0;
-    
-    h1 {
-        margin: 0;
-        font-weight: 400;
-        line-height: 50px;
-    }
+    width: 40%;
+    line-height: 0;
+}
 
-    background-color: gray;
+#container {
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#about-me {
+    width: 40%;
+    color: #34d83c;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 24px;
 }
