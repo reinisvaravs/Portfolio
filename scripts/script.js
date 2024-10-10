@@ -1,13 +1,13 @@
 document.getElementById("projects-btn").onclick = () => {
     window.scroll({
-        top: 700, 
+        top: 600, 
         left: 0, 
         behavior: 'smooth' 
     });
 }
 document.getElementById("contacts-btn").onclick = () => {
     window.scroll({
-        top: 1000, 
+        top: 1200, 
         left: 0, 
         behavior: 'smooth' 
     });
