@@ -18,7 +18,6 @@
 #typewriter-div {
     display: flex;
     justify-content: left;
-    width: 110vw;
 }
 
 .var-highlight{
@@ -29,7 +28,7 @@
 }
   
 #typewriter{
-    font-size: clamp(10px, 3vw, 30px);
+    font-size: clamp(17px, 3vw, 30px);
     margin: 0;
     font-family: "Courier New";
 
