@@ -29,7 +29,7 @@
 }
   
 #typewriter{
-    font-size: clamp(18px, 3vw, 30px);
+    font-size: clamp(14px, 3vw, 30px);
     margin: 0;
     font-family: "Courier New";
 
