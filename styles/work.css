@@ -24,7 +24,7 @@
     color: #fff;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: clamp(14px, 3vw, 30px);
+    font-size: clamp(12px, 3vw, 30px);
     color: #23b71b;
     margin-left: 5px;
 }

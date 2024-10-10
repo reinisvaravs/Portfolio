@@ -29,7 +29,7 @@
 }
 
 .icon {
-    width: 30px;
+    width: clamp(20px, 3vw, 40px);;
 }
 
 footer {

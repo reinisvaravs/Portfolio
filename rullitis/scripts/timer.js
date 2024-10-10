@@ -1,3 +1,5 @@
+let i = 0;
+
 const start = setInterval(() => {
-    console.log("1 mili")
+    i++;
 }, 1);

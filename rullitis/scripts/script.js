@@ -1,3 +1,6 @@
+
+
+
 function showPage(page) {
     document.querySelectorAll(".pages").forEach(div => {
         div.classList.remove('active');
@@ -37,9 +40,7 @@ window.onload = () => {
 }
 
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("done loading...")
+    console.log(`Loaded in ${i/1000} s`)
     clearInterval(start);
 })
