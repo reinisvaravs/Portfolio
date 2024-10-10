@@ -3,6 +3,10 @@
     width: 95%;
   }
   
+  .hero {
+    height: 90vh;
+  }
+
   #item {
     width: 48%;
   }
@@ -30,6 +34,14 @@
     width: 85%;
   }
 
+  .hero {
+    height: 80vh;
+  }
+
+  .video-bg {
+    transform: translate(-50%, -40%);
+  }
+
   .virsraksts {
     font-size: 22px;
   }
@@ -50,6 +62,14 @@
 
   #logo {
     height: 70%;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .video-bg {
+    transform: translate(-50%, -40%);
   }
 
   .virsraksts {
