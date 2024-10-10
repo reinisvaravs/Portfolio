@@ -5,14 +5,13 @@
 }
 
 body {
-    /* font-family: Arial, sans-serif; */
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     background-color: black;
     overflow-x: hidden;
 }
 
-#bg {
+.bg {
     background: url('../images/bg.gif');
     background-repeat: no-repeat;
     position: fixed;

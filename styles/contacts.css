@@ -14,6 +14,23 @@
     color: white;
 }
 
+#contacts p a:hover {
+    animation: phone 0.3s forwards ease-in;
+}
+
+@keyframes phone {
+    from {
+        color: #26d41d;
+    }
+    to {
+        color: #1cec12;
+    }
+}
+
 .icon {
     width: 30px;
+}
+
+footer {
+    height: 100px;
 }

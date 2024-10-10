@@ -31,6 +31,6 @@ header ul li button {
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: clamp(16px, 2vw, 25px);
     font-family: 'Courier New', Courier, monospace;
 }

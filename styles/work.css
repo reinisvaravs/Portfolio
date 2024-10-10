@@ -44,12 +44,12 @@
     }
 }
 
-footer {
-    height: 100px;
-    padding-top: 500px;
-}
-
 .someText {
     text-align: center;
     color: white;
+    font-weight: 500;
+}
+
+.preview {
+    width: 80%;
 }
