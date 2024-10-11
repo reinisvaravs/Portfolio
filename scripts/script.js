@@ -26,14 +26,6 @@ document.addEventListener("keyup", (e) => {
     }
 })
 
-window.onload = () => {
-    window.scroll({
-        top: 2000, 
-        left: 0, 
-        behavior: 'smooth' 
-    });
-}
-
 // const box = document.getElementById("box");
 // const question = document.getElementById("question");
 
