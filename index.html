@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/hero.css">
     <link rel="stylesheet" href="./styles/work.css">
     <link rel="stylesheet" href="./styles/contacts.css">
+    <link rel="stylesheet" href="./styles/snake.css">
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
         </nav>
     </header>
 
-    <div id="bg"></div>
+    <div id="bg" class="bg"></div>
 
     <div id="hero">
         <div id="typewriter-div">
@@ -59,10 +60,26 @@
         </div>
     </div>
 
+    <div id="box">
+        <div class="box-item"></div>
+        <div class="box-item"></div>
+        <div class="box-item"></div>
+        <div class="box-item"></div>
+    </div>
+    <div id="question">
+        <h1>?</h1>
+    </div>
 
-    <footer></footer>
+    <div id="gameContainer">
+        <div class="loader" id="loader"></div>
+        <canvas id="gameBoard" width="500" height="500"></canvas>
+        <div id="scoreText">0</div>
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+    </div>
 
     <script src="./scripts/script.js"></script>
     <script src="./scripts/typer.js"></script>
+    <script src="./scripts/snake.js"></script>
 </body>
 </html>
