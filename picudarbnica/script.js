@@ -22,7 +22,6 @@ const closeFormBtn = document.querySelector("#close-btn");
 const error_div = document.querySelector("#error_div");
 const kopa = document.querySelector("#kopa");
 const zvaniet = document.querySelector("#zvaniet");
-const sticky = document.querySelector("#sticky");
 const header = document.querySelector("header");
 const page5Btn = document.getElementById("page5Btn");
 
@@ -164,7 +163,13 @@ function showPage(page) {
     document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
         button.classList.add("active");
     });
+
+    window.scroll({
+        top: 0,
+    });
 };
+
+
 
 document.querySelectorAll(".page_buttons").forEach(button => {
     button.onclick = function() {
@@ -173,6 +178,11 @@ document.querySelectorAll(".page_buttons").forEach(button => {
 });
 
 window.onload = function() {
+    window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+    });
 
     setInterval(showPage2, 0);
     setInterval(showPage3, 0);
@@ -265,15 +275,6 @@ function askToShowGold() {
 }
 
 
-window.onscroll = () => {
-    if (window.scrollY >= header.clientHeight) {
-        sticky.classList.add("sticky");
-        header.classList.add("stickyHeader")
-    } else {
-        sticky.classList.remove("sticky");
-        header.classList.remove("stickyHeader");
-    }
-}
 
 function openForm() {
     const overlay = document.getElementById('popup-overlay');
