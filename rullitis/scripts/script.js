@@ -37,10 +37,34 @@ window.onload = () => {
     document.querySelectorAll(`button[data-page="page1"]`).forEach(button => {
         button.classList.add("active");
     });
+    document.querySelector("button[data-page='page1']")
+      .classList.remove("active");
+
+    window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+    });
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    console.log(`Loaded in ${i/1000} s`)
-    clearInterval(start);
-})
+let xKeyPressed = false;
+let timer = null;
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'X') {
+    if (!xKeyPressed) {
+      xKeyPressed = true;
+      timer = setTimeout(() => {
+        console.log("rrv")
+      }, 1000); 
+    }
+  }
+});
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'X') {
+    clearTimeout(timer);
+    xKeyPressed = false;
+  }
+});
