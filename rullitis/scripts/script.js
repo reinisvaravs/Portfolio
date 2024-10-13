@@ -1,5 +1,5 @@
 
-console.log("update2");
+console.log("update 3");
 
 function showPage(page) {
     document.querySelectorAll(".pages").forEach(div => {
