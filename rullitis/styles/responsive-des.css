@@ -85,12 +85,24 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  #tel-text {
+    width: clamp(1rem, 30vw, 15rem);
+  }
+}
+
 @media screen and (max-width: 380px) {
   li button {
     font-size: 12px;
   }
   .hero {
     height: 50vh;
+  }
+  #hero-content {
+    margin-top: 100px;
+  }
+  #tel-text {
+    width: clamp(1rem, 40vw, 15rem);
   }
 }
 
