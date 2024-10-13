@@ -89,6 +89,9 @@
   li button {
     font-size: 12px;
   }
+  .hero {
+    height: 50vh;
+  }
 }
 
 @media screen and (max-width: 340px) {
