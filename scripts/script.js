@@ -1,3 +1,4 @@
+console.log("update 1")
 
 document.getElementById("projects-btn").onclick = () => {
     window.scroll({
@@ -10,7 +11,7 @@ document.getElementById("projects-btn").onclick = () => {
 }
 document.getElementById("contacts-btn").onclick = () => {
     window.scroll({
-        top: 1200, 
+        top: 1000, 
         left: 0, 
         behavior: 'smooth' 
     });
