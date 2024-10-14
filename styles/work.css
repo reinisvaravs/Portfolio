@@ -18,6 +18,10 @@
     width: 50%;
     height: 200px;
     text-align: center;
+
+    img {
+        width: 80%;
+    }
 }
 
 #work h2 a {
@@ -49,4 +53,10 @@
     color: white;
     font-weight: 500;
     font-size: clamp(18px, 3vw, 30px);
+}
+
+
+.preview {
+    width: 70%;
+    margin-top: 20px;
 }
