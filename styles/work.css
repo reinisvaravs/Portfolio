@@ -2,7 +2,7 @@
 #work {
     background-color: rgba(96, 54, 32, 1);
     width: 100%;
-    min-height: 450px;
+    min-height: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,7 +18,7 @@
     h4 {
         color: rgba(255, 255, 255, 0.7);
         font-weight: 100;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-size: 20px;
         text-align: left;
         padding: 20px;
@@ -57,7 +57,7 @@
         width: 100%;
         transition: all 0.5s;
         line-height: 60px;
-        font-weight: 600;
+        font-weight: 900;
     
         a {
             font-size: clamp(30px, 5vw, 50px);
@@ -134,5 +134,12 @@
 @media screen and (min-width: 1030px) {
     #work {
         padding: 30px 15% 0 15%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #work-text {
+        line-height: 17px;
+        width: 80%;
     }
 }

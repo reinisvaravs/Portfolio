@@ -47,7 +47,7 @@
 
 .someText2 {
     color: white;
-    font-weight: 600;
+    font-weight: 900;
     letter-spacing: 2px;
     font-size: clamp(14px, 2vw, 20px);
     text-align: left;
