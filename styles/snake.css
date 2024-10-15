@@ -3,6 +3,7 @@
     margin-top: 100px;
     height: 95vh;
     position: relative;
+    display: none;
 }
 #scoreText {
     font-family: 'Courier New', Courier, monospace;

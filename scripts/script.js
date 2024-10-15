@@ -1,8 +1,7 @@
-console.log("update 1")
 
 document.getElementById("projects-btn").onclick = () => {
     window.scroll({
-        top: 600, 
+        top: 850, 
         left: 0, 
         behavior: 'smooth' 
     });
@@ -11,7 +10,7 @@ document.getElementById("projects-btn").onclick = () => {
 }
 document.getElementById("contacts-btn").onclick = () => {
     window.scroll({
-        top: 1000, 
+        top: 953, 
         left: 0, 
         behavior: 'smooth' 
     });
@@ -19,15 +18,11 @@ document.getElementById("contacts-btn").onclick = () => {
     document.getElementById("myAudio").play()
 }
 
-const bg = document.getElementById("bg")
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "X") {
-        bg.style.opacity = "20%";
-    }
-})
-document.addEventListener("keyup", (e) => {
-    if (e.key === "X") {
-        bg.style.opacity = "0%";
-    }
-})
+document.querySelector("body").onscroll = function myFunction() {  
+    var scrolltotop = document.scrollingElement.scrollTop;
+    var target = document.getElementById("hero");
+    var xvalue = "center";
+    var factor = 0.5;
+    var yvalue = scrolltotop * factor;
+    target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+}

@@ -25,24 +25,14 @@ let snake = [
 ]
 
 window.addEventListener("keydown", changeDirection)
-resetBtn.addEventListener("click", resetGame)
+
 
 const loader = document.querySelector("#loader")
-
 loader.style.display = "none"
+scoreText.style.display = "none"
 
-startBtn.onclick = function() {
-    alert("up - W\ndown - S\nleft - A\nright - D")
-    loader.style.display = "flex"
-    setTimeout(() => {
-        gameStart()
-        scoreText.style.color = "white"
-        startBtn.style.display = "none"
-        loader.style.display = "none"
-    }, 1000);
-}
-
-resetBtn.style.display = "none"
+let secretScore = 0;
+let runningNum = 0;
 
 function gameStart(){
     running = true
@@ -50,7 +40,6 @@ function gameStart(){
     createFood()
     drawFood()
     nextTick()
-    resetBtn.style.display = "none"
 }
 function nextTick(){
     if(running) {
@@ -78,7 +67,6 @@ function createFood(){
     }
     foodX = randomFood(0, gameWidth - unitSize)
     foodY = randomFood(0, gameWidth - unitSize)
-    console.log(foodX)
 }
 function drawFood(){
     ctx.fillStyle = foodColor
@@ -165,7 +153,6 @@ function displayGameOver(){
     ctx.textAlign = "center"
     ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2)
     running = false
-    resetBtn.style.display = "block"
 }
 function resetGame(){
     score = 0
@@ -180,3 +167,32 @@ function resetGame(){
     ]
     gameStart()
 }
+
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "p") {
+        secretScore += 1
+
+        if (secretScore === 5) {
+            document.getElementById("gameContainer").style.display = "block"
+            loader.style.display = "flex"
+            scoreText.style.display = "block"
+            window.scroll({
+                top: 1700, 
+                left: 0, 
+                behavior: 'smooth' 
+            });
+            setTimeout(() => {
+                gameStart()
+                scoreText.style.color = "white"
+                loader.style.display = "none"
+            }, 1000);
+        }
+    }
+})
+document.addEventListener("keydown", (event) => {
+    if (event.key === "r" && running) {
+        running = false
+        setTimeout(resetGame, 150)
+    }
+})

@@ -13,11 +13,18 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    margin-top: -80px;
+
+    background-image: url(../images/bg4.avif);
+    background-position: top center;
+    background-attachment:scroll;
+    background-size: cover;
 }
 
 #typewriter-div {
     display: flex;
     justify-content: left;
+    margin-top: 80px;
 }
 
 .var-highlight{

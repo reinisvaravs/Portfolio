@@ -1,62 +1,137 @@
+
 #work {
-    color: #fff;
-    text-align: left;
+    background-color: rgba(96, 54, 32, 1);
+    width: 100%;
+    min-height: 500px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 80%;
-    margin: 40px 10%;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
-#rullitis-div {
-    width: 50%;
-    height: 200px;
-    text-align: center;
-}
-
-#picu-div {
-    width: 50%;
-    height: 200px;
-    text-align: center;
-
-    img {
-        width: 80%;
+#work-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    
+    h4 {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 100;
+        letter-spacing: 2px;
+        font-size: 20px;
+        text-align: left;
+        padding: 20px;
     }
 }
+#work-text {
+    width: 100%;
+    color: rgb(191, 111, 61);
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10%;
+}
 
-#work h2 a {
-    color: #fff;
+
+#item-1, #item-2, #item-3, #item-4 {
     text-decoration: none;
+    color: rgba(249,134,64,0.8);
+    font-size: 60px;
+    text-align: right;
+    padding-right: 5%;
+    transition: all 0.5s;
+    background-color: rgba(96, 54, 32, 1);
     letter-spacing: 1px;
-    font-size: clamp(16px, 3vw, 30px);
-    color: #23b71b;
-    margin-left: 5px;
+    transition: all 0.5s;
 }
 
-#work h2 a:hover {
-    animation: hover 0.3s forwards ease-in;
-}
+#work-right {
+    width: 55%;
+    margin-top: 5%;
+    padding-bottom: 30px;
 
-@keyframes hover {
-    from {
-        padding-left: 0px;
-        color: #26d41d;
+    h3 {
+        text-align: right;
+        padding-right: 5%;
+        width: 100%;
+        transition: all 0.5s;
+        line-height: 60px;
+        font-weight: 600;
+    
+        a {
+            font-size: clamp(30px, 5vw, 50px);
+        }
     }
-    to {
-        padding-left: 5px;
-        color: #1cec12;
+    
+    h3:hover {
+        a {
+            color: rgb(252, 143, 76);
+            font-size: clamp(30px, 5.3vw, 54px);
+            background-color: rgba(104, 62, 40, 1);
+            padding: 15px;
+            padding-right: 5%;
+            letter-spacing: 2px;
+        }
+        transition: all 0.5s;
     }
 }
 
-.someText {
+@media screen and (max-width: 900px) {
+    #work {
+        flex-direction: column;
+    }
+    #work-left {
+        width: 100%;
+    }
+    #work-text {
+        width: 60%;
+        text-align: left;
+        margin: auto;
+        padding: 0;
+    }
+    #work-right {
+        width: 100%;
+    }
+    #work-right > h3 {
+        line-height: 35px;
+        padding-right: 0 5%;
+    }
+    #work-right > h3:hover > a {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #work-right > h3 {
+        line-height: 45px;
+    }
+}
+
+/* ===== The UX and UI hover effect =====*/
+.firstSpan {
+    font-style: italic;
+    cursor: default;
+}
+.firstSpan .secondSpan {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(252, 143, 76);
+    color: black;
     text-align: center;
-    color: white;
-    font-weight: 500;
-    font-size: clamp(18px, 3vw, 30px);
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    margin-left: 10px;
 }
+.firstSpan:hover .secondSpan {
+    visibility: visible;
+}
+/* ===== The UX and UI hover effect =====*/
 
-
-.preview {
-    width: 70%;
-    margin-top: 20px;
+@media screen and (min-width: 1030px) {
+    #work {
+        padding: 30px 15% 0 15%;
+    }
 }

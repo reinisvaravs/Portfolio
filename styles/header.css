@@ -4,6 +4,7 @@ header {
     padding: 1rem 0;
     margin-left: 20px;
     font-family: 'Courier New', Courier, monospace;
+    height: 80px;
 }
 
 header nav {
