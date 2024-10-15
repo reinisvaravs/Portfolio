@@ -2,7 +2,7 @@
 #work {
     background-color: rgba(96, 54, 32, 1);
     width: 100%;
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -89,12 +89,13 @@
         text-align: left;
         margin: auto;
         padding: 0;
+        line-height: 20px;
     }
     #work-right {
         width: 100%;
     }
     #work-right > h3 {
-        line-height: 35px;
+        line-height: 40px;
         padding-right: 0 5%;
     }
     #work-right > h3:hover > a {
@@ -104,7 +105,7 @@
 
 @media screen and (max-width: 500px) {
     #work-right > h3 {
-        line-height: 45px;
+        line-height: 30px;
     }
 }
 

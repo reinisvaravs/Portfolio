@@ -6,7 +6,7 @@ footer {
     align-items: center;
 }
 
-#author a {
+#author {
     color: whitesmoke;
-    text-decoration: none;
+    text-align: center;
 }

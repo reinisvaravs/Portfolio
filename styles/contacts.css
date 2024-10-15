@@ -58,6 +58,7 @@
     width: 45%;
     height: 100%;
     padding: 5%;
+    margin: auto;
 }
 
 #name {
@@ -86,10 +87,21 @@
 }
 
 @media screen and (max-width: 500px) {
-    #name-div, #contacts {
-        width: 40%;
-    }
     #contacts-container {
-        gap: 10%;
+        flex-direction: column;
+        height: 400px;
+    }
+    #contacts {
+        width: 90%;
+    }
+    #name-div {
+        width: 90%;
+    }
+    #contacts > p {
+        display: block;
+    }
+    #icon-div {
+        margin-left: 4%;
+        margin-top: 5%;
     }
 }
