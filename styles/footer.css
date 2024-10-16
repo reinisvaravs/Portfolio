@@ -1,5 +1,5 @@
 footer {
-    height: 100px;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -8,6 +8,6 @@ footer {
 }
 
 #author {
-    color: whitesmoke;
+    color: rgb(208, 208, 208);
     text-align: center;
 }
