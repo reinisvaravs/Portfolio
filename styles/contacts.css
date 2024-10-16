@@ -3,7 +3,7 @@
     height: 350px;
     display: flex;
     flex-direction: row;
-    background-color: rgb(120, 69, 42);
+    background-color: rgb(112, 64, 38);
     margin: auto;
     padding-top: 20px;
 }
@@ -48,7 +48,6 @@
 .someText2 {
     color: white;
     font-weight: 900;
-    letter-spacing: 2px;
     font-size: clamp(14px, 2vw, 20px);
     text-align: left;
     padding: 10px 0 0 10px;

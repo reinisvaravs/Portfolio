@@ -8,9 +8,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     background-color: rgba(96, 54, 32, 1);
-}
-
-body, header, footer {
     overflow-x: hidden;
 }
 

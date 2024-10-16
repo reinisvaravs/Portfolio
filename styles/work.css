@@ -42,7 +42,6 @@
     padding-right: 5%;
     transition: all 0.5s;
     background-color: rgba(96, 54, 32, 1);
-    letter-spacing: 1px;
     transition: all 0.5s;
 }
 
@@ -71,7 +70,7 @@
             background-color: rgba(104, 62, 40, 1);
             padding: 15px;
             padding-right: 5%;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         transition: all 0.5s;
     }
