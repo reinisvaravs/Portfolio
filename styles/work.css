@@ -103,8 +103,12 @@
 }
 
 @media screen and (max-width: 500px) {
-    #work-right > h3 {
-        line-height: 30px;
+    #work-right {
+        padding-top: 15px;
+        line-height: 35px;
+        h3 {
+            line-height: 30px;
+        }
     }
 }
 
