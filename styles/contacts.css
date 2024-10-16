@@ -62,9 +62,9 @@
 
 #name {
     font-size: clamp(14px, 2vw, 24px);
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     color: white;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 #about {
