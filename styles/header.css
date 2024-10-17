@@ -3,7 +3,6 @@ header {
     color: #fff;
     padding: 1rem 0;
     margin-left: 20px;
-    font-family: 'Courier New', Courier, monospace;
     height: 80px;
     animation: load 2s forwards ease;
 }
@@ -24,7 +23,7 @@ header ul {
 }
 
 header ul li {
-    padding: 0 15px; 
+    padding: 0 15px;
 }
 
 header ul li button {

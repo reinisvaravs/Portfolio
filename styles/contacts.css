@@ -35,10 +35,10 @@
 }
 
 .icon-div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+    a { display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px; }
     p { color: white;
         font-weight: 700;
         letter-spacing: 1px;
