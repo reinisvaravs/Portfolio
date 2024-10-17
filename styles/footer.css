@@ -16,7 +16,7 @@ footer {
 #author {
     color: rgb(208, 208, 208);
     text-align: center;
-    font-size: clamp(12px, 1.5vw, 18px);
+    font-size: clamp(10px, 1.5vw, 18px);
 }
 
 #footer-buttons {
@@ -45,6 +45,23 @@ footer {
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: clamp(12px, 1.5vw, 18px);
+    font-size: clamp(10px, 1.5vw, 18px);
     font-family: 'Courier New', Courier, monospace;
+}
+
+
+@media screen and (max-width: 500px) {
+    #footer-buttons ul li {
+        padding: 0 5px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    #footer-buttons {
+        width: 40%;
+    }
+    #author-div {
+        width: 50%;
+    }
 }
