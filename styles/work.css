@@ -123,6 +123,9 @@
 
 @media screen and (max-width: 500px) {
     .about-item p {
-        line-height: 24px;
+        line-height: 22px;
+    }
+    #work-text {
+        line-height: 26px;
     }
 }
