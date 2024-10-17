@@ -15,9 +15,9 @@
     align-items: center;
     margin-top: -80px;
 
-    background-image: url(../images/bg4.avif);
-    background-position: top center;
-    background-attachment:scroll;
+    background-image: url(../images/bg4.png);
+    background-position: center;
+    background-attachment: scroll;
     background-size: cover;
 }
 

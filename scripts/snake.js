@@ -178,7 +178,7 @@ document.addEventListener("keydown", (event) => {
             loader.style.display = "flex"
             scoreText.style.display = "block"
             window.scroll({
-                top: 1700, 
+                top: 2400, 
                 left: 0, 
                 behavior: 'smooth' 
             });

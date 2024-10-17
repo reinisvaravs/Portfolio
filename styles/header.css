@@ -5,6 +5,7 @@ header {
     margin-left: 20px;
     font-family: 'Courier New', Courier, monospace;
     height: 80px;
+    animation: load 2s forwards ease;
 }
 
 header nav {
@@ -34,4 +35,14 @@ header ul li button {
     cursor: pointer;
     font-size: clamp(16px, 2vw, 25px);
     font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes load {
+    from {
+        opacity: 0%;
+        transform: translate(0%, -10%);
+    } to {
+        opacity: 100%;
+        transform: translate(0%, 0%);
+    }
 }

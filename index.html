@@ -13,18 +13,16 @@
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
-
     <audio src="./sounds/minecraft_click2.mp3" preload="auto" id="myAudio"></audio>
 
-
-<header>
-    <nav>
-        <ul>
-            <li><button id="projects-btn" class="nav-buttons" data-NPK="1">// projects</button></li>
-            <li><button id="contacts-btn" class="nav-buttons" data-NPK="1">// contacts</button></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <ul>
+                <li><button class="projects-btn">// projects</button></li>
+                <li><button class="contacts-btn">// contacts</button></li>
+            </ul>
+        </nav>
+    </header>
 
     <div id="hero">
         <div id="typewriter-div">
@@ -40,38 +38,54 @@
     }; </pre>
         </div>
     </div>
-
-
     
     <div id="work">
-        <div id="work-left">
-            <h4>Projects</h4>
+        <div id="work-top">
+            <h4 class="section-header">Projects</h4>
             <p id="work-text">Here you will find some of the personal and clients projects that I created. As a front-end developer my main focus is making the user experience and user interface as smooth as possible.</p>
         </div>
-
-        <div id="work-right">
-            <h3><a id="item-1" href="https://reinisvaravs.github.io/rullitis/index.html" target="_blank">Rullitis</a></h3>
-            <h3><a id="item-2" href="https://reinisvaravs.github.io/restaurant/index.html" target="_blank">Viedi</a></h3>
-        </div>
-    </div>
-
-
-    <div id="contacts-container">
-        <div id="contacts">
-            <h2 class="someText2"><span class="var-highlight">var</span> contacts {</h2>
-            <p class="dent">email: <a href="mailto:rreinisvaravs@gmail.com">"rreinisvaravs@gmail.com"<span style="color: white;">,</span></a></p>
-            <p class="dent">phone: <a href="tel:+371 28816633">"+371<span style="font-size: 10px;"> </span>28816633"</a></p>
-            <p>};</p>
-            <div id="icon-div">
-                <a href="https://www.instagram.com/reinisrvaravs/" target="_blank"><img src="./images/ig.webp" alt="instagram" class="icon"></a>
-                <a href="https://www.linkedin.com/in/reinis-varavs-274289332/" target="_blank"><img src="./images/in.png" alt="linkedIn" class="icon"></a>
+        <div id="work-bottom">
+            <div class="item">
+                <img class="laptop" src="./images/laptop.png">
+                <div class="laptop-display" id="display-1"></div>
+                <div class="about-item">
+                    <h1 class="string-highlight">Restoraunt "Viedi"</h1>
+                    <p>"Viedi" is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.</p>
+                    <a href="https://reinisvaravs.github.io/restaurant/index.html" class="site-link" target="_blank">Case Study</a>
+                </div>
+            </div>
+            <div class="item">
+                <img class="laptop" src="./images/laptop.png">
+                <div class="laptop-display" id="display-2"></div>
+                <div class="about-item">
+                    <h1 class="string-highlight">Rullītis</h1>
+                    <p>Rullītis is a karting center and I created their website from scratch using the frontend tools I know.</p>
+                    <a href="https://reinisvaravs.github.io/rullitis/index.html" class="site-link" target="_blank">Case Study</a>
+                </div>
             </div>
         </div>
-        <div id="name-div">
-            <h2 id="name">Reinis R. Vāravs</h2>
-            <p id="about" class="string-highlight">A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
-        </div>
     </div>
+
+    <section id="contacts-section">
+        <div id="contacts-container">
+            <h4 id="contacts-heading">contact.</h4>
+            <p id="sub-heading">Get in touch with me via social media or send me an email.</p>
+            <div id="icon-container">
+                <div class="icon-div">
+                    <img src="./images/ig.webp" class="icon">
+                    <p>Instagram</p>
+                </div>
+                <div class="icon-div">
+                    <img src="./images/in.png" class="icon">
+                    <p>LinkedIn</p>
+                </div>
+            </div>
+            <div id="email-div">
+                <p class="email">email: <a href="mailto:rreinisvaravs@gmail.com" target="_blank">rreinisvaravs@gmail.com</a></p>
+                <p class="email">phone: <a href="tel:+371 28816633" target="_blank">+371 28816633</a></p>
+            </div>
+        </div>
+    </section>
 
     <div id="gameContainer">
         <div class="loader" id="loader"></div>
@@ -79,9 +93,17 @@
         <div id="scoreText">0</div>
     </div>
 
-<footer>
-    <p id="author">Author: Reinis R. Vāravs</p>
-</footer>
+    <footer>
+        <div id="author-div">
+            <p id="author">© 2024 Reinis R. Vāravs</p>
+        </div>
+        <div id="footer-buttons">
+            <ul>
+                <li><button class="projects-btn">// projects</button></li>
+                <li><button class="contacts-btn">// contacts</button></li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="./scripts/script.js"></script>
     <script src="./scripts/typer.js"></script>

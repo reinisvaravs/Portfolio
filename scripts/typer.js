@@ -67,4 +67,6 @@ var typer = document.getElementById('typewriter');
 
 typewriter = setupTypewriter(typewriter);
 
-typewriter.type();
+setTimeout(() => {
+    typewriter.type();
+}, 400);
