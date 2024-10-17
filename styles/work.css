@@ -120,3 +120,9 @@
             margin: 10px auto 20px auto; }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .about-item p {
+        line-height: 24px;
+    }
+}
