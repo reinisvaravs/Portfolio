@@ -24,7 +24,7 @@
 
 #icon-container {
     width: 50%;
-    height: 70px;
+    min-height: 70px;
     margin: 40px 0 40px 15%;
     display: flex;
     justify-content: left;
@@ -37,6 +37,8 @@
 .icon-div {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 20px;
     a { display: flex;
         flex-direction: row;
         align-items: center;
