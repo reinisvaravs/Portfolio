@@ -6,7 +6,7 @@ document.querySelectorAll(".projects-btn").forEach(button => {
             left: 0, 
             behavior: 'smooth' 
         });
-        document.getElementById("myAudio").play()
+        // document.getElementById("myAudio").play()
     }
 })
 
@@ -17,7 +17,7 @@ document.querySelectorAll(".contacts-btn").forEach(button => {
             left: 0, 
             behavior: 'smooth' 
         });
-        document.getElementById("myAudio").play()
+        // document.getElementById("myAudio").play()
     }
 })
 

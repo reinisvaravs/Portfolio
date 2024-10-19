@@ -16,7 +16,7 @@
     margin-top: -80px;
 
     background-image: url(../images/bg4.png);
-    background-position: center;
+    background-position: center 0px;
     background-attachment: scroll;
     background-size: cover;
 }
