@@ -18,9 +18,9 @@
 
     <header>
         <nav>
-            <ul class="temp hidden">
-                <li><button class="projects-btn">// projects</button></li>
-                <li><button class="contacts-btn">// contacts</button></li>
+            <ul>
+                <li><button class="projects-btn hidden">// projects</button></li>
+                <li><button class="contacts-btn hidden" style="transition-delay: 100ms;">// contacts</button></li>
             </ul>
         </nav>
     </header>
@@ -46,22 +46,30 @@
             <p id="work-text" class="hidden">Here you will find some of the personal and clients projects that I created. As a front-end developer my main focus is making the user experience and user interface as smooth as possible.</p>
         </div>
         <div id="work-bottom">
-            <div class="item hidden">
-                <img class="laptop" src="./images/laptop.png">
-                <div class="laptop-display" id="display-1"></div>
+            <div class="item">
+                <section class="hidden">
+                    <img class="laptop" src="./images/laptop.png">
+                    <div class="laptop-display" id="display-1"></div>
+                </section>
                 <div class="about-item">
                     <h1 class="string-highlight hidden">Restoraunt "Viedi"</h1>
                     <p class="hidden">"Viedi" is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.</p>
-                    <a href="https://reinisvaravs.github.io/restaurant/index.html" class="site-link hidden" target="_blank">Case Study</a>
+                    <section class="hidden">
+                        <a href="https://reinisvaravs.github.io/restaurant/index.html" class="site-link" target="_blank">Case Study</a>
+                    </section>
                 </div>
             </div>
-            <div class="item hidden">
-                <img class="laptop" src="./images/laptop.png">
-                <div class="laptop-display" id="display-2"></div>
+            <div class="item">
+                <section class="hidden">
+                    <img class="laptop" src="./images/laptop.png">
+                    <div class="laptop-display" id="display-2"></div>
+                </section>
                 <div class="about-item">
                     <h1 class="string-highlight hidden">Rullītis</h1>
                     <p class="hidden">Rullītis is a karting center and I created their website from scratch using the frontend tools I know.</p>
-                    <a href="https://reinisvaravs.github.io/rullitis/index.html" class="site-link hidden" target="_blank">Case Study</a>
+                    <section class="hidden">
+                        <a href="https://reinisvaravs.github.io/rullitis/index.html" class="site-link" target="_blank">Case Study</a>
+                    </section>
                 </div>
             </div>
         </div>
@@ -99,10 +107,10 @@
     </div>
 
     <footer>
-        <div id="author-div">
+        <div id="author-div" class="hidden">
             <p id="author">© 2024 Reinis R. Vāravs</p>
         </div>
-        <div id="footer-buttons">
+        <div id="footer-buttons" class="hidden" style="transition-delay: 100ms;">
             <ul>
                 <li><button class="projects-btn">// projects</button></li>
                 <li><button class="contacts-btn">// contacts</button></li>
