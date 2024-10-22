@@ -73,6 +73,10 @@
     background-size: cover;
 }
 
+#display-1, #display-2 {
+    opacity: 0;
+}
+
 .black {
     background-color: black;
 }
