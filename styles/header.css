@@ -4,6 +4,14 @@ header {
     padding: 1rem 0;
     margin-left: 20px;
     height: 80px;
+    animation: moveIn 1s ease-out;
+}
+
+@keyframes moveIn {
+    from { transform: translateX(-50px);
+           opacity: 0; }
+    to { transform: translateX(0px); 
+         opacity: 1; }
 }
 
 header nav {

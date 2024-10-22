@@ -24,6 +24,3 @@ body {
     background-position: center;
     background-size: cover;
 }
-html {
-    scroll-behavior: smooth;
-}
