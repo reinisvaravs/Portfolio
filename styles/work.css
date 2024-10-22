@@ -59,7 +59,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 .laptop-display {
@@ -71,6 +71,10 @@
     border-radius: 5px 5px 2px 2px;
     background-position: center;
     background-size: cover;
+}
+
+.black {
+    background-color: black;
 }
 
 .about-item {
@@ -109,7 +113,7 @@
         align-items: center;
         margin-bottom: 80px;
     }
-    .laptop-display {
+    #display-1, #display-2, .black {
         top: 11px;
         left: 50%;
         transform: translate(-49%, 0);
