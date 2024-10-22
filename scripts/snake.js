@@ -186,12 +186,12 @@ document.addEventListener("keydown", (event) => {
                 gameStart()
                 scoreText.style.color = "white"
                 loader.style.display = "none"
-            }, 1000);
+            }, 2000);
         }
     }
 })
 document.addEventListener("keydown", (event) => {
-    if (event.key === "r" && running) {
+    if (event.key === "r") {
         running = false
         setTimeout(resetGame, 150)
     }
