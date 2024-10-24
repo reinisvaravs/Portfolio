@@ -24,3 +24,16 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+
+#cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    display: none;
+}
+  

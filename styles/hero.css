@@ -60,3 +60,22 @@
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
+
+#hero-arrow {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+    width: 30px;
+    height: 30px;
+}
+
+.arrow {
+    animation: arrow 2s infinite ease;
+}
+
+@keyframes arrow {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
