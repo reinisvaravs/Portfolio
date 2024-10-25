@@ -11,20 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-.bg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-
-    background-image: url(../images/bg4.avif);
-    background-position: center;
-    background-size: cover;
-}
-
 
 #cursor {
     width: 20px;
@@ -36,4 +22,6 @@ body {
     z-index: 1000;
     display: none;
 }
-  
+
+
+

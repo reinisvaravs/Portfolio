@@ -1,7 +1,4 @@
 
-const display1 = document.getElementById("display-1")
-const display2 = document.getElementById("display-2")
-
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
