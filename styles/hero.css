@@ -14,11 +14,23 @@
     justify-content: left;
     align-items: center;
     margin-top: -80px;
+}
 
-    background-image: url(../images/bg4.png);
-    background-position: center 0px;
-    background-attachment: scroll;
+#bg-image {
+    background: url(../images/bg4.png);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    z-index: -1;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 1;
 }
 
 #typewriter-div {

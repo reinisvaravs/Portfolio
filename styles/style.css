@@ -4,24 +4,25 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
-    background-color: rgba(96, 54, 32, 1);
+    background-color: #131313;
     overflow-x: hidden;
 }
 
-
 #cursor {
-    width: 25px;
-    height: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     pointer-events: none;
     z-index: 1000;
     display: none;
 }
-
-
-
+  

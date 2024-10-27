@@ -14,11 +14,14 @@
     <link rel="stylesheet" href="./styles/anim.css">
 </head>
 <body>
+    <div id="bg-image"></div>
 
     <header>
         <nav>
-            <ul><li><button class="projects-btn">// projects</button></li>
-            <li><button class="contacts-btn">// contacts</button></li></ul>
+            <ul>
+                <li><button class="projects-btn">// projects</button></li>
+                <li><button class="contacts-btn">// contacts</button></li>
+            </ul>
         </nav>
     </header>
 
@@ -76,23 +79,21 @@
         <div id="contacts-container">
             <h4 id="contacts-heading">contact.</h4>
             <p id="sub-heading">Get in touch with me via social media or send me an email.</p>
-            <div id="icon-container">
-                <div class="icon-div hidden">
-                    <img src="./images/ig.webp" class="icon">
-                    <p>
-                        <a class="link1" href="https://www.instagram.com/reinisrvaravs/" target="_blank">Instagram</a>
-                    </p>
-                </div>
-                <div class="icon-div hidden">
-                    <img src="./images/in.png" class="icon">
-                    <p>
-                        <a class="link1" href="https://www.linkedin.com/in/reinis-varavs-274289332/" target="_blank">LinkedIn</a>
-                    </p>
-                </div>
-            </div>
             <div id="email-div">
                 <p class="email hidden">email: <a href="mailto:rreinisvaravs@gmail.com" target="_blank">rreinisvaravs@gmail.com</a></p>
                 <p class="email hidden" style="transition-delay: 200ms;">phone: <a href="tel:+371 28816633" target="_blank">+371 28816633</a></p>
+            </div>
+            <div id="icon-container" class="hidden" style="transition-delay: 400ms;">
+                <div class="icon-div">
+                    <a class="link1" href="https://www.instagram.com/reinisrvaravs/" target="_blank">
+                        <img src="./images/ig.webp" class="icon">
+                    </a>
+                </div>
+                <div class="icon-div">
+                    <a class="link1" href="https://www.linkedin.com/in/reinis-varavs-274289332/" target="_blank">
+                        <img src="./images/in.png" class="icon">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
