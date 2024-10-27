@@ -2,17 +2,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 gsap.to('.bg', {
-    opacity: '100%',
-})
-gsap.to('.bg', {
     duration: 2,
     opacity: 0,
     scrollTrigger: {
         trigger: '#work',
-        start: 'top 99%',
+        start: 'top 101%',
         end: 'top 50%',
         toggleActions: 'play none reverse none',
-        scrub: 2,
+        scrub: 1,
     }
 })
 gsap.to('.bg', {
@@ -23,7 +20,7 @@ gsap.to('.bg', {
         start: 'top 40%',
         end: 'center 55%',
         toggleActions: 'play none reverse none',
-        scrub: 2,
+        scrub: 1,
     }
 })
 
@@ -37,3 +34,14 @@ gsap.utils.toArray('.span1').forEach(span => {
         scrub: 2,
     })
 });
+
+
+
+window.onload = function() {
+    window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+    });
+}
+

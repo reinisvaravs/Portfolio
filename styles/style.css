@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
@@ -25,4 +21,3 @@ body {
     z-index: 1000;
     display: none;
 }
-  
