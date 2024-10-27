@@ -20,7 +20,7 @@ body {
     height: 20px;
     border: 1px solid white;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     z-index: 1000;
     display: none;
