@@ -32,30 +32,33 @@ document.querySelectorAll(".contacts-btn").forEach(button => {
 
 
 
-let X = 0;
-let Y = 0;
-let targetX = 0;
-let targetY = 0;
-const easeFactor = 0.2;
-
-window.addEventListener('mousemove', function(e) {
-    targetX = e.clientX;
-    targetY = e.clientY;
-    cursor.style.display = "block"
-});
-
-function animateCursor() {
+// Only activate custom cursor if the device has a fine pointer (e.g., a mouse)
+if (window.matchMedia('(pointer: fine)').matches) {
+    let X = 0;
+    let Y = 0;
+    let targetX = 0;
+    let targetY = 0;
+    const easeFactor = 0.2;
     const cursor = document.getElementById("cursor");
 
-    X += (targetX - X) * easeFactor;
-    Y += (targetY - Y) * easeFactor;
+    window.addEventListener('mousemove', function(e) {
+        targetX = e.clientX;
+        targetY = e.clientY;
+        cursor.style.display = "block"; // Show cursor only if mouse is present
+    });
 
-    cursor.style.left = X + 'px';
-    cursor.style.top = Y + 'px';
-    cursor.style.transform = 'translate(-55%, -60%)';
+    function animateCursor() {
+        X += (targetX - X) * easeFactor;
+        Y += (targetY - Y) * easeFactor;
 
-    requestAnimationFrame(animateCursor);
+        cursor.style.left = X + 'px';
+        cursor.style.top = Y + 'px';
+        cursor.style.transform = 'translate(-55%, -60%)';
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
 }
 
-animateCursor();
 
