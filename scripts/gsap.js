@@ -14,7 +14,7 @@ gsap.to('.bg', {
 })
 gsap.to('.bg', {
     duration: 2,
-    opacity: '100%',
+    opacity: '90%',
     scrollTrigger: {
         trigger: '#contacts-container',
         start: 'top 40%',
@@ -37,11 +37,73 @@ gsap.utils.toArray('.span1').forEach(span => {
 
 
 
-window.onload = function() {
-    window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
-    });
-}
+gsap.from('#about-item-1', {
+    duration: 1,
+    x: 1500,
+    scrollTrigger: {
+        trigger: '#about-item-1',
+        start: 'top 90%',
+        end: 'top 80%',
+        toggleActions: 'play none none reverse',
+    }
+})
+
+gsap.from('#about-item-2', {
+    duration: 1,
+    x: 1500,
+    scrollTrigger: {
+        trigger: '#about-item-2',
+        start: 'top 90%',
+        end: 'top 80%',
+        toggleActions: 'play none none reverse',
+    }
+})
+
+gsap.from('#email', {
+    duration: 1,
+    x: -600,
+    scrollTrigger: {
+        trigger: '#email',
+        start: 'top 90%',
+        end: 'top 80%',
+        toggleActions: 'play none none reverse',
+    }
+})
+
+gsap.from('#phone', {
+    duration: 1,
+    x: -600,
+    delay: 0.23,
+    scrollTrigger: {
+        trigger: '#phone',
+        start: 'top 90%',
+        end: 'top 80%',
+        toggleActions: 'play none none reverse',
+    }
+})
+
+gsap.from('#instagram', {
+    duration: 1,
+    x: -600,
+    delay: 0.3,
+    scrollTrigger: {
+        trigger: '#instagram',
+        start: 'top 90%',
+        end: 'top 80%',
+        toggleActions: 'play none none reverse',
+    }
+})
+
+gsap.from('#linkedin', {
+    duration: 1,
+    x: -600,
+    delay: 0.3,
+    scrollTrigger: {
+        trigger: '#linkedin',
+        start: 'top 90%',
+        end: 'top 80%',
+        toggleActions: 'play none none reverse',
+    }
+})
+
 

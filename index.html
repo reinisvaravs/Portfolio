@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./styles/contacts.css">
     <link rel="stylesheet" href="./styles/snake.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/anim.css">
     <link rel="stylesheet" href="./styles/about.css">
 </head>
 <body>
@@ -27,84 +26,88 @@
         </nav>
     </header>
 
-    <div id="hero">
-        <div id="typewriter-div">
-<pre id="typewriter">
-    <span class="var-highlight">var</span> object = {
-        name: <span class="string-highlight">'Reinis Roberts Varavs'</span>,
-        type: <span class="string-highlight">'Front-end Developer'</span>,
-        location: <span class="string-highlight">'Latvia, Jelgava'</span>,
-        properties:[<span class="string-highlight">'Javascript'</span>,
-                    <span class="string-highlight">'CSS'</span>,
-                    <span class="string-highlight">'HTML'</span>]
-    }; </pre>
-        </div>
-        <div id="arrow-div" class="arrow">
-            <button id="arrowBtn" class="projects-btn">
-                <img src="./images/arrow.png" id="hero-arrow">
-            </button>
-        </div>
-    </div>
-    
-    <div id="work">
-        <div id="work-top">
-            <h4 class="section-header">Projects</h4>
-            <p id="work-text">Here you will find some of the personal and clients projects that I created. As a front-end developer my main focus is making the user experience and user interface as smooth as possible.</p>
-        </div>
-        <div id="work-bottom">
-            <div class="item">
-                <section>
-                    <img class="laptop" src="./images/laptop.png">
-                    <div class="laptop-display" id="display-1"></div>
-                </section>
-                <div class="about-item hidden2">
-                    <h1 class="string-highlight">Restoraunt "Viedi"</h1>
-                    <p>"Viedi" is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.</p>
-                    <a href="https://reinisvaravs.github.io/restaurant/" class="site-link" target="_blank">Case Study</a>
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            <div id="hero">
+                <div id="typewriter-div">
+        <pre id="typewriter">
+            <span class="var-highlight">var</span> object = {
+                name: <span class="string-highlight">'Reinis Roberts Varavs'</span>,
+                type: <span class="string-highlight">'Front-end Developer'</span>,
+                location: <span class="string-highlight">'Latvia, Jelgava'</span>,
+                properties:[<span class="string-highlight">'Javascript'</span>,
+                            <span class="string-highlight">'CSS'</span>,
+                            <span class="string-highlight">'HTML'</span>]
+            }; </pre>
+                </div>
+                <div id="arrow-div" class="arrow">
+                    <button id="arrowBtn" class="projects-btn">
+                        <img src="./images/arrow.png" id="hero-arrow">
+                    </button>
                 </div>
             </div>
-            <div class="item">
-                <section>
-                    <img class="laptop" src="./images/laptop.png">
-                    <div class="laptop-display" id="display-2"></div>
-                </section>
-                <div class="about-item hidden2">
-                    <h1 class="string-highlight">Rullītis</h1>
-                    <p>Rullītis is a karting center and I created their website from scratch using the frontend tools I know.</p>
-                    <a href="https://reinisvaravs.github.io/karting/" class="site-link" target="_blank">Case Study</a>
+            
+            <div id="work">
+                <div id="work-top">
+                    <h4 class="section-header">Projects</h4>
+                    <p id="work-text">Here you will find some of the personal and clients projects that I created. As a front-end developer my main focus is making the user experience and user interface as smooth as possible.</p>
+                </div>
+                <div id="work-bottom">
+                    <div class="item">
+                        <section>
+                            <img class="laptop" src="./images/laptop.png">
+                            <div class="laptop-display" id="display-1"></div>
+                        </section>
+                        <div class="about-item" id="about-item-1">
+                            <h1 class="string-highlight">Restoraunt "Viedi"</h1>
+                            <p>"Viedi" is a web template that I created targeting the restaurant and food industry which anyone can use to present their business online.</p>
+                            <a href="https://reinisvaravs.github.io/restaurant/" class="site-link" target="_blank">Case Study</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <section>
+                            <img class="laptop" src="./images/laptop.png">
+                            <div class="laptop-display" id="display-2"></div>
+                        </section>
+                        <div class="about-item" id="about-item-2">
+                            <h1 class="string-highlight">Rullītis</h1>
+                            <p>Rullītis is a karting center and I created their website from scratch using the frontend tools I know.</p>
+                            <a href="https://reinisvaravs.github.io/karting/" class="site-link" target="_blank">Case Study</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        
+            <div id="about">
+                <h1>Hello. I am Reinis</h1>
+                <p>Roberts Varavs</p>
+                <p>My name is Reinis Varavs and I am a <span class="span1">designer and front-end developer.</span></p>
+            </div>
+        
+            <section id="contacts-section">
+                <div id="contacts-container">
+                    <h4 id="contacts-heading">contact.</h4>
+                    <p id="sub-heading">Get in touch with me via social media or send me an email.</p>
+                    <div id="email-div">
+                        <p class="email" id="email">email: <a href="mailto:rreinisvaravs@gmail.com" target="_blank">rreinisvaravs@gmail.com</a></p>
+                        <p class="email" id="phone">phone: <a href="tel:+371 28816633" target="_blank">+371 28816633</a></p>
+                    </div>
+                    <div id="icon-container">
+                        <div class="icon-div">
+                            <a class="link1" id="instagram" href="https://www.instagram.com/reinisrvaravs/" target="_blank">
+                                <img src="./images/ig.webp" class="icon">
+                            </a>
+                        </div>
+                        <div class="icon-div">
+                            <a class="link1" id="linkedin" href="https://www.linkedin.com/in/reinis-varavs-274289332/" target="_blank">
+                                <img src="./images/in.png" class="icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
-
-    <div id="about">
-        <h1>Hello. I am Reinis</h1>
-        <p>Roberts Varavs</p>
-        <p>My name is Reinis Varavs and I am a <span class="span1">designer and front-end developer.</span></p>
-    </div>
-
-    <section id="contacts-section">
-        <div id="contacts-container">
-            <h4 id="contacts-heading">contact.</h4>
-            <p id="sub-heading">Get in touch with me via social media or send me an email.</p>
-            <div id="email-div">
-                <p class="email hidden">email: <a href="mailto:rreinisvaravs@gmail.com" target="_blank">rreinisvaravs@gmail.com</a></p>
-                <p class="email hidden" style="transition-delay: 200ms;">phone: <a href="tel:+371 28816633" target="_blank">+371 28816633</a></p>
-            </div>
-            <div id="icon-container" class="hidden" style="transition-delay: 400ms;">
-                <div class="icon-div">
-                    <a class="link1" href="https://www.instagram.com/reinisrvaravs/" target="_blank">
-                        <img src="./images/ig.webp" class="icon">
-                    </a>
-                </div>
-                <div class="icon-div">
-                    <a class="link1" href="https://www.linkedin.com/in/reinis-varavs-274289332/" target="_blank">
-                        <img src="./images/in.png" class="icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <div id="gameContainer">
         <div class="loader" id="loader"></div>
@@ -126,10 +129,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="./scripts/gsap.js"></script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/typer.js"></script>
-    <script src="./scripts/anim.js"></script>
     <script src="./scripts/snake.js"></script>
 </body>
 </html>
