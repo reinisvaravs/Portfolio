@@ -23,7 +23,7 @@ document.querySelectorAll(".projects-btn").forEach(button => {
 document.querySelectorAll(".contacts-btn").forEach(button => {
     button.onclick = () => {
         window.scroll({
-            top: workHeight, 
+            top: workHeight + 1000, 
             left: 0, 
             behavior: 'smooth' 
         });
