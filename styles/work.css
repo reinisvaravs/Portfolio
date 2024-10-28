@@ -75,7 +75,8 @@
 .about-item {
     margin: 0 20px;
     color: rgb(211, 123, 76);
-    p { margin-bottom: 10px; }
+    p { margin-bottom: 10px;
+        text-align: left; }
 }
 
 #display-1 {
@@ -108,7 +109,7 @@
         align-items: center;
         margin-bottom: 80px;
     }
-    #display-1, #display-2, .black {
+    #display-1, #display-2 {
         top: 11px;
         left: 50%;
         transform: translate(-49%, 0);
