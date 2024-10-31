@@ -2,37 +2,35 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 const lenis = new Lenis();
-
 lenis.on("scroll", ScrollTrigger.update);
-
 gsap.ticker.add((time) => {
   lenis.raf(time * 1000);
 });
-
 gsap.ticker.lagSmoothing(0);
 
-gsap.to('.bg', {
-    duration: 2,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: '#work',
-        start: 'top 101%',
-        end: 'top 50%',
-        toggleActions: 'play none reverse none',
-        scrub: 1,
-    }
-})
-gsap.to('.bg', {
-    duration: 2,
-    opacity: '90%',
-    scrollTrigger: {
-        trigger: '#contacts-container',
-        start: 'top 40%',
-        end: 'center 55%',
-        toggleActions: 'play none reverse none',
-        scrub: 1,
-    }
-})
+
+// gsap.to('.bg', {
+//     duration: 2,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: '#work',
+//         start: 'top 101%',
+//         end: 'top 50%',
+//         toggleActions: 'play none reverse none',
+//         scrub: 1,
+//     }
+// })
+// gsap.to('.bg', {
+//     duration: 2,
+//     opacity: '90%',
+//     scrollTrigger: {
+//         trigger: '#contacts-container',
+//         start: 'top 40%',
+//         end: 'center 55%',
+//         toggleActions: 'play none reverse none',
+//         scrub: 1,
+//     }
+// })
 
 
 gsap.utils.toArray('.span1').forEach(span => {

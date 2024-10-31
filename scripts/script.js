@@ -6,6 +6,8 @@ window.onload = function() {
     });
 }
 
+
+
 const heroHeight = document.getElementById("hero").offsetHeight
 const workHeight = heroHeight + document.getElementById("work").offsetHeight
 
