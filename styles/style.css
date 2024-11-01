@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+img { user-select: none; }
+
 
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -28,6 +30,7 @@ body {
 
 #cursor-div {
     opacity: 0;
+    pointer-events: none;
 }
 
 .floating {

@@ -93,6 +93,10 @@ gsap.to('#loading-screen', {
     opacity: 0,
     duration: 1,
 })
+gsap.to('#loading-screen', {
+    delay: 2.5,
+    display: "none"
+})
 gsap.to('#cursor-div', {
     delay: 2,
     opacity: 1,
