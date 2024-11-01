@@ -9,29 +9,6 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 
-// gsap.to('.bg', {
-//     duration: 2,
-//     opacity: 0,
-//     scrollTrigger: {
-//         trigger: '#work',
-//         start: 'top 101%',
-//         end: 'top 50%',
-//         toggleActions: 'play none reverse none',
-//         scrub: 1,
-//     }
-// })
-// gsap.to('.bg', {
-//     duration: 2,
-//     opacity: '90%',
-//     scrollTrigger: {
-//         trigger: '#contacts-container',
-//         start: 'top 40%',
-//         end: 'center 55%',
-//         toggleActions: 'play none reverse none',
-//         scrub: 1,
-//     }
-// })
-
 
 gsap.utils.toArray('.span1').forEach(span => {
     ScrollTrigger.create({
@@ -55,7 +32,6 @@ gsap.from('#about-item-1', {
         toggleActions: 'play none none reverse',
     }
 })
-
 gsap.from('#about-item-2', {
     duration: 1,
     x: 1500,
@@ -77,7 +53,6 @@ gsap.from('#email', {
         toggleActions: 'play none none reverse',
     }
 })
-
 gsap.from('#phone', {
     duration: 1,
     x: -600,
@@ -101,7 +76,6 @@ gsap.from('#instagram', {
         toggleActions: 'play none none reverse',
     }
 })
-
 gsap.from('#linkedin', {
     duration: 1,
     x: -600,
@@ -120,32 +94,32 @@ gsap.to('#loading-screen', {
     duration: 1,
 })
 gsap.to('#cursor-div', {
-    delay: 3,
+    delay: 2,
     opacity: 1,
     duration: 1,
 })
+gsap.from('body', {
+    delay: 3.5,
+    position: 'fixed',
+})
+
 
 const timeline = gsap.timeline({ default: { duration: 0.3 } })
 
 timeline
   .to('#loading-icon', {
     rotation: '-360deg',
-    background: '#E60000'
   })
   .to('#loading-icon', {
     rotation: '360deg',
-    background: '#00C0E6'
   })
   .to('#loading-icon', {
     rotation: '-360deg',
-    background: '#FFFF00'
   })
   .to('#loading-icon', {
-    rotation: '2000deg',
+    rotation: '1000deg',
     duration: 1,
-    background: 'red',
-})
-
+  })
   .from('.projects-btn', { opacity: 0 })
   .from('.contacts-btn', { opacity: 0 })
   .from('#hero-image', {

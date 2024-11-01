@@ -4,17 +4,16 @@
     box-sizing: border-box;
 }
 
-html {
-    overflow-x: hidden;
-}
 
 body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     background-color: black;
-    overflow-x: hidden;
     width: 100vw;
+    overflow-x: hidden;
+    position: relative;
 }
+
 
 #cursor {
     width: 20px;
@@ -55,8 +54,11 @@ body {
 }
 
 #loading-icon {
-    background-color: white;
-    height: 10vh;
-    width: 10vh;
+    height: clamp(40px, 15vw, 130px);
+    width: clamp(40px, 15vw, 130px);
     z-index: 3;
+    background-image: url(../images/tire.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
