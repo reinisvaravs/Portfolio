@@ -124,11 +124,29 @@ timeline
     rotation: '1000deg',
     duration: 1,
   })
-  .from('.projects-btn', { opacity: 0 })
-  .from('.contacts-btn', { opacity: 0 })
-  .from('#hero-image', {
+  
+  
+  
+gsap.from('.projects-btn', {
     opacity: 0,
+    delay: 2.5,
+    duration: 1,
+})
+gsap.from('.contacts-btn', {
+    opacity: 0,
+    delay: 2.5,
+    duration: 1,
+})
+gsap.from('#hero-image', {
+    opacity: 0,
+    delay: 2.5,
+    duration: 1,
   })
-  .from('#arrow-div', { opacity: 0, ease: 'ease' })
+gsap.from('#arrow-div', {
+    opacity: 0,
+    ease: 'ease',
+    delay: 2.5,
+    duration: 1,
+})
 
 
