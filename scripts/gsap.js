@@ -115,7 +115,7 @@ gsap.from('#linkedin', {
 })
 
 gsap.to('#loading-screen', {
-    delay: 2,
+    delay: 1.5,
     opacity: 0,
     duration: 1,
 })
@@ -125,9 +125,7 @@ gsap.to('#cursor-div', {
     duration: 1,
 })
 
-
-
-const timeline = gsap.timeline({ default: { duration: 0.5 } })
+const timeline = gsap.timeline({ default: { duration: 0.3 } })
 
 timeline
   .to('#loading-icon', {
@@ -143,16 +141,15 @@ timeline
     background: '#FFFF00'
   })
   .to('#loading-icon', {
-    rotation: '3000deg',
-    duration: 1.5,
+    rotation: '2000deg',
+    duration: 1,
     background: 'red',
 })
 
-  .from('.projects-btn', { opacity: 0, duration: 0.4 })
-  .from('.contacts-btn', { opacity: 0, duration: 0.4 })
+  .from('.projects-btn', { opacity: 0 })
+  .from('.contacts-btn', { opacity: 0 })
   .from('#hero-image', {
     opacity: 0,
-    duration: 0.4
   })
   .from('#arrow-div', { opacity: 0, ease: 'ease' })
 
