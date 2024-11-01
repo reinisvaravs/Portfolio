@@ -4,19 +4,11 @@ header {
     height: 80px;
 }
 
-@keyframes moveIn {
-    from { transform: translateY(-15px);
-           opacity: 0; }
-    to { transform: translateY(0px); 
-         opacity: 1; }
-}
-
 header nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: auto;
-    animation: moveIn 1s ease-out;
 }
 
 header ul {

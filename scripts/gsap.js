@@ -114,4 +114,54 @@ gsap.from('#linkedin', {
     }
 })
 
+gsap.to('#loading-screen', {
+    delay: 3,
+    opacity: 0,
+    duration: 2,
+})
+gsap.to('#cursor-div', {
+    delay: 4,
+    opacity: 1,
+    duration: 1,
+})
+
+
+
+const timeline = gsap.timeline({ default: { duration: 1 } })
+
+timeline
+  .to('#loading-icon', {
+    rotation: '270deg',
+    background: '#1FE600'
+  })
+  .to('#loading-icon', {
+    rotation: '-270deg',
+    background: '#000FE6'
+  })
+  .to('#loading-icon', {
+    rotation: '360deg',
+    background: '#E60000'
+  })
+  .to('#loading-icon', {
+    rotation: '-360deg',
+    background: '#00C0E6'
+  })
+  .to('#loading-icon', {
+    rotation: '360deg',
+    background: '#FFFF00'
+  })
+  .to('#loading-icon', {
+    rotation: '4000deg',
+    duration: 2,
+    background: 'red',
+})
+
+  .from('.projects-btn', { opacity: 0, ease: 'ease', duration: 0.4 })
+  .from('.contacts-btn', { opacity: 0, ease: 'ease', duration: 0.4 })
+  .from('#hero-image', {
+    opacity: 0,
+    duration: 0.4
+  })
+  .from('#arrow-div', { opacity: 0, ease: 'ease' })
+
 

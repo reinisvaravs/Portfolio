@@ -69,4 +69,4 @@ typewriter = setupTypewriter(typewriter);
 
 setTimeout(() => {
     typewriter.type();
-}, 400);
+}, 3500);
