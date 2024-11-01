@@ -6,13 +6,16 @@
 
 img { user-select: none; }
 
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     background-color: black;
-    width: 100vw;
-    overflow-x: hidden;
+    position: relative;
 }
 
 

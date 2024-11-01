@@ -85,14 +85,11 @@ gsap.to('#loading-screen', {
     delay: 2.5,
     display: "none"
 })
+gsap.from('body', {
+    delay: 3.5,
+    position: 'fixed',
+})
 
-setTimeout(() => {
-    window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
-    });
-}, 2000);
 
 const timeline = gsap.timeline({ default: { duration: 0.3 } })
 
