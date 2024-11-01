@@ -121,9 +121,9 @@
     #hero-image-div {
         width: 100vw;
         position: absolute;
-        top: 80%;
+        top: 75%;
         img {
-            width: 40vw;
+            width: 45vw;
         }
     }
     #arrowBtn {
