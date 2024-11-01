@@ -30,6 +30,17 @@ gsap.from('#about-item-2', {
         toggleActions: 'play none none reverse',
     }
 })
+gsap.from('#about-item-3', {
+    duration: 1,
+    x: 1500,
+    scrollTrigger: {
+        trigger: '#about-item-3',
+        start: 'top 90%',
+        end: 'top 80%',
+        toggleActions: 'play none none reverse',
+    }
+})
+
 
 gsap.from('#email', {
     duration: 1,
@@ -131,5 +142,3 @@ gsap.from('#arrow-div', {
     delay: 2.5,
     duration: 1,
 })
-
-
