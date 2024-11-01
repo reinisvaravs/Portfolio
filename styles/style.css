@@ -28,11 +28,6 @@ body {
     display: none;
 }
 
-#cursor-div {
-    opacity: 0;
-    pointer-events: none;
-}
-
 .floating {
     animation: floating 4s ease-in-out infinite;
 }

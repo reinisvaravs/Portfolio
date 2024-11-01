@@ -2,6 +2,11 @@ header {
     color: #fff;
     padding: 2.5rem 0;
     height: 80px;
+    z-index: 1;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header nav {

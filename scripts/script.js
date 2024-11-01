@@ -6,7 +6,9 @@ window.onload = function() {
     });
 }
 
-
+function test() {
+    alert("working button")
+}
 
 const heroHeight = document.getElementById("hero").offsetHeight
 const workHeight = heroHeight + document.getElementById("work").offsetHeight

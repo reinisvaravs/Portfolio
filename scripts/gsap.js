@@ -10,18 +10,6 @@ gsap.ticker.lagSmoothing(0);
 
 
 
-gsap.utils.toArray('.span1').forEach(span => {
-    ScrollTrigger.create({
-        trigger: '.span1',
-        start: 'top center',
-        toggleActions: 'play none none reverse',
-        toggleClass: 'active',
-        scrub: 2,
-    })
-});
-
-
-
 gsap.from('#about-item-1', {
     duration: 1,
     x: 1500,
@@ -97,11 +85,6 @@ gsap.to('#loading-screen', {
     delay: 2.5,
     display: "none"
 })
-gsap.to('#cursor-div', {
-    delay: 2,
-    opacity: 1,
-    duration: 1,
-})
 gsap.from('body', {
     delay: 3.5,
     position: 'fixed',
@@ -129,17 +112,17 @@ timeline
   
 gsap.from('.projects-btn', {
     opacity: 0,
-    delay: 2.5,
+    delay: 4,
     duration: 1,
 })
 gsap.from('.contacts-btn', {
     opacity: 0,
-    delay: 2.5,
+    delay: 4,
     duration: 1,
 })
 gsap.from('#hero-image', {
     opacity: 0,
-    delay: 2.5,
+    delay: 3.5,
     duration: 1,
   })
 gsap.from('#arrow-div', {
