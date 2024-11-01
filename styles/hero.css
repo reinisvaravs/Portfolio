@@ -11,9 +11,11 @@
     width: 100vw;
     color: #fff;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     margin-top: -80px;
+    padding-right: clamp(10px, 7vw, 150px);
+    position: relative;
 }
 
 #bg-image {
@@ -35,6 +37,7 @@
     display: flex;
     justify-content: left;
     margin-top: 80px;
+    max-width: 60vw;
 }
 
 .var-highlight{
@@ -102,3 +105,30 @@
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
+
+#hero-image-div {
+    width: 30vw;
+    img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #hero-image-div {
+        width: 100vw;
+        position: absolute;
+        top: 80%;
+        img {
+            width: 40vw;
+        }
+    }
+    #arrowBtn {
+        display: none;
+    }
+}
+
+
