@@ -123,12 +123,7 @@
 
 @media screen and (max-width: 500px) {
     #hero-image-div {
-        width: 100vw;
-        position: absolute;
-        top: 75%;
-        img {
-            width: 45vw;
-        }
+        display: none;
     }
     #arrowBtn {
         display: none;
