@@ -31,7 +31,6 @@ gsap.to('#bg-image', {
         end: 'center 30%',
         toggleActions: 'play none none reverse',
         scrub: true,
-        markers: true
     }
 })
 
