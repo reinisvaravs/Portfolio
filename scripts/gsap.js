@@ -9,7 +9,7 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 gsap.to('#bg-image', {
-    opacity: 0.9,
+    opacity: 0.6,
 })
 
 gsap.to('#bg-image', {
@@ -17,20 +17,21 @@ gsap.to('#bg-image', {
     scrollTrigger: {
         trigger: '#bg-image',
         start: '10% top',
-        end: 'bottom 30%',
+        end: 'bottom 10%',
         toggleActions: 'play none none reverse',
         scrub: true,
     }
 })
 
 gsap.to('#bg-image', {
-    opacity: '80%',
+    opacity: '60%',
     scrollTrigger: {
         trigger: '#contacts-heading',
-        start: 'center 60%',
+        start: 'center 70%',
         end: 'center 30%',
         toggleActions: 'play none none reverse',
         scrub: true,
+        markers: true
     }
 })
 

@@ -8,7 +8,7 @@
 }
 
 #contacts-heading {
-    color: rgba(255, 255, 255, 0.8);
+    color: #f5eee6;
     margin: 100px 0 0 15%;
     font-size: clamp(40px, 10vw, 70px);
 }
@@ -27,8 +27,15 @@
 
 .email {
     color: white;
-    a { text-decoration: none;
-        color: white; }
+    a {
+        text-decoration: none;
+        color: white;
+        transition: all 0.5s;
+    }
+    a:hover {
+        padding-left: 10px;
+        transition: all 0.5s;
+    }
 }
 
 
