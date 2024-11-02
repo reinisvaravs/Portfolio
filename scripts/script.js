@@ -6,10 +6,6 @@ window.onload = function() {
     });
 }
 
-function test() {
-    alert("working button")
-}
-
 const heroHeight = document.getElementById("hero").offsetHeight
 const workHeight = heroHeight + document.getElementById("work").offsetHeight
 
@@ -17,7 +13,7 @@ const workHeight = heroHeight + document.getElementById("work").offsetHeight
 document.querySelectorAll(".projects-btn").forEach(button => {
     button.onclick = () => {
         window.scroll({
-            top: heroHeight, 
+            top: heroHeight -120, 
             left: 0, 
             behavior: 'smooth' 
         });
@@ -27,7 +23,7 @@ document.querySelectorAll(".projects-btn").forEach(button => {
 document.querySelectorAll(".contacts-btn").forEach(button => {
     button.onclick = () => {
         window.scroll({
-            top: workHeight + 1000, 
+            top: workHeight, 
             left: 0, 
             behavior: 'smooth' 
         });

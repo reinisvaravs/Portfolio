@@ -8,6 +8,31 @@ gsap.ticker.add((time) => {
 });
 gsap.ticker.lagSmoothing(0);
 
+gsap.to('#bg-image', {
+    opacity: 0.9,
+})
+
+gsap.to('#bg-image', {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: '#bg-image',
+        start: '10% top',
+        end: 'bottom 30%',
+        toggleActions: 'play none none reverse',
+        scrub: true,
+    }
+})
+
+gsap.to('#bg-image', {
+    opacity: '80%',
+    scrollTrigger: {
+        trigger: '#contacts-heading',
+        start: 'center 60%',
+        end: 'center 30%',
+        toggleActions: 'play none none reverse',
+        scrub: true,
+    }
+})
 
 
 gsap.from('#about-item-1', {
@@ -87,22 +112,14 @@ gsap.from('#linkedin', {
     }
 })
 
+
+
 gsap.to('#loading-screen', {
-    delay: 1.5,
     opacity: 0,
-    duration: 1,
-})
-gsap.to('#loading-screen', {
-    delay: 2.5,
-    display: "none"
-})
-gsap.from('body', {
-    delay: 3.5,
-    position: 'fixed',
+    delay: 2,
 })
 
-
-const timeline = gsap.timeline({ default: { duration: 0.3 } })
+const timeline = gsap.timeline({ defaults: { duration: 0.5 } });
 
 timeline
   .to('#loading-icon', {
@@ -118,27 +135,27 @@ timeline
     rotation: '1000deg',
     duration: 1,
   })
-  
-  
-  
-gsap.from('.projects-btn', {
-    opacity: 0,
-    delay: 4,
-    duration: 1,
-})
-gsap.from('.contacts-btn', {
-    opacity: 0,
-    delay: 4,
-    duration: 1,
-})
-gsap.from('#hero-image', {
-    opacity: 0,
-    delay: 3.5,
-    duration: 1,
+
+
+  .to('#loading-screen', {
+    display: "none",
+    duration: 0.1,
   })
-gsap.from('#arrow-div', {
+  .from('body', {
+    position: 'fixed',
+    duration: 0.1,
+  })
+  
+  
+  .from('.projects-btn', {
     opacity: 0,
-    ease: 'ease',
-    delay: 2.5,
-    duration: 1,
-})
+  })
+  .from('.contacts-btn', {
+    opacity: 0,
+  })
+  .from('#hero-image', {
+    opacity: 0,
+  })
+  .from('#arrow-div', {
+    opacity: 0,
+  })
