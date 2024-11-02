@@ -158,3 +158,9 @@
     }
 }
 
+@media screen and (max-width: 400px) {
+    #hero-about {
+        width: 70vw;
+        margin-top: -100px;
+    }
+}
