@@ -20,6 +20,7 @@
 
 #bg-image {
     background: url(../images/stars-bg.png);
+    /* background: url(../images/bg4.png); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -31,6 +32,8 @@
     position: fixed;
     top: 0;
     left: 0;
+
+    opacity: 0.8;
 }
 
 #typewriter-div {
