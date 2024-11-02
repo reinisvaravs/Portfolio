@@ -19,30 +19,6 @@
     font-size: clamp(14px, 2.5vw, 25px); 
 }
 
-#icon-container {
-    width: 50%;
-    min-height: 70px;
-    margin: 10px 0 0 15%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 5%;
-}
-
-.icon-div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
-.icon {
-    width: clamp(20px, 3vw, 30px);
-    height: clamp(20px, 3vw, 30px);
-}
-
 #email-div {
     margin-left: 15%;
     margin-top: 60px;
@@ -65,12 +41,5 @@
 @media screen and (max-width: 500px) {
     #sub-heading {
         line-height: 17px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    #icon-container {
-        flex-wrap: wrap;
-        gap: 15px;
     }
 }

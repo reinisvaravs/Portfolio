@@ -6,6 +6,23 @@ window.onload = function() {
     });
 }
 
+const dateHtml = document.getElementById("clock")
+const monthHtml = document.getElementById("month")
+
+const now = new Date();
+let date = now.getDate()
+
+const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+const month = months[now.getMonth()];
+
+if (date >= 1 && date <= 9) {
+    date = `0${date}`;
+}
+
+dateHtml.innerHTML = date
+monthHtml.innerHTML = month
+
+
 const heroHeight = document.getElementById("hero").offsetHeight
 const workHeight = heroHeight + document.getElementById("work").offsetHeight
 
@@ -13,7 +30,7 @@ const workHeight = heroHeight + document.getElementById("work").offsetHeight
 document.querySelectorAll(".projects-btn").forEach(button => {
     button.onclick = () => {
         window.scroll({
-            top: heroHeight -120, 
+            top: heroHeight +100, 
             left: 0, 
             behavior: 'smooth' 
         });
@@ -23,7 +40,7 @@ document.querySelectorAll(".projects-btn").forEach(button => {
 document.querySelectorAll(".contacts-btn").forEach(button => {
     button.onclick = () => {
         window.scroll({
-            top: workHeight, 
+            top: workHeight +500, 
             left: 0, 
             behavior: 'smooth' 
         });

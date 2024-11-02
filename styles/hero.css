@@ -1,27 +1,7 @@
-#hero h2 {
-    font-size: 3rem;
-}
 
-#hero p {
-    font-size: 1.2rem;
-}
-
-#hero {
-    height: 110vh;
-    width: 100vw;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -80px;
-    padding-right: clamp(10px, 7vw, 150px);
-    position: relative;
-}
 
 #bg-image {
     background: url(../images/hero1.png);
-    /* background: url(../images/stars-bg.png); */
-    /* background: url(../images/bg4.png); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -37,46 +17,85 @@
     opacity: 90%;
 }
 
-#typewriter-div {
+#hero {
+    height: 100vh;
+    width: 100vw;
+    color: white;
     display: flex;
     justify-content: left;
-    margin-top: 80px;
-    max-width: 60vw;
+    align-items: center;
+    padding-left: 5%;
+    position: relative;
 }
 
-.var-highlight{
-    color: #C0AD60;
+#hero-content {
+    font-family: "Tulpen One", sans-serif;
+    display: flex;
+    flex-direction: column;
 }
-.string-highlight{
-    color: rgba(253, 149, 90, 0.8);
-}
-  
-#typewriter{
-    font-size: clamp(14px, 2.5vw, 30px);
-    margin: 0;
-    margin-top: -100px;
-    font-family: "Courier New";
 
-    &:after{
-    content: "|";
-    animation: blink 500ms linear infinite alternate;
+
+#time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20vw;
+    height: 10vh;
+    margin-left: 50vw;
+    font-family: "Bodoni Moda", serif;
+}
+
+#clock {
+    font-size: 70px;
+}
+
+#month {
+    font-size: 25px;
+    padding-bottom: 4px;
+}
+
+#time-right {
+    line-height: 18px;
+    font-family: "Bodoni Moda", serif;
+}
+
+
+.font1 {
+    font-family: "Bodoni Moda", serif;
+    text-transform: uppercase;
+}
+#creative {
+    font-size: 25px;
+    font-family: "Bodoni Moda", serif;
+}
+#designer {
+    font-size: 80px;
+    display: flex;
+    flex-direction: row;
+    margin-top: -60px;
+    
+    p {
+        font-size: 30px;
+        align-self: center;
+        padding-top: 80px;
+        padding-left: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }
-  
-@-webkit-keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+#developer {
+    font-size: 80px;
+    margin-top: -130px;
+}
+#hero-about {
+    font-family: "Bodoni Moda", serif;
+    width: 60vw;
+    max-width: 500px;
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    margin-top: -70px;
 }
 
-@-moz-keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-@keyframes blink{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
 
 #arrow-div {
     position: absolute;
@@ -122,12 +141,20 @@
 }
 
 @media screen and (max-width: 500px) {
-    #hero-image-div {
-        display: none;
+    #designer {
+        font-size: 60px;
+        margin-top: -50px;
+        p {
+            padding-top: 55px;
+            padding-left: 15px;
+        }
     }
-    #arrowBtn {
-        display: none;
+    #developer {
+        font-size: 60px;
+        margin-top: -100px;
+    }
+    #time {
+        margin-left: 40vw;
     }
 }
-
 

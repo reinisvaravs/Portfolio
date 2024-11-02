@@ -6,6 +6,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    font-family: "Bodoni Moda", serif;
 }
 
 #author-div {
@@ -35,7 +36,7 @@ footer {
 }
 
 #footer-buttons ul li {
-    padding: 0 15px;
+    padding: 0 5px;
 }
 
 #footer-buttons ul li button {
@@ -44,16 +45,12 @@ footer {
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: clamp(10px, 1.5vw, 18px);
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-family: "Bodoni Moda", serif;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
-
-@media screen and (max-width: 500px) {
-    #footer-buttons ul li {
-        padding: 0 5px;
-    }
-}
 
 
 @media screen and (max-width: 400px) {
