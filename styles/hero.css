@@ -164,3 +164,42 @@
         margin-top: -100px;
     }
 }
+
+
+@media screen and (min-width: 1000px) {
+    #designer {
+        font-size: 90px;
+        margin-top: -70px;
+        p {
+            padding-top: 100px;
+            padding-left: 30px;
+        }
+    }
+    #developer {
+        font-size: 90px;
+        margin-top: -140px;
+    }
+    #hero-about {
+        font-size: 20px;
+    }
+
+
+    #time {
+        gap: 10px;
+    }
+    
+    #clock {
+        font-size: 100px;
+    }
+    
+    #month {
+        font-size: 35px;
+        padding-bottom: 10px;
+    }
+    
+    #time-right {
+        line-height: 22px;
+        font-size: 20px;
+        font-family: "Bodoni Moda", serif;
+    }
+}
