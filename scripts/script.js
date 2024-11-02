@@ -6,6 +6,8 @@ window.onload = function() {
     });
 }
 
+
+
 const dateHtml = document.getElementById("clock")
 const monthHtml = document.getElementById("month")
 
