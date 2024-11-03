@@ -10,7 +10,7 @@ gsap.ticker.lagSmoothing(0);
 
 
 
-gsap.to('header', {
+gsap.to('#header-blur', {
     backdropFilter: 'blur(5px)',
     scrollTrigger: {
         trigger: '#clock',
