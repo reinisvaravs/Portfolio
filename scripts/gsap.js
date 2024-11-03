@@ -1,12 +1,47 @@
 gsap.registerPlugin(ScrollTrigger)
-
-
 const lenis = new Lenis();
 lenis.on("scroll", ScrollTrigger.update);
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
+gsap.ticker.add((time) => { lenis.raf(time * 1000); });
 gsap.ticker.lagSmoothing(0);
+
+
+
+
+gsap.timeline()
+    .from('.heroAnim', {
+        y: 100,
+        duration: 0.4,
+        rotation: '5deg',
+    })
+    .from('.opacityAnim', {
+        opacity: 0,
+        duration: 0.3,
+    })
+    .from('header', {
+        y: -100,
+        duration: 0.5,
+    })
+    .from('#time', {
+        opacity: 0,
+        duration: 0.3,
+    })
+    .from('#loading-screen', {
+        opacity: '100%',
+        duration: 0.5,
+        delay: 0.2,
+    })
+    .from('#hero-about', {
+        opacity: 0,
+        duration: 0.5,
+    })
+    .add(async () => {
+        await getDate();
+        await getMonth();
+    })
+
+
+
+
 
 
 
@@ -20,7 +55,6 @@ gsap.to('#header-blur', {
         scrub: true,
     }
 })
-
 
 
 gsap.to('#bg-image', {

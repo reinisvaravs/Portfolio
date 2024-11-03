@@ -89,17 +89,17 @@ async function getMonth() {
         await delay(50)
     }
 }
-
 async function getDate() {
-    for (let i = 0; i <= now.getDate(); i++) {
+    let dateDelay
+    if (date >= 1 && date <= 10) { dateDelay = 100 }
+    if (date > 10 && date <= 20) { dateDelay = 60 }
+    if (date > 20 && date <= 31) { dateDelay = 40 }
+    
+    for (let i = 0; i <= date; i++) {
         if (i >= 1 && i <= 9) {
             i = `0${i}`;
         }
         dateHtml.innerHTML = i
-        await delay(100)
+        await delay(dateDelay)
     }
 }
-
-setTimeout(() => {
-    getDate().then(() => getMonth())
-}, 1000);

@@ -30,36 +30,13 @@ body {
     display: none;
 }
 
-.floating {
-    animation: floating 4s ease-in-out infinite;
-}
-
-@keyframes floating {
-    0%{ transform: translateY(0); }
-    50%{ transform: translateY(-15px); }
-    100%{ transform: translateY(0px); }
-}
-
 #loading-screen {
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    z-index: 0;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
-}
-
-#loading-icon {
-    height: clamp(40px, 15vw, 130px);
-    width: clamp(40px, 15vw, 130px);
-    z-index: 3;
-    background-image: url(../images/tire.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #131313;
+    opacity: 0;
 }
