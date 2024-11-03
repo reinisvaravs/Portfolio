@@ -32,6 +32,11 @@ header {
     align-items: center;
 }
 
+#header-prof {
+    font-family: "Bodoni Moda", serif;
+    text-transform: uppercase;
+}
+
 header nav {
     display: flex;
     flex-direction: row;

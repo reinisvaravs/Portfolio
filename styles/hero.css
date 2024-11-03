@@ -45,6 +45,7 @@
     height: 10vh;
     margin-left: 50vw;
     font-family: "Bodoni Moda", serif;
+    transform: translateY(-50px);
 }
 
 #clock {
@@ -61,33 +62,29 @@
     font-family: "Bodoni Moda", serif;
 }
 
-
-.font1 {
-    font-family: "Bodoni Moda", serif;
-    text-transform: uppercase;
-}
 #creative {
     font-size: 25px;
     font-family: "Bodoni Moda", serif;
     color: #edd5c2;
+    transform: translateY(-30px);
 }
 #designer {
     font-size: 80px;
     display: flex;
     flex-direction: row;
     margin-top: -60px;
+    transform: translateY(-30px);
     
-    p {
-        font-size: 30px;
+    p { font-size: 30px;
         align-self: center;
         padding-top: 80px;
         padding-left: 20px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 }
 #developer {
     font-size: 80px;
     margin-top: -130px;
+    transform: translateY(-30px);
 }
 #hero-about {
     font-family: "Bodoni Moda", serif;
@@ -98,6 +95,8 @@
     right: 10%;
     margin-top: -70px;
     text-indent: 15vw;
+    p { font-family: "Bodoni Moda", serif;
+        text-transform: uppercase; }
 }
 
 
@@ -164,6 +163,35 @@
         width: 70vw;
         margin-top: -100px;
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #designer {
+        font-size: 50px;
+        margin-top: -40px;
+        p {
+            padding-top: 42px;
+            padding-left: 10px;
+        }
+    }
+    #developer {
+        font-size: 50px;
+        margin-top: -80px;
+    }
+    #clock {
+        font-size: 50px;
+    }
+    #time-right {
+        font-size: 14px;
+    }
+    #month {
+        font-size: 24px;
+    }
+    #hero-about {
+        width: 70vw;
+        margin-top: -100px;
+        font-size: 14px;
     }
 }
 

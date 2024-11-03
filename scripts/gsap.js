@@ -34,6 +34,9 @@ gsap.timeline()
         opacity: 0,
         duration: 0.5,
     })
+    .from('body', {
+        position: 'fixed',
+    })
     .add(async () => {
         await getDate();
         await getMonth();
