@@ -8,6 +8,21 @@ gsap.ticker.add((time) => {
 });
 gsap.ticker.lagSmoothing(0);
 
+
+
+gsap.to('header', {
+    backdropFilter: 'blur(5px)',
+    scrollTrigger: {
+        trigger: '#clock',
+        start: 'top top',
+        end: 'top -20%',
+        toggleActions: 'play none none reverse',
+        scrub: true,
+    }
+})
+
+
+
 gsap.to('#bg-image', {
     opacity: 0.6,
 })
