@@ -26,6 +26,8 @@
     align-items: center;
     padding-left: 5%;
     position: relative;
+
+    margin-bottom: 300px;
 }
 
 #hero-content {
@@ -67,6 +69,7 @@
 #creative {
     font-size: 25px;
     font-family: "Bodoni Moda", serif;
+    color: #edd5c2;
 }
 #designer {
     font-size: 80px;
