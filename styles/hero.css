@@ -74,12 +74,13 @@
     flex-direction: row;
     margin-top: -60px;
     transform: translateY(-30px);
+    font-family: "Six Caps", sans-serif;
     
     p { font-size: 30px;
-        align-self: center;
-        padding-top: 80px;
-        padding-left: 20px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+        align-self: flex-end;
+        font-family: "Bodoni Moda", serif;
+        transform: translate(10px, -50px);
+    }
 }
 
 
@@ -87,7 +88,8 @@
 #developer {
     font-size: 80px;
     margin-top: -130px;
-    transform: translateY(-30px);
+    transform: translateY(-10px);
+    font-family: "Six Caps", sans-serif;
 }
 
 
@@ -153,9 +155,8 @@
     #designer {
         font-size: 60px;
         margin-top: -50px;
-        p {
-            padding-top: 55px;
-            padding-left: 15px;
+        p { transform: translate(5px, -30px);
+            font-size: 24px;
         }
     }
     #developer {
@@ -176,14 +177,13 @@
     #designer {
         font-size: 50px;
         margin-top: -40px;
-        p {
-            padding-top: 42px;
-            padding-left: 10px;
+        p { transform: translate(5px, -25px);
+            font-size: 20px;
         }
     }
     #developer {
         font-size: 50px;
-        margin-top: -80px;
+        margin-top: -85px;
     }
     #clock {
         font-size: 50px;
@@ -206,10 +206,6 @@
     #designer {
         font-size: 90px;
         margin-top: -70px;
-        p {
-            padding-top: 100px;
-            padding-left: 30px;
-        }
     }
     #developer {
         font-size: 90px;
