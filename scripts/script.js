@@ -8,23 +8,6 @@ window.onload = function() {
 
 
 
-const dateHtml = document.getElementById("clock")
-const monthHtml = document.getElementById("month")
-
-const now = new Date();
-let date = now.getDate()
-
-const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
-const month = months[now.getMonth()];
-
-if (date >= 1 && date <= 9) {
-    date = `0${date}`;
-}
-
-dateHtml.innerHTML = date
-monthHtml.innerHTML = month
-
-
 const heroHeight = document.getElementById("hero").offsetHeight
 const workHeight = heroHeight + document.getElementById("work").offsetHeight
 
@@ -81,3 +64,42 @@ if (window.matchMedia('(pointer: fine)').matches) {
 }
 
 
+
+
+// Date and Month animation
+
+
+const dateHtml = document.getElementById("clock")
+const monthHtml = document.getElementById("month")
+
+const now = new Date();
+let date = now.getDate()
+
+const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+const month = months[now.getMonth()];
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function getMonth() {
+    for (let i = 0; i <= now.getMonth(); i++) {
+        const element = months[i]
+        monthHtml.innerHTML = element
+        await delay(50)
+    }
+}
+
+async function getDate() {
+    for (let i = 0; i <= now.getDate(); i++) {
+        if (i >= 1 && i <= 9) {
+            i = `0${i}`;
+        }
+        dateHtml.innerHTML = i
+        await delay(100)
+    }
+}
+
+setTimeout(() => {
+    getDate().then(() => getMonth())
+}, 1000);
