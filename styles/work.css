@@ -18,7 +18,6 @@
     flex-direction: column;
     gap: 10%;
     color: #f5eee6;
-
     margin-bottom: 100px;
 }
 
@@ -29,16 +28,17 @@
     font-weight: 100;
     font-size: 18px;
     text-align: left;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
 }
 
 .section-header {
     color: rgba(255, 255, 255, 0.8);
     font-weight: 100;
-    letter-spacing: 1px;
     font-size: 20px;
     text-align: left;
     padding: 20px;
-    font-family: "Zen Dots", sans-serif;
+    font-family: Roboto, sans-serif;
     text-transform: uppercase;
 }
 
@@ -83,8 +83,8 @@
     margin: 0 20px;
     color: rgb(211, 123, 76);
     h1 {
-        font-size: clamp(22px, 2.7vw, 40px);
-        font-family: "Zen Dots", sans-serif;
+        font-size: clamp(32px, 12vw, 70px);
+        font-family: "Six Caps", sans-serif;
         color: #f5eee6;
         text-transform: uppercase;
     }
@@ -93,6 +93,8 @@
         text-align: left;
         font-size: clamp(14px, 2vw, 20px);
         color: white;
+        font-family: Roboto, sans-serif;
+        text-transform: uppercase;
     }
 }
 #display-1 {
@@ -114,6 +116,9 @@
     background-color: #353535;
     padding: 5px;
     transition: padding 0.5s;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 .site-link:hover {

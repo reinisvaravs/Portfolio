@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
 
 #bg-image {
@@ -40,7 +41,7 @@
 #time {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     width: 20vw;
     height: 10vh;
     margin-left: 50vw;
@@ -50,6 +51,7 @@
 
 #clock {
     font-size: 70px;
+    font-family: "Pinyon Script", cursive;
 }
 
 #month {
@@ -101,43 +103,10 @@
     position: absolute;
     top: 80%;
     right: 10%;
-    margin-top: -70px;
+    margin-top: -30px;
     text-indent: 15vw;
     p { font-family: "Bodoni Moda", serif;
         text-transform: uppercase; }
-}
-
-
-#arrow-div {
-    position: absolute;
-    top: 93%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
-}
-
-#hero-arrow {
-    width: 100%;
-    height: 100%;
-}
-
-#arrowBtn {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.arrow {
-    animation: arrow 2s infinite ease;
-}
-
-@keyframes arrow {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
 }
 
 #hero-image-div {
@@ -168,7 +137,7 @@
     }
     #hero-about {
         width: 70vw;
-        margin-top: -100px;
+        margin-top: -60px;
         font-size: 16px;
     }
 }
@@ -196,7 +165,7 @@
     }
     #hero-about {
         width: 70vw;
-        margin-top: -100px;
+        margin-top: -70px;
         font-size: 14px;
     }
 }
@@ -214,14 +183,9 @@
     #hero-about {
         font-size: 20px;
     }
-
-
-    #time {
-        gap: 10px;
-    }
     
     #clock {
-        font-size: 100px;
+        font-size: 50px;
     }
     
     #month {

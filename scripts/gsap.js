@@ -44,9 +44,6 @@ gsap.timeline()
 
 
 
-
-
-
 gsap.to('#header-blur', {
     backdropFilter: 'blur(5px)',
     scrollTrigger: {
