@@ -30,12 +30,25 @@
     a {
         text-decoration: none;
         color: white;
-        transition: all 0.5s;
+        position: relative;
+        display: inline-block;
+        margin: 0;
     }
-    a:hover {
-        padding-left: 10px;
-        transition: all 0.5s;
-    }
+}
+
+.email a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 0;
+    height: 2px;
+    background: #f5eee6;
+    transition: width 0.5s ease;
+}
+
+.email a:hover::after {
+    width: 100%;
 }
 
 

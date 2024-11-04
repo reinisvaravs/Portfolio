@@ -1,21 +1,11 @@
-window.onload = function() {
-    window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
-    });
-}
-
-
-
-const heroHeight = document.getElementById("hero").offsetHeight
-const workHeight = heroHeight + document.getElementById("work").offsetHeight
 
 
 document.querySelectorAll(".projects-btn").forEach(button => {
+    const heroHeight = document.getElementById("hero").offsetHeight
+    const workHeight = heroHeight + document.querySelector(".work").offsetHeight
     button.onclick = () => {
         window.scroll({
-            top: heroHeight +100, 
+            top: heroHeight +150, 
             left: 0, 
             behavior: 'smooth' 
         });
@@ -23,6 +13,8 @@ document.querySelectorAll(".projects-btn").forEach(button => {
 })
 
 document.querySelectorAll(".contacts-btn").forEach(button => {
+    const heroHeight = document.getElementById("hero").offsetHeight
+    const workHeight = heroHeight + document.querySelector(".work").offsetHeight
     button.onclick = () => {
         window.scroll({
             top: workHeight +500, 
@@ -34,7 +26,6 @@ document.querySelectorAll(".contacts-btn").forEach(button => {
 
 
 
-// Only activate custom cursor if the device has a fine pointer (e.g., a mouse)
 if (window.matchMedia('(pointer: fine)').matches) {
     let X = 0;
     let Y = 0;
@@ -46,7 +37,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
     window.addEventListener('mousemove', function(e) {
         targetX = e.clientX;
         targetY = e.clientY;
-        cursor.style.display = "block"; // Show cursor only if mouse is present
+        cursor.style.display = "block"; 
     });
 
     function animateCursor() {
@@ -65,8 +56,6 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
 
 
-
-// Date and Month animation
 
 
 const dateHtml = document.getElementById("clock")

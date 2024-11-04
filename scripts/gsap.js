@@ -1,47 +1,92 @@
 gsap.registerPlugin(ScrollTrigger)
 const lenis = new Lenis();
 lenis.on("scroll", ScrollTrigger.update);
-gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+gsap.ticker.add((time) => { lenis.raf(time * 4000); });
 gsap.ticker.lagSmoothing(0);
 
 
+document.querySelectorAll('.work-img-div').forEach(item => {
+    item.addEventListener('mouseover', () => {
+        gsap.to(item.querySelector('.work-img'), {
+            backgroundSize: '145%', 
+            backgroundPosition: 'center',
+            duration: 1,
+            ease: 'power2.out',
+        });
+        gsap.to(item, {
+            scale: 0.93,
+            duration: 1.5,
+            ease: 'power2.out',
+        });
+    });
+
+    item.addEventListener('mouseout', () => {
+        gsap.to(item.querySelector('.work-img'), {
+            backgroundSize: '120%', 
+            backgroundPosition: 'center',
+            duration: 1,
+            ease: 'power2.out',
+        });
+        gsap.to(item, {
+            scale: 1, 
+            duration: 1.5,
+            ease: 'power2.out', 
+        });
+    });
+});
+
+gsap.to('.work-img', {
+    backgroundSize: '120%', 
+    backgroundPosition: 'center',
+});
+gsap.to('.work-img', {
+    scale: 1,
+});
 
 
-gsap.timeline()
-    .from('.heroAnim', {
-        y: 100,
-        duration: 0.4,
-        rotation: '5deg',
-    })
-    .from('.opacityAnim', {
-        opacity: 0,
-        duration: 0.3,
-    })
-    .from('header', {
-        y: -100,
-        duration: 0.5,
-    })
-    .from('#time', {
-        opacity: 0,
-        duration: 0.3,
-    })
-    .from('#loading-screen', {
-        opacity: '100%',
-        duration: 0.5,
-        delay: 0.2,
-    })
-    .from('#hero-about', {
-        opacity: 0,
-        duration: 0.5,
-    })
-    .from('body', {
-        position: 'fixed',
-    })
-    .add(async () => {
-        await getDate();
-        await getMonth();
-    })
+gsap.from('.heroAnim', {
+    y: 100,
+    duration: 0.4,
+    rotation: '5deg',
+})
+gsap.from('.opacityAnim', {
+    opacity: 0,
+    duration: 0.3,
+    delay: 0.5,
+})
+gsap.from('header', {
+    y: -100,
+    duration: 0.5,
+    delay: 0.5,
+})
+gsap.from('#time', {
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.6,
+})
+gsap.from('body', {
+    position: 'fixed',
+    delay: 2,
+})
+gsap.to('body', {
+    delay: 3,
+    paddingRight: '15px',
+})
+gsap.from('#loading-screen', {
+    opacity: '100%',
+    duration: 0.5,
+    delay: 1.5,
+})
+gsap.from('#hero-about', {
+    opacity: 0,
+    duration: 0.5,
+    delay: 2,
+})
+    
 
+setTimeout(() => {
+    getDate().then(() => { getMonth() })
+}, 2500);
 
 
 gsap.to('#header-blur', {
@@ -83,36 +128,37 @@ gsap.to('#bg-image', {
 })
 
 
-gsap.from('#about-item-1', {
-    duration: 1,
-    x: 1500,
+
+
+gsap.from('#work-viedi', {
+    duration: 0.5,
+    y: 200,
     scrollTrigger: {
-        trigger: '#about-item-1',
-        start: 'top 90%',
-        end: 'top 80%',
+        trigger: '#work-viedi',
+        start: '-70% bottom',
         toggleActions: 'play none none reverse',
     }
 })
-gsap.from('#about-item-2', {
-    duration: 1,
-    x: 1500,
+gsap.from('#work-candles', {
+    duration: 0.5,
+    y: 200,
     scrollTrigger: {
-        trigger: '#about-item-2',
-        start: 'top 90%',
-        end: 'top 80%',
+        trigger: '#work-candles',
+        start: '-70% bottom',
         toggleActions: 'play none none reverse',
     }
 })
-gsap.from('#about-item-3', {
-    duration: 1,
-    x: 1500,
+gsap.from('#work-karting', {
+    duration: 0.5,
+    y: 200,
     scrollTrigger: {
-        trigger: '#about-item-3',
-        start: 'top 90%',
-        end: 'top 80%',
+        trigger: '#work-karting',
+        start: '-70% bottom',
         toggleActions: 'play none none reverse',
     }
 })
+
+
 
 
 gsap.from('#email', {
