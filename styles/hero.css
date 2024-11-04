@@ -25,16 +25,15 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 5%;
+    padding-left: 3%;
     position: relative;
-
     margin-bottom: 300px;
 }
 
 #hero-content {
-    font-family: "Tulpen One", sans-serif;
     display: flex;
     flex-direction: column;
+    margin-bottom: -200px;
 }
 
 
@@ -44,116 +43,175 @@
     gap: 20px;
     width: 20vw;
     height: 10vh;
-    margin-left: 50vw;
+    position: absolute;
+    top: 20%;
+    right: 25%;
     font-family: "Bodoni Moda", serif;
-    transform: translateY(-50px);
 }
 
 #clock {
-    font-size: 70px;
+    font-size: 120px;
     font-family: "Pinyon Script", cursive;
 }
 
 #month {
-    font-size: 25px;
-    padding-bottom: 4px;
+    font-size: 35px;
+    padding-bottom: 15px;
 }
 
 #time-right {
-    line-height: 18px;
     font-family: "Bodoni Moda", serif;
+    line-height: 17px;
 }
 
 #creative {
-    font-size: 25px;
+    font-size: 35px;
     font-family: "Bodoni Moda", serif;
     color: #edd5c2;
-    transform: translateY(-30px);
 }
 #designer {
-    font-size: 80px;
+    font-size: 140px;
     display: flex;
     flex-direction: row;
-    margin-top: -60px;
-    transform: translateY(-30px);
-    font-family: "Six Caps", sans-serif;
+    font-family: "Dorsa", sans-serif;
+    letter-spacing: 4px;
+    line-height: 220px;
     
-    p { font-size: 30px;
-        align-self: flex-end;
+    p { font-size: 35px;
         font-family: "Bodoni Moda", serif;
-        transform: translate(10px, -50px);
+        transform: translate(15px, 76px);
+    }
+}
+#developer {
+    font-size: 140px;
+    font-family: "Dorsa", sans-serif;
+    letter-spacing: 4px;
+    line-height: 220px;
+}
+#hero-about {
+    font-family: "Bodoni Moda", serif;
+    width: 70vw;
+    max-width: 600px;
+    position: absolute;
+    top: 55%;
+    right: 3%;
+    text-indent: 15vw;
+    p {
+        font-family: "Bodoni Moda", serif;
+        text-transform: uppercase;
+        font-size: 30px;
     }
 }
 
 
-
-#developer {
-    font-size: 80px;
-    margin-top: -130px;
-    transform: translateY(-10px);
-    font-family: "Six Caps", sans-serif;
+@media screen and (max-width: 1200px) {
+    #hero-content {
+        margin-bottom: 0px;
+    }
+    #creative {
+        font-size: 30px;
+    }
+    #designer {
+        font-size: 100px;
+        line-height: 155px;
+        
+        p {
+            font-size: 25px;
+            transform: translate(15px, 55px);
+        }
+    }
+    #developer {
+        font-size: 100px;
+        line-height: 155px;
+    }
+    #hero-about {
+        width: 80vw;
+        top: 68%;
+        right: 5%;
+        p {
+            font-size: 25px;
+        }
+    }
 }
 
-
-
-#hero-about {
-    font-family: "Bodoni Moda", serif;
-    width: 60vw;
-    max-width: 500px;
-    position: absolute;
-    top: 80%;
-    right: 10%;
-    margin-top: -30px;
-    text-indent: 15vw;
-    p { font-family: "Bodoni Moda", serif;
-        text-transform: uppercase; }
+@media screen and (max-width: 940px) {
+    #creative, #designer, #developer {
+        transform: translateY(-40px);
+    }
+    #clock {
+        font-size: 80px;
+    }
+    #month {
+        font-size: 25px;
+        padding-bottom: 7px;
+    }
+    #time-right {
+        line-height: 14px;
+    }
+    #hero-about {
+        width: 90vw;
+        max-width: 90vw;
+        top: 70%;
+        right: 3%;
+        text-indent: 30vw;
+        p {
+            font-family: "Bodoni Moda", serif;
+            text-transform: uppercase;
+            font-size: 28px;
+        }
+    }
 }
 
-#hero-image-div {
-    width: 30vw;
-    img {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+@media screen and (max-width: 700px) {
+    #hero-about p {
+        font-size: 20px;
+    }
+    #hero-content {
+        margin-bottom: 0px;
+    }
+    #creative {
+        font-size: 25px;
+    }
+    #designer {
+        font-size: 80px;
+        line-height: 125px;
+        
+        p {
+            font-size: 20px;
+            transform: translate(12px, 45px);
+        }
+    }
+    #developer {
+        font-size: 80px;
+        line-height: 130px;
     }
 }
 
 @media screen and (max-width: 500px) {
+    #creative {
+        font-size: 20px;
+    }
     #designer {
         font-size: 60px;
-        margin-top: -50px;
-        p { transform: translate(5px, -30px);
-            font-size: 24px;
+        line-height: 95px;
+        p { transform: translate(7px, 33px);
+            font-size: 18px;
         }
     }
     #developer {
         font-size: 60px;
-        margin-top: -100px;
+        line-height: 95px;
     }
     #time {
-        margin-left: 40vw;
+        top: 20%;
+        right: 35%;
     }
-    #hero-about {
-        width: 70vw;
-        margin-top: -60px;
+    #hero-about p {
         font-size: 16px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    #designer {
-        font-size: 50px;
-        margin-top: -40px;
-        p { transform: translate(5px, -25px);
-            font-size: 20px;
-        }
-    }
-    #developer {
-        font-size: 50px;
-        margin-top: -85px;
-    }
     #clock {
         font-size: 50px;
     }
@@ -162,41 +220,6 @@
     }
     #month {
         font-size: 24px;
-    }
-    #hero-about {
-        width: 70vw;
-        margin-top: -70px;
-        font-size: 14px;
-    }
-}
-
-
-@media screen and (min-width: 800px) {
-    #designer {
-        font-size: 90px;
-        margin-top: -70px;
-    }
-    #developer {
-        font-size: 90px;
-        margin-top: -140px;
-    }
-    #hero-about {
-        font-size: 20px;
-    }
-    
-    #clock {
-        font-size: 50px;
-    }
-    
-    #month {
-        font-size: 35px;
-        padding-bottom: 10px;
-    }
-    
-    #time-right {
-        line-height: 22px;
-        font-size: 20px;
-        font-family: "Bodoni Moda", serif;
     }
 }
 
