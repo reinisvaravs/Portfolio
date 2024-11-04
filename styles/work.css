@@ -207,7 +207,6 @@
 
 
 .work-item:nth-child(4) {
-    cursor: no-drop;
     .work-img {
         cursor: no-drop;
     }
@@ -215,11 +214,10 @@
         cursor: no-drop;
     }
     .work-text-div {
-        cursor: no-drop;
+        h1 { cursor: no-drop; }
     }
 }
 .work-item:nth-child(5) {
-    cursor: no-drop;
     .work-img {
         cursor: no-drop;
     }
@@ -227,6 +225,6 @@
         cursor: no-drop;
     }
     .work-text-div {
-        cursor: no-drop;
+        h1 { cursor: no-drop; }
     }
 }
