@@ -1,4 +1,7 @@
-
+.work-item:nth-child(4), .work-item:nth-child(5) {
+    opacity: 0;
+    margin-top: -200px;
+}
 
 
 #selected-cases-div {
