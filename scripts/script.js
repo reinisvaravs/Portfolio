@@ -1,39 +1,55 @@
 
 
-function scrollPage() {
-    var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-    let scrollHeight = 0
+let scrollInterval; // Variable to store the interval ID
+let isScrolling = false; // Track whether scrolling is active
 
-    setInterval(() => {
+function scrollPage() {
+    var limit = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+    let scrollHeight = 0;
+
+    scrollInterval = setInterval(() => {
         if (scrollHeight >= limit - 700) {
             window.scroll({
-                top: 0, 
-                left: 0, 
-                behavior: 'smooth' 
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
             });
-            scrollHeight = 0
-        }
-        else {
-            scrollHeight = scrollHeight + 500
+            scrollHeight = 0;
+        } else {
+            scrollHeight += 500;
             window.scroll({
-                top: scrollHeight, 
-                left: 0, 
-                behavior: 'smooth' 
+                top: scrollHeight,
+                left: 0,
+                behavior: 'smooth'
             });
         }
     }, 2000);
+    isScrolling = true;
 }
 
+function stopScroll() {
+    clearInterval(scrollInterval); // Clear the interval to stop scrolling
+    isScrolling = false;
+}
 
-
-function startScroll(event) {
+document.addEventListener("keydown", (event) => {
     if (event.key === "k" || event.key === "K") {
-        scrollPage()
+        if (!isScrolling) {
+            scrollPage();
+        }
+    } else if (event.key === "j" || event.key === "J") {
+        if (isScrolling) {
+            stopScroll();
+        }
     }
-}
+});
 
-
-document.addEventListener("keydown", startScroll);
+// Stop scrolling on any mouse movement
+document.addEventListener("mousemove", () => {
+    if (isScrolling) {
+        stopScroll();
+    }
+});
 
 
 
