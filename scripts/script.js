@@ -1,5 +1,46 @@
 
 
+function scrollPage() {
+    var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    let scrollHeight = 0
+
+    setInterval(() => {
+        if (scrollHeight >= limit - 700) {
+            window.scroll({
+                top: 0, 
+                left: 0, 
+                behavior: 'smooth' 
+            });
+            scrollHeight = 0
+        }
+        else {
+            scrollHeight = scrollHeight + 500
+            window.scroll({
+                top: scrollHeight, 
+                left: 0, 
+                behavior: 'smooth' 
+            });
+        }
+    }, 2000);
+}
+
+
+
+function startScroll(event) {
+    if (event.key === "k" || event.key === "K") {
+        scrollPage()
+    }
+}
+
+
+document.addEventListener("keydown", startScroll);
+
+
+
+
+
+
+
 document.querySelectorAll(".projects-btn").forEach(button => {
     const heroHeight = document.getElementById("hero").offsetHeight
     const workHeight = heroHeight + document.querySelector(".work").offsetHeight
