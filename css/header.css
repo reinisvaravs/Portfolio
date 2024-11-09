@@ -1,0 +1,127 @@
+header {
+    width: 100vw;
+    height: 90px;
+    position: fixed;
+    background-color: #131313;
+    z-index: 5;
+}
+
+.header-div {
+    width: 95%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.logo-div {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.banner {
+    background-color: #b5986c;
+    width: 140px;
+    height: 150px;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.nav {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    ul {
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        color: #8e9399;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        li {
+            cursor: pointer;
+        }
+    }
+}
+
+.reserve-div {
+    width: 25%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    button {
+        width: 165px;
+        height: 48px;
+        background-color: #b5986c;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.M-screen {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .L-screen {
+        display: none;
+    }
+    .M-screen {
+        display: block;
+    }
+    .popup-menu {
+        position: fixed;
+        top: 25x;
+        right: 25px;
+        width: 4vw;
+        height: 4vw;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+    }
+    .span-menu {
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+    .popup {
+        height: 100vh;
+        width: 50vw;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(3px);
+        transform: translateX(100%);
+    }
+}

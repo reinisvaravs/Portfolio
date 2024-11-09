@@ -1,168 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reinis Varavs 🤟</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Lexend:wght@100..900&family=Prata&family=Tulpen+One&family=Zen+Dots&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Glass+Antiqua&family=Lexend:wght@100..900&family=Prata&family=Tulpen+One&family=Zen+Dots&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Glass+Antiqua&family=Lexend:wght@100..900&family=Prata&family=Six+Caps&family=Tulpen+One&family=Zen+Dots&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dorsa&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/hero.css">
-    <link rel="stylesheet" href="./styles/work.css">
-    <link rel="stylesheet" href="./styles/contacts.css">
-    <link rel="stylesheet" href="./styles/footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ķēķis | Kafejnīca</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div id="bg-image" class="bg"></div>
-    <div id="cursor"></div>
-    <div id="header-blur"></div>
-    <div id="loading-screen"></div>
-
-    <header>
-        <div id="name">
-            <p>Reinis Vāravs</p>
-            <p id="header-prof">UX/UI Designer, Developer</p>
+  <header>
+    <div class="header-div">
+      <div class="logo-div">
+        <div class="banner">
+          <img src="./assets/logo-white.png" class="logo">
         </div>
-        <nav>
-            <ul><li><button class="projects-btn">works,</li>
-                <li><button class="contacts-btn">contact</button></li></ul>
-        </nav>
-    </header>
-
-    <div id="hero">
-        <div id="hero-content">
-            <div id="time">
-                <div>
-                    <p id="clock">00</p>
-                </div>
-                <div id="time-right">
-                    <p id="month">jan</p>
-                    <p>available</p>
-                    <p>for work</p>
-                </div>
+      </div>
+        <div class="nav L-screen">
+          <ul>
+            <li>Ēdienkarte</li>
+            <li>Banketi</li>
+            <li>Galerija</li>
+            <li>Par mums</li>
+            <li>Kontakti</li>
+          </ul>
+        </div>
+      <div class="reserve-div L-screen">
+        <button>Rezervēt</button>
+      </div>
+      <button class="popup-menu M-screen" id="menuBtn">
+        <span class="span-menu"></span>
+        <span class="span-menu"></span>
+        <span class="span-menu"></span>
+      </button>
+      <div class="popup M-screen"></div>
+    </div>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="bg"></div>
+        <div class="hero-h1-div">
+          <h1>Garšas un sajūtu harmonija</h1>
+        </div>
+        <div class="hero-btn-div">
+          <button>Ēdienkarte</button>
+        </div>
+        <div class="info">
+          <div class="address">
+            <div class="icon-div">
+              <img src="./assets/location.webp" class="icon">
             </div>
-            <div id="creative">
-                <p>creative</p>
+            <h1>Brīvības 131, Jēkabpils</h1>
+            <div class="small-line"></div>
+            <a href="https://maps.app.goo.gl/Ubmr3wtZTtbSxTBn6" target="_blank" class="karte-link">Atvērt Google karti <span class="arrow">></span></a>
+            <div id="address-img"></div>
+          </div>
+          <div class="working-hours">
+            <div class="icon-div">
+              <img src="./assets/clock.webp" class="icon">
             </div>
-            <div id="designer">
-                <h1 class="heroAnim">DESIGNER</h1>
-                <p class="opacityAnim">&</p>
+              <h1>Darba laiks</h1>
+              <div class="small-line"></div>
+              <p class="hours">Svētdien - Ceturtdien</p>
+              <p class="hours">9.00 - 19.00</p>
+                <br>
+              <p class="hours">Piektdien - Sestdien</p>
+              <p class="hours">9.00 - 22.00</p>
+              <div id="hours-img"></div>
             </div>
-            <div id="developer">
-                <h1 class="heroAnim">DEVELOPER</h1>
-            </div>
-            <div id="hero-about">
-                <p>
-                    I am a developer and UX/UI designer based in Latvia. I specialize in JAVASCRIPT and GSAP. I love designs that stand out. I love music, coffee and<span style="opacity: 0; font-size: 7px;">x</span>ai.<span style="opacity: 0;">.........</span>
-                </p>
-            </div>
+            <div class="phone">
+              <div class="icon-div">
+                <img src="./assets/phone.webp" class="icon">
+              </div>
+              <h1>Zvani un rezervē!</h1>
+              <div class="small-line"></div>
+              <p>+371 <a href="tel:+371 27 070 000">27 070 000</a></p>
+              <div id="phone-img"></div>
+          </div>
         </div>
     </div>
-
-    <div id="selected-cases-div">
-        <img src="./images/web.png">
-        <h1 id="selected-cases">Selected Cases</h1>
+    <div class="about">
+      <h1>Par mums</h1>
+      <div class="medium-line"></div>
+      <h2>Mēs piedāvājam ēdināšanas pakalpojumus semināriem, svētku reizēm un bēru mielastiem, ar iespēju organizēt pasākumus mūsu kafejnīcas telpās vai jūsu izvēlētajā vietā. Pieejamas uzkodas līdznešanai un izbraukuma tirdzniecība pasākumos, kā arī pusdienu piegāde pilsētas robežās, lai nodrošinātu ērtu un gardu maltīti ikdienai.</h2>
+      <div class="about-img"></div>
+      <h2 class="curtain-h2">Pie mums vēsture un garša apvienojas, radot gastronomisku garšu baudījumu katrā kumosā.</h2>
     </div>
-    <div class="work">
-        <div class="work-item">
-            <div class="work-img-div">
-                <div id="work-viedi" class="work-img" onclick="window.open('https://reinisvaravs.github.io/restaurant/', `_blank`);"></div>
-                <div class="ontop-div" onclick="window.open('https://reinisvaravs.github.io/restaurant/', `_blank`);">
-                    <h1>Restaurant</h1>
-                </div>
-            </div>
-            <div class="work-text-div" onclick="window.open('https://reinisvaravs.github.io/restaurant/', `_blank`);">
-                <h1>Restaurant</h1>
-            </div>            
-        </div>
-        <div class="work-item">
-            <div class="work-img-div">
-                <div id="work-candles" class="work-img" onclick="window.open('https://reinisvaravs.github.io/candles/', `_blank`);"></div>
-                <div class="ontop-div" onclick="window.open('https://reinisvaravs.github.io/candles/', `_blank`);">
-                    <h1>Candle Store</h1>
-                </div>
-            </div>
-            <div class="work-text-div">
-                <h1 onclick="window.open('https://reinisvaravs.github.io/candles/', `_blank`);">Candle Store</h1>
-            </div>
-        </div>
-        <div class="work-item">
-            <div class="work-img-div">
-                <div id="work-karting" class="work-img" onclick="window.open('https://reinisvaravs.github.io/karting/', `_blank`);"></div>
-                <div class="ontop-div" onclick="window.open('https://reinisvaravs.github.io/karting/', `_blank`);">
-                    <h1>Karting Center</h1>
-                </div>
-            </div>
-            <div class="work-text-div">
-                <h1 onclick="window.open('https://reinisvaravs.github.io/karting/', `_blank`);">Karting Center</h1>
-            </div>
-        </div>
-        <div class="work-item">
-            <div class="work-img-div">
-                <div id="work-website1" class="work-img"></div>
-                <div class="ontop-div">
-                    <h1>Website</h1>
-                </div>
-            </div>
-            <div class="work-text-div">
-                <h1>Website</h1>
-            </div>
-        </div>
-        <div class="work-item">
-            <div class="work-img-div">
-                <div id="work-website2" class="work-img"></div>
-                <div class="ontop-div">
-                    <h1>Website</h1>
-                </div>
-            </div>
-            <div class="work-text-div">
-                <h1>Website</h1>
-            </div>
-        </div>
+    <div class="menu">
+      <button id="curtainBtn">Uzzināt vairāk!</button>
+      <div class="new-header"></div>
     </div>
+  </main>
+  <footer></footer>
 
-    <section id="contacts-section">
-        <div id="contacts-container">
-            <h4 id="contacts-heading">contact.</h4>
-            <p id="sub-heading">Get in touch with me via social media or send me an email.</p>
-            <div id="email-div">
-                <p class="email" id="email">email: <a href="mailto:rreinisvaravs@gmail.com" target="_blank">rreinisvaravs@gmail.com</a></p>
-                <p class="email" id="phone">phone: <a href="tel:+371 28816633" target="_blank">+371 28816633</a></p>
-                <p class="email" id="instagram">instagram: <a href="https://www.instagram.com/reinisrvaravs/" target="_blank">@reinisrvaravs</a></p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div id="author-div">
-            <p id="author">2024 Reinis R. Vāravs</p>
-        </div>
-        <div id="footer-buttons">
-            <ul><li><button class="projects-btn">works,</li>
-                <li><button class="contacts-btn">contact</button></li></ul>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
-    <script src="./scripts/gsap.js"></script>
-    <script src="./scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

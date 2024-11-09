@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+body {
+    background-color: #131313;
+}
+
+main, header, footer {
+    width: calc(100vw - 15px);
+}
