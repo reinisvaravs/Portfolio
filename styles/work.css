@@ -1,6 +1,5 @@
 .work-item:nth-child(4), .work-item:nth-child(5) {
-    opacity: 0;
-    margin-top: -200px;
+    display: none;
 }
 
 
@@ -147,12 +146,12 @@
 
 
 #work-viedi {
-    background: url(../images/viedi2.webp) no-repeat;
+    background: url(../images/image1.jpg) no-repeat;
     background-position: center bottom;
     background-size: cover;
 }
 #work-candles {
-    background: url(../images/candles2.webp) no-repeat;
+    background: url(../images/viedi2.webp) no-repeat;
     background-position: center top;
     background-size: cover;
 }
@@ -244,25 +243,3 @@
 }
 
 
-.work-item:nth-child(4) {
-    .work-img {
-        cursor: no-drop;
-    }
-    .ontop-div {
-        cursor: no-drop;
-    }
-    .work-text-div {
-        h1 { cursor: no-drop; }
-    }
-}
-.work-item:nth-child(5) {
-    .work-img {
-        cursor: no-drop;
-    }
-    .ontop-div {
-        cursor: no-drop;
-    }
-    .work-text-div {
-        h1 { cursor: no-drop; }
-    }
-}
