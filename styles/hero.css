@@ -2,7 +2,7 @@
 
 
 #bg-image {
-    background: url(../images/heaven-small.webp);
+    background: url(../images/col2.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -185,6 +185,9 @@
         font-size: 80px;
         line-height: 130px;
     }
+    #bg-image {
+        background-position: left;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -209,6 +212,9 @@
     #hero-about p {
         font-size: 16px;
     }
+    #bg-image {
+        background-position: 7%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -221,13 +227,7 @@
     #month {
         font-size: 24px;
     }
-}
-
-@media screen and (min-width: 1250px) {
     #bg-image {
-        background: url(../images/heaven-big.webp);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background-position: 20%;
     }
 }
