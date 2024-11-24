@@ -1,25 +1,17 @@
 
 
 document.querySelectorAll(".projects-btn").forEach(button => {
-    const heroHeight = document.getElementById("hero").offsetHeight
-    const workHeight = heroHeight + document.querySelector(".work").offsetHeight
     button.onclick = () => {
-        window.scroll({
-            top: heroHeight +150, 
-            left: 0, 
-            behavior: 'smooth' 
+        document.querySelector('.work').scrollIntoView({
+            behavior: "smooth" 
         });
     }
 })
 
 document.querySelectorAll(".contacts-btn").forEach(button => {
-    const heroHeight = document.getElementById("hero").offsetHeight
-    const workHeight = heroHeight + document.querySelector(".work").offsetHeight
     button.onclick = () => {
-        window.scroll({
-            top: workHeight +500, 
-            left: 0, 
-            behavior: 'smooth' 
+        document.querySelector('#contacts-section').scrollIntoView({
+            behavior: "smooth" 
         });
     }
 })

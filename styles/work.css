@@ -1,4 +1,4 @@
-.work-item:nth-child(4), .work-item:nth-child(5) {
+.work-item:nth-child(5), .work-item:nth-child(6) {
     display: none;
 }
 
@@ -33,6 +33,7 @@
     max-width: 900px;
     min-height: 90vh;
     margin: auto;
+    padding-top: 30px;
 }
 
 .work-item {
