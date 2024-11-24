@@ -84,3 +84,23 @@ async function getDate() {
         await delay(dateDelay)
     }
 }
+
+
+
+
+
+const bg = document.querySelector("#bg-image");
+let isFirstPress = true;
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "b" || event.key === "B") {
+    if (isFirstPress) {
+      bg.classList.add("wanderer")
+      bg.classList.remove("napoleon")
+    } else {
+      bg.classList.remove("wanderer")
+      bg.classList.add("napoleon")    
+    }
+    isFirstPress = !isFirstPress;
+  }
+});
