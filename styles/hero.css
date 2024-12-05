@@ -28,6 +28,13 @@
     background-size: cover;
 }
 
+.wanderer2 {
+    background: url(../images/wanderer2.jpg);
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    background-size: cover;
+}
+
 #hero {
     height: 100vh;
     width: 100vw;

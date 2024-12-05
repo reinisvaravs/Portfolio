@@ -87,20 +87,15 @@ async function getDate() {
 
 
 
-
-
-const bg = document.querySelector("#bg-image");
-let isFirstPress = true;
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "b" || event.key === "B") {
-    if (isFirstPress) {
-      bg.classList.add("wanderer")
-      bg.classList.remove("napoleon")
-    } else {
-      bg.classList.remove("wanderer")
-      bg.classList.add("napoleon")    
+document.addEventListener("keydown", function (event) {
+    if (event.key.toLowerCase() === "b") {
+        const element = document.getElementById("bg-image");
+        const classes = ["napoleon", "wanderer", "wanderer2"];
+        const currentClass = classes.find(cls => element.classList.contains(cls));
+        const currentIndex = classes.indexOf(currentClass);
+        const nextIndex = (currentIndex + 1) % classes.length;
+        element.classList.remove(...classes);
+        element.classList.add(classes[nextIndex]);
     }
-    isFirstPress = !isFirstPress;
-  }
 });
+
